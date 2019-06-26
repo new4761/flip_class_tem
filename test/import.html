@@ -1,0 +1,70 @@
+<script>
+        // Define and register <say-hi>.
+        var proto = Object.create(HTMLElement.prototype);
+      
+        proto.createdCallback = function() {
+          this.innerHTML = 'Hello, <b>' +
+                           (this.getAttribute('name') || '?') + '</b>';
+        };
+      
+        document.registerElement('say-hi', {prototype: proto});
+      </script>
+      
+      <template id="t">
+        <style>
+          ::content > * {
+            color: red;
+          }
+        </style>
+        <span>I'm a shadow-element using Shadow DOM!</span>
+        <content></content>
+      </template>
+      
+      <script>
+        (function() {
+          var importDoc = document.currentScript.ownerDocument; // importee
+      
+          // Define and register <shadow-element>
+          // that uses Shadow DOM and a template.
+          var proto2 = Object.create(HTMLElement.prototype);
+      
+          proto2.createdCallback = function() {
+            // get template in import
+            var template = importDoc.querySelector('#t');
+      
+            // import template into
+            var clone = document.importNode(template.content, true);
+            document.body.appendChild(clone);
+          };
+      
+          document.registerElement('shadow-element', {prototype: proto2});
+        })();
+      </script>
+
+      <template id="test">
+<p>testtext</p>
+
+      </template>
+
+      <script>
+            (function() {
+              var importDoc = document.currentScript.ownerDocument; // importee
+          
+              // Define and register <shadow-element>
+              // that uses Shadow DOM and a template.
+              var proto3 = Object.create(HTMLElement.prototype);
+          
+              proto3.createdCallback = function() {
+                // get template in import
+                var template = importDoc.querySelector('#test');
+          
+                // import template into
+                var clone = document.importNode(template.content, true);
+          
+                document.body.appendChild(clone);
+              };
+          
+              document.registerElement('test-element', {prototype: proto3});
+            })();
+          </script>
+    
