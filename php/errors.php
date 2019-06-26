@@ -9,3 +9,6 @@ ini_set('error_reporting', E_ALL );
   	<?php endforeach ?>
   </div>
 <?php  endif ?>
+<head>
+	<title><?php echo $error ?></title>
+</head>
