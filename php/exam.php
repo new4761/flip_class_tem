@@ -38,24 +38,17 @@ if (isset($_GET['logout'])) {
     <?php
     if (isset($_SESSION['admin_id'])) { ?>
         <h3> HELLO ADMIN <?php echo $row_loginadmin['admin_username']; ?></h3>
-        <a href="addlesson.php"> เพิ่มบทเรียน </a>
+        <a href="admin/addlesson.php"> เพิ่มบทเรียน </a>
     <?php }
 ?>
     <?php
-    $query_lesson = "SELECT * FROM lesson";
+    $query_lesson = "SELECT * FROM lesson WHERE lesson_status = 'active'";
     $lesson = mysqli_query($con, $query_lesson);
 
     $row_lesson = mysqli_num_rows($lesson);
     if ($row_lesson > 0) {
         while ($data_lesson = mysqli_fetch_assoc($lesson)) { ?>
-            <p>บทเรียนทั้งหมด<p>
                     <p>ชื่อบทเรียน : <?php echo $data_lesson['lesson_name']; ?></p>
-                    <p>เนื่อหาและบทเรียน : <?php echo $data_lesson['lesson_content']; ?> </p>
-                    <p>ADMINZONE : เพิ่มแบบทดสอบ <a href="addchoice.php?l_id=<?php echo $data_lesson['lesson_id']; ?>">choice</a></p>
-
-                    <p>แบบทดสอบ</p>
-                    <a href="choicetest.php?<?php echo $data_lesson['choice_id'] ?>"> Choice Test</a><br>
-                    <a href="writetest.php?<?php echo $data_lesson['writing_id'] ?>"> Writing Test</a>
                 <?php }
         } else { ?>
                 <h1>ไม่มีบทเรียน</h1>
