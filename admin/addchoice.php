@@ -26,7 +26,12 @@ if (isset($_GET['l_id'])) {
         $row_choice = mysqli_num_rows($choice);
         $lessonid = $colname_lesson;
         if ($row_choice > 0) { ?>
+<<<<<<< HEAD
             <p>จำนวนข้อสอบ <?php echo $row_choice; ?> ข้อ <a href="showall.php">ดูชุดข้อสอบทั้งหมด</a><p>
+=======
+            <p>จำนวนข้อสอบ <p>
+                    <?php echo "เจอผลลัพธ์ " . $row_choice . " ผลลัพธ์"; ?>
+>>>>>>> 1cb27bf6f525e22c3f35d0cbefe921f7b7a4e3e5
                     <?php while ($data_choice = mysqli_fetch_assoc($choice)) { ?>
 
                     <?php }
@@ -95,7 +100,10 @@ if (isset($_GET['l_id'])) {
                 success: function(data) {
                     alert(data);
                     $('#add_name')[0].reset();
+<<<<<<< HEAD
                     location.reload();
+=======
+>>>>>>> 1cb27bf6f525e22c3f35d0cbefe921f7b7a4e3e5
                 }
             });
         });
