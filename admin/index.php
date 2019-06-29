@@ -30,14 +30,9 @@ include '../include/session.php';
                 <a href="editless.php?l_id=<?php echo $data_lesson['lesson_id']; ?>"> แก้ไขบทเรียน</a>
                 <a href="addchoice.php?l_id=<?php echo $data_lesson['lesson_id']; ?>"> เพิ่มบททดสอบแบบตัวเลือก</a>
                 <a href="editless.php?l_id=<?php echo $data_lesson['lesson_id']; ?>"> เพิ่มบททดสอบแบบข้อเขียน</a>
-<<<<<<< HEAD
                 <script src="http://code.jquery.com/jquery-latest.js"></script>
                 สถานะบทเรียน : <button name="lesson_status" type="submit" value="<?php echo $data_lesson['lesson_id']; ?>" class="btn btn-info button"><?php echo $data_lesson['lesson_status']; ?></button>
                 สถานะบททดสอบ : <button name="exam_status" type="submit" value="<?php echo $data_lesson['lesson_id']; ?>" class="btn btn-info button"><?php echo $data_lesson['exam_status']; ?></button>
-=======
-                สถานะบทเรียน : <button name="submitl" id="submitl" type="submit" value="<?php echo $data_lesson['lesson_id']; ?>" class="btn btn-info"><?php echo $data_lesson['lesson_status']; ?></button>
-                สถานะบททดสอบ : <a href="activeexam.php?l_id=<?php echo $data_lesson['lesson_id']; ?>" onClick="alert('Change Active')"> <?php echo $data_lesson['exam_status']; ?></a>
->>>>>>> 1cb27bf6f525e22c3f35d0cbefe921f7b7a4e3e5
             </p>
 
         <?php }
@@ -61,7 +56,6 @@ include '../include/session.php';
 
 </html>
 
-<<<<<<< HEAD
 <script type="text/javascript">
     $(document).ready(function() {
         $('button[name="lesson_status"]').click(function() {
@@ -89,20 +83,6 @@ include '../include/session.php';
                 success: function(status) {
                     alert(status);
                     location.reload();
-=======
-<script>
-    $(document).ready(function() {
-        $('button').click(function() {
-            var getid = $(this).val();
-            $.ajax({
-                method: "POST",
-                url: "active.php",
-                data: {
-                    id = getid
-                },
-                success: function(status) {
-                    alert(status);
->>>>>>> 1cb27bf6f525e22c3f35d0cbefe921f7b7a4e3e5
                 }
             });
         });

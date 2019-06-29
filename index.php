@@ -84,7 +84,7 @@ if (isset($_SESSION['m_id'])) {
                 <?php if (isset($_SESSION['m_id'])) { ?>
                     HELLO  <?php echo $row_loginmember['m_username']; ?> <br>
                     <a href="logout.php"> logout </a>
-                    <a href=" exam.php"> เริ่มทำแบบทดสอบ </a>
+                    <a href="exam/"> ดูบทเรียน </a>
                 <?php } else if (isset($_SESSION['admin_id'])) { ?>
                     <h3>HELLO ADMIN </h3>
                     <a href="logout.php"> logout </a> <br>

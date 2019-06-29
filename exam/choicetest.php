@@ -15,22 +15,37 @@ if (isset($_SESSION['m_id'])) {
     include('errors.php');
     exit();
 }
-
-/*if (isset($_GET['l_id'])) {
-    
-}*/
-$sql_lesson = "SELECT lesson_name FROM lesson WHERE lesson_id = '1'";
+$typeexam = $_GET['type'];
+if($typeexam == 'pre'){
+    $nametype = "แบบทดสอบก่อนเเรียน";
+}
+else {
+    $nametype = "แบบทดสอบหลังเเรียน";
+}
+if (isset($_GET['l_id'])) {
+    $lesson_id = $_GET['l_id'];
+}
+else {
+    array_push($errors,"- Page Not Found");
+    include('../errors.php');
+    exit();
+}
+$sql_lesson = "SELECT lesson_name FROM lesson WHERE lesson_id = '".$lesson_id ."' ";
 $query_lesson = mysqli_query($con, $sql_lesson);
+$row_lesson = mysqli_num_rows($query_lesson);
 $data_lesson = mysqli_fetch_assoc($query_lesson);
 
 
-$lessonid = '1';
-$sql = "SELECT choice_id FROM choicetest WHERE lesson_id = '1'";
+
+$sql = "SELECT choice_id FROM choicetest WHERE lesson_id = '".$lesson_id ."'";
 $query = mysqli_query($con, $sql);
 $row = mysqli_num_rows($query);
 $perpage = 1;
 $total_page = ceil($row / $perpage);
 
+$sqlhistory = "SELECT * FROM history WHERE m_id = '".$row_loginmember['m_id']."' and type ='".$typeexam."' and lesson_id = '".$lesson_id ."' ";
+$queryhistory = mysqli_query($con, $sqlhistory);
+$status = mysqli_fetch_assoc($queryhistory);
 
 
 ?>
@@ -44,21 +59,29 @@ $total_page = ceil($row / $perpage);
 
 <body>
     <!-- Choice TEST start -->
+
     <?php
-    
-    if (isset($_SESSION['page']) ) {
+    if ($status['status'] == yes) { ?>
+        <h1> Result </h1>
+        <p> Your Score : <?php echo $status['score']; ?> / <?php echo $status['total']; ?></p>
+        <p> Wrong : <?php echo $status['wrong']; ?> / <?php echo $status['total']; ?></p>
+        
+<?php    
+        exit();
+    }
+    if (isset($_SESSION['page'])) {
         $page = $_SESSION['page'];
-       
     } else {
         $page = 1;
         $_SESSION['page'] = $page;
     }
-    if($page > $total_page){
-        $page = 1;
-        $_SESSION['page'] = $page;
+    if ($page > $total_page) {
+        $_SESSION['page'] = null;
+        echo $_SESSION['page'];
+        exit();
     }
     ?>
-    <h1>แบบทดสอบ <?php echo $data_lesson['lesson_name']; ?> </h1>
+    <h1>แบบทดสอบ <?php echo $data_lesson['lesson_name']; ?>  </h1>
     <form method="POST" enctype="multipart/form-data" name="add_name" id="add_name">
         <?php
         $start_from = ($page - 1);
@@ -84,12 +107,12 @@ $total_page = ceil($row / $perpage);
                 <?php        } ?>
                 <button name="submit" id="submit" type="submit" value="submit_comfirm">ยืนยันคำตอบ </button>
             <?php
-        }
+            }
 
-        $pageu = $page + 1;
-        // $url = "choicetest.php?page=" . $pageu . " ";
-    }
-    ?>
+            $pageu = $page + 1;
+            // $url = "choicetest.php?page=" . $pageu . " ";
+        }
+        ?>
 
     </form>
 
@@ -98,9 +121,12 @@ $total_page = ceil($row / $perpage);
             $('button[name="submit"]').click(function() {
                 var vale = $("input[name='answer']:checked").val();
                 var choiceid = $("input[name='idchoice']").val();
-                var member_id = '<?php echo $row_loginmember['m_id'] ?>';
+                var member_id = '<?php echo $row_loginmember['
+                m_id '] ?>';
                 var lesson_id = $("input[name='lessonid']").val();
                 var page = '<?php echo $pageu; ?>';
+                var total = '<?php echo $total_page; ?>';
+                var typeexam = '<?php echo $typeexam; ?>'
                 if (vale) {
                     $.ajax({
                         url: "update.php",
@@ -110,10 +136,12 @@ $total_page = ceil($row / $perpage);
                             id: choiceid,
                             memberid: member_id,
                             lessonid: lesson_id,
-                            pageu : page
+                            pageu: page,
+                            totaltest: total,
+                            type : typeexam
                         },
                         success: function(data) {
-                            
+
                             location.reload();
                             alert(data);
                         }

@@ -10,26 +10,32 @@ if (isset($_SESSION['m_id'])) {
     $query_loginadmin = "SELECT * FROM admin WHERE admin_id = '" . $_SESSION['admin_id'] . "'";
     $loginadmin = mysqli_query($con, $query_loginadmin);
     $row_loginadmin = mysqli_fetch_assoc($loginadmin);
-<<<<<<< HEAD
     $status_admin = '1';
-=======
->>>>>>> 1cb27bf6f525e22c3f35d0cbefe921f7b7a4e3e5
 } else {
     array_push($errors, "-Please Login first");
     include('errors.php');
     exit();
 }
-<<<<<<< HEAD
 if (isset($_GET['l_id'])) {
     $sql_lesson = "SELECT * FROM lesson WHERE lesson_id = '" . $_GET['l_id'] . "' ";
     $query_lesson = mysqli_query($con, $sql_lesson);
     $row_lesson = mysqli_num_rows($query_lesson);
     $data_lesson = mysqli_fetch_assoc($query_lesson);
 }
+$historysql = "SELECT lesson_id FROM history WHERE m_id = '" . $_SESSION['m_id'] . "' ";
+$historyquery = mysqli_query($con, $historysql);
+$row_history = mysqli_num_rows($historyquery);
 
+if ($row_history > 0) {
+    $tpyeexam = "post";
+} else {
 
-=======
->>>>>>> 1cb27bf6f525e22c3f35d0cbefe921f7b7a4e3e5
+    $typeexam = "pre"; 
+    echo $row_history;
+    ?>
+    <?php exit();
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -119,39 +125,22 @@ if (isset($_GET['l_id'])) {
                 <!-- from lessonContent.html-->
                 <lessonContent-element>
                     <?php
-<<<<<<< HEAD
-                    if ($row_loginmember['m_level'] != $data_lesson['lesson_level'] && $status_admin != '1') { 
+                    if ($row_loginmember['m_level'] != $data_lesson['lesson_level'] && $status_admin != '1') {
                         echo "คุณไม่สามารถทำบททดสอบนี่้ได้คะ";
                     } else {
                         if ($row_lesson > 0) { ?>
-                            <p>บทเรียนทั้งหมด<p>
-                                    <p>ชื่อบทเรียน : <?php echo $data_lesson['lesson_name']; ?></p>
-                                    <p>เนื่อหาและบทเรียน : <?php echo $data_lesson['lesson_content']; ?> </p>
+                            <p>ชื่อบทเรียน : <?php echo $data_lesson['lesson_name']; ?></p>
+                            <p>เนื่อหาและบทเรียน : <?php echo $data_lesson['lesson_content']; ?> </p>
 
-                                    <p>แบบทดสอบ</p>
-                                    <a href="choicetest.php?l_id=<?php echo $data_lesson['lesson_id'] ?>"> Choice Test</a><br>
-                                    <a href="writetest.php?l_id=<?php echo $data_lesson['lesson_id'] ?>"> Writing Test</a>
-                                <?php
-                            } else { ?>
-                                    <h1>ไม่มีบทเรียน</h1>
-                                <?php     }
-                        }
-=======
-                    if ($row_lesson > 0) { ?>
-                        <p>บทเรียนทั้งหมด<p>
-                                <p>ชื่อบทเรียน : <?php echo $data_lesson['lesson_name']; ?></p>
-                                <p>เนื่อหาและบทเรียน : <?php echo $data_lesson['lesson_content']; ?> </p>
-                                <p>ADMINZONE : เพิ่มแบบทดสอบ <a href="addchoice.php?l_id=<?php echo $data_lesson['lesson_id']; ?>">choice</a></p>
-
-                                <p>แบบทดสอบ</p>
-                                <a href="choicetest.php?l_id=<?php echo $data_lesson['lesson_id'] ?>"> Choice Test</a><br>
-                                <a href="writetest.php?l_id=<?php echo $data_lesson['lesson_id'] ?>"> Writing Test</a>
-                            <?php
+                            <p>แบบทดสอบ</p>
+                            <a href="exam/choicetest.php?l_id=<?php echo $data_lesson['lesson_id'] ?>&type=post"> ทำแบบทดสอบหลังเรียน</a><br>
+                            <a href="exam/choicetest.php?l_id=<?php echo $data_lesson['lesson_id'] ?>&type=pre">ดูคะแนนสอบก่อนเรียน </a>
+                        <?php
                         } else { ?>
-                                <h1>ไม่มีบทเรียน</h1>
-                            <?php     }
->>>>>>> 1cb27bf6f525e22c3f35d0cbefe921f7b7a4e3e5
-                        ?>
+                            <h1>ไม่มีบทเรียน</h1>
+                        <?php     }
+                    }
+                    ?>
                 </lessonContent-element>
             </div>
 
