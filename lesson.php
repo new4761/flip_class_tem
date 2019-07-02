@@ -22,17 +22,22 @@ if (isset($_GET['l_id'])) {
     $row_lesson = mysqli_num_rows($query_lesson);
     $data_lesson = mysqli_fetch_assoc($query_lesson);
 }
-$historysql = "SELECT lesson_id FROM history WHERE m_id = '" . $_SESSION['m_id'] . "' ";
+if($data_lesson['lesson_status']=='noactive'){
+    $statuserrorspage = 200;
+    include('errorpage/errorpage.php');
+    exit();
+}
+$historysql = "SELECT * FROM history WHERE m_id = '" . $_SESSION['m_id'] . "' AND lesson_id = '" . $_GET['l_id'] . "'  ";
 $historyquery = mysqli_query($con, $historysql);
 $row_history = mysqli_num_rows($historyquery);
-
-if ($row_history > 0) {
+$data_history = mysqli_fetch_assoc($historyquery);
+if ($row_history > 0 && $data_history['status'] == 'yes') {
     $tpyeexam = "post";
-} else {
-
-    $typeexam = "pre"; 
-    echo $row_history;
+}
+else {
+    $typeexam = "pre";
     ?>
+    <meta http-equiv="refresh" content="0;url=exam/choicetest.php?l_id=<?php echo $data_lesson['lesson_id']; ?>&type=<?php echo $typeexam; ?>">
     <?php exit();
 }
 
@@ -125,7 +130,7 @@ if ($row_history > 0) {
                 <!-- from lessonContent.html-->
                 <lessonContent-element>
                     <?php
-                    if ($row_loginmember['m_level'] != $data_lesson['lesson_level'] && $status_admin != '1') {
+                    if ($row_loginmember['m_level'] < $data_lesson['lesson_level'] && $status_admin != '1') {
                         echo "คุณไม่สามารถทำบททดสอบนี่้ได้คะ";
                     } else {
                         if ($row_lesson > 0) { ?>

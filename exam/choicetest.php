@@ -15,37 +15,70 @@ if (isset($_SESSION['m_id'])) {
     include('errors.php');
     exit();
 }
-$typeexam = $_GET['type'];
-if($typeexam == 'pre'){
-    $nametype = "แบบทดสอบก่อนเเรียน";
-}
-else {
-    $nametype = "แบบทดสอบหลังเเรียน";
-}
+
+
+
+
 if (isset($_GET['l_id'])) {
     $lesson_id = $_GET['l_id'];
-}
-else {
-    array_push($errors,"- Page Not Found");
-    include('../errors.php');
+} else {
+    $statuserrorspage = 100;
+    include('../errorpage/errorpage.php');
     exit();
 }
-$sql_lesson = "SELECT lesson_name FROM lesson WHERE lesson_id = '".$lesson_id ."' ";
+
+$sql_lesson = "SELECT * FROM lesson WHERE lesson_id = '" . $lesson_id . "' ";
 $query_lesson = mysqli_query($con, $sql_lesson);
 $row_lesson = mysqli_num_rows($query_lesson);
 $data_lesson = mysqli_fetch_assoc($query_lesson);
+if ($data_lesson['lesson_level'] > $row_loginmember['m_level']) {
+    $statuserrorspage = 300;
+    include('../errorpage/errorpage.php');
+    exit();
+}
+if($data_lesson['exam_status']=='noactive'){
+    $statuserrorspage = 200;
+    include('errorpage/errorpage.php');
+    exit();
+}
 
 
-
-$sql = "SELECT choice_id FROM choicetest WHERE lesson_id = '".$lesson_id ."'";
+$sql = "SELECT * FROM choicetest WHERE lesson_id = '" . $lesson_id . "'";
 $query = mysqli_query($con, $sql);
 $row = mysqli_num_rows($query);
 $perpage = 1;
 $total_page = ceil($row / $perpage);
 
-$sqlhistory = "SELECT * FROM history WHERE m_id = '".$row_loginmember['m_id']."' and type ='".$typeexam."' and lesson_id = '".$lesson_id ."' ";
+if ($total_page == 0) {
+    $statuserrorspage = 200;
+    include('../errorpage/errorpage.php');
+    exit();
+}
+if (isset($_GET['type'])) {
+    $typeexam  = $_GET['type'];
+} else {
+    $statuserrorspage = 500;
+    include('../errorpage/errorpage.php');
+    exit();
+}
+
+$sqlhistory = "SELECT * FROM history WHERE m_id = '" . $row_loginmember['m_id'] . "' AND type ='" . $typeexam . "' AND lesson_id = '" . $lesson_id . "' ";
 $queryhistory = mysqli_query($con, $sqlhistory);
 $status = mysqli_fetch_assoc($queryhistory);
+if ($typeexam == 'pre') {
+    $nametype = "แบบทดสอบก่อนเเรียน";
+} else if ($typeexam == 'post') {
+    $nametype = "แบบทดสอบหลังเเรียน";
+    if ($status['type'] != 'post') {
+        $statuserrorspage = 100;
+        include('../errorpage/errorpage.php');
+        exit();
+    }
+} else {
+    $statuserrorspage = 200;
+    include('../errorpage/errorpage.php');
+    exit();
+}
 
 
 ?>
@@ -53,7 +86,7 @@ $status = mysqli_fetch_assoc($queryhistory);
 <html>
 
 <head>
-    <title>test</title>
+    <title><?php echo $nametype; ?></title>
     <?php include '../include/header.php'; ?>
 </head>
 
@@ -65,9 +98,15 @@ $status = mysqli_fetch_assoc($queryhistory);
         <h1> Result </h1>
         <p> Your Score : <?php echo $status['score']; ?> / <?php echo $status['total']; ?></p>
         <p> Wrong : <?php echo $status['wrong']; ?> / <?php echo $status['total']; ?></p>
-        
-<?php    
+        <a href="../lesson.php?l_id=<?php echo $lesson_id; ?>">เข้าสู่บทเรียน</a>
+
+        <?php
         exit();
+    } else if ($status['status'] == no) {
+        $_SESSION['page'] = $status['present'];
+    } else {
+        $page = 1;
+        $_SESSION['page'] = $page;
     }
     if (isset($_SESSION['page'])) {
         $page = $_SESSION['page'];
@@ -81,7 +120,7 @@ $status = mysqli_fetch_assoc($queryhistory);
         exit();
     }
     ?>
-    <h1>แบบทดสอบ <?php echo $data_lesson['lesson_name']; ?>  </h1>
+    <h1>แบบทดสอบ <?php echo $data_lesson['lesson_name']; ?> </h1>
     <form method="POST" enctype="multipart/form-data" name="add_name" id="add_name">
         <?php
         $start_from = ($page - 1);
@@ -138,7 +177,7 @@ $status = mysqli_fetch_assoc($queryhistory);
                             lessonid: lesson_id,
                             pageu: page,
                             totaltest: total,
-                            type : typeexam
+                            type: typeexam
                         },
                         success: function(data) {
 

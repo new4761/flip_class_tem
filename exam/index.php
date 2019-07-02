@@ -49,7 +49,7 @@ if (isset($_GET['logout'])) {
     if ($row_lesson > 0) {
         while ($data_lesson = mysqli_fetch_assoc($lesson)) { ?>
             <?php
-            if ($row_loginmember['m_level'] != $data_lesson['lesson_level']) { ?>
+            if ($row_loginmember['m_level'] < $data_lesson['lesson_level']) { ?>
                 <a href="" class="isDisabled">
                     <p>ชื่อบทเรียน : <?php echo $data_lesson['lesson_name']; ?></p>
                 </a>

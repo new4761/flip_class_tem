@@ -1,11 +1,9 @@
 <?php
-include '../include/session.php';
+include '../include/session.php'; // adminonly
 if (isset($_POST['submit'])) {
     $header = mysqli_escape_string($con, $_POST['topicname']);
     $descript = mysqli_escape_string($con, $_POST['descript']);
-    $lessonlevel = mysqli_escape_string($con, $_POST['lessonlevel']);
-
-
+    $postby = mysqli_escape_string($con,$row_loginadmin['admin_username']);
     if (empty($header)) {
         array_push($errors, "-header is required");
     }
@@ -13,10 +11,10 @@ if (isset($_POST['submit'])) {
         array_push($errors, "-descript is required");
     }
     if (count($errors) == 0) {
-        $query = "INSERT INTO lesson (lesson_name,lesson_level,lesson_content) VALUES ('$header','$lessonlevel','$descript')";
+        $query = "INSERT INTO announcement (a_head,a_content,a_postby) VALUES ('$header','$descript','$postby')";
         if (mysqli_query($con, $query)) { ?>
         <script>alert("Success");</script>
-        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=../exam.php">
+        <META HTTP-EQUIV="Refresh" CONTENT="0;URL=../index.php">
         <?php       
         }
     }
@@ -39,12 +37,8 @@ if (isset($_POST['submit'])) {
 ?>
     <form method="POST" enctype="multipart/form-data">
         <div>
-            <label>ชื่อบทเรียน: </label>
+            <label>หัวข้อบทความ : </label>
             <input type="text" name="topicname">
-        </div>
-        <div>
-            <label>ระดับของบทเรียน: </label>
-            <input type="text" name="lessonlevel">
         </div>
         <div>
             <label>เนื้อหา: </label>
@@ -85,7 +79,7 @@ if (isset($_POST['submit'])) {
                 });
             </script>
         </div>
-        <button type="submit" name="submit">Add lesson</button>
+        <button type="submit" name="submit"> POST </button>
     </form>
 
 </body>

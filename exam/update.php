@@ -34,11 +34,11 @@ if (!($row_history)) {
     } else {
         echo "failed";
     }
-    $sqlhist = "UPDATE history SET score = score +'".$score."' , wrong = wrong + '".$wrong."' WHERE m_id = '$memberid' ";
+    $sqlhist = "UPDATE history SET score = score +'".$score."' , wrong = wrong + '".$wrong."' ,present = " . $_SESSION['page'] ." WHERE m_id = '$memberid' and type = '$typeexam'";
     $querysqlhis = mysqli_query($con, $sqlhist);
 }
 else {
-    $sqlhist = "UPDATE history SET score = score +'".$score."' , wrong = wrong + '".$wrong."' WHERE m_id = '$memberid' ";
+    $sqlhist = "UPDATE history SET score = score +'".$score."' , wrong = wrong + '".$wrong."' , present = " . $_SESSION['page'] ." WHERE m_id = '$memberid' and type = '$typeexam' ";
     $querysqlhis = mysqli_query($con, $sqlhist);
     if ($querysqlhis) {
         echo "pass";

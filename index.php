@@ -82,7 +82,7 @@ if (isset($_SESSION['m_id'])) {
             <!-- forom sidebar.html -->
             <sidebar-item-element>
                 <?php if (isset($_SESSION['m_id'])) { ?>
-                    HELLO  <?php echo $row_loginmember['m_username']; ?> <br>
+                    HELLO <?php echo $row_loginmember['m_username']; ?> <br>
                     <a href="logout.php"> logout </a>
                     <a href="exam/"> ดูบทเรียน </a>
                 <?php } else if (isset($_SESSION['admin_id'])) { ?>
@@ -105,7 +105,21 @@ if (isset($_SESSION['m_id'])) {
             <div class="main-content-inner">
 
                 <!-- from indexContent.html-->
-                <indexContent-element></indexContent-element>
+                <indexContent-element>
+                    <h3>Announcement </h3>
+                    <?php
+                    $sqla = "SELECT * FROM announcement ORDER BY a_id ASC";
+                    $query_sqla = mysqli_query($con, $sqla);
+                    $row_a = mysqli_num_rows($query_sqla);
+                    if ($row_a > 0) {
+                        while ($data_a = mysqli_fetch_assoc($query_sqla)) { ?>
+                        <a href="readtopic.php?a_id=<?php echo $data_a['a_id']; ?>"><h2><?php echo $data_a['a_head']; ?> </h2></a>
+                        <p> <?php echo $data_a['a_content']; ?> </p>
+                        <p>โพสวันที่ : <?php echo $data_a['time']; ?> โพสโดย : <?php echo $data_a['a_postby']; ?> </p>
+                        <?php                        }
+                    }
+                    ?>
+                </indexContent-element>
             </div>
 
 
