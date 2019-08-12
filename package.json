@@ -1,0 +1,37 @@
+{
+  "name": "vuesax-nuxt",
+  "version": "1.0.0",
+  "description": "My world-class Nuxt.js project",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@inkline/inkline": "^1.15.4",
+    "@nuxtjs/pwa": "^3.0.0-beta.16",
+    "element-ui": "^2.11.1",
+    "eslint": "^6.1.0",
+    "eslint-loader": "^2.2.1",
+    "hooper": "^0.3.4",
+    "jquery": "^3.4.1",
+    "material-icons": "^0.3.1",
+    "nuxt": "^2.8.1",
+    "nuxt-element-ui": "^1.0.10",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-vue": "^0.8.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-burger-menu": "^2.0.2",
+    "vue-concise-slider": "^3.4.2",
+    "vue-scrollactive": "^0.8.0",
+    "vue-sidebar-menu": "^4.0.0",
+    "vue-slick": "^1.1.15",
+    "vuedarkmode": "^0.3.23",
+    "vuesax": "^3.9.0"
+  },
+  "devDependencies": {}
+}
