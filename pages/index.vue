@@ -1,7 +1,5 @@
 <template>
   <div>
-     <sui-button>Click Here</sui-button>
-    <sui-button content="Content as a prop" />
     <Carouesl />
     <vs-divider/>
     <h3>New</h3>
