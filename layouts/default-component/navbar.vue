@@ -1,23 +1,9 @@
 <template>
-  <div>
-    <vs-navbar v-model="activeItem" class="nabarx">
-      <div slot="title">
-        <vs-navbar-title>
-          Hello world
-        </vs-navbar-title>
-      </div>
-      <vs-navbar-item index="0">
-       <nuxt-link to="/">main</nuxt-link>
-      </vs-navbar-item>
-      <vs-navbar-item index="1">
-         <nuxt-link to="/lesson">test</nuxt-link>
-      </vs-navbar-item>
-      <vs-navbar-item index="2">
-        <a href="#">Update</a>
-      </vs-navbar-item>
-      <vs-input icon="search" placeholder="Search" v-model="search"/>
-    </vs-navbar>
-  </div>
+  <sui-menu class="mainNavbar" :widths="3">
+    <sui-menu-item>Editorials</sui-menu-item>
+    <sui-menu-item>Reviews</sui-menu-item>
+    <sui-menu-item active>Upcoming Events</sui-menu-item>
+  </sui-menu>
 </template>
 <script>
 export default {
@@ -26,4 +12,9 @@ export default {
     search: ''
   })
 }
-</script>
+</script> 
+
+
+<style >
+.mainNavbar{height: 60px; color:#fff;   line-height: 60px; }
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <el-carousel :interval="5000" arrow="always">
+  <el-carousel :interval="5000" arrow="always"  height="400px" >
     <el-carousel-item v-for="item in 4" :key="item">
      <img src="https://dummyimage.com/800x400/000/fff" class="image">
        <div class="bottom-left">Bottom Left</div>
