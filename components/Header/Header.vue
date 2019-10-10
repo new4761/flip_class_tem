@@ -3,7 +3,7 @@
     
     <b-link class="navbar-brand" to="#"></b-link>
 
-    <b-navbar-nav class="ml-auto">
+    <b-navbar-nav>
       <b-nav-item class="d-md-down-none">
         <HButton />
       </b-nav-item>

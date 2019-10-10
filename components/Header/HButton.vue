@@ -1,5 +1,5 @@
 <template><div>
-    <b-button  v-for="data in ButtonData" :key="data" variant="primary" class="mr-2">
+    <b-button  v-for="(data,idx) in ButtonData" :key="idx" variant="primary" class="Hbutton m-1">
         <i :class="data.icon">
             
             </i>&nbsp; {{ data.name }}
@@ -8,15 +8,22 @@
           </div>
 </template>
 <script>
+
 export default {
     data:()=>({
 ButtonData:[
-    {icon:"",
-     name:"test1"},
+    {
+     icon:"icon-home",
+     name:"Home"},
 
-    {icon:"",
-     name:"test2"},]
+    {
+     icon:"icon-question",
+     name:"Help"},]
 
     })
 }
 </script>
+
+<style>
+@import './css/HeaderStyle.css';
+</style>
