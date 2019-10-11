@@ -1,11 +1,11 @@
 <template>
 
-      <b-nav-item-dropdown right>
+      <b-nav-item-dropdown right no-caret>
 
         <template slot="button-content">
-            <b-button variant="primary" class="Hbutton m-1">
-            <i :class="icon-user">username</i>&nbsp; 
-            </b-button>
+            <v-btn class="DHbutton">
+            <i class="icon-user"></i>&nbsp; username
+            </v-btn>
         </template>
 
         <b-dropdown-header tag="div" class="text-center"><strong>Study</strong></b-dropdown-header>

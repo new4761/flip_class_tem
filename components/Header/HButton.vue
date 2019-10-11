@@ -1,9 +1,8 @@
 <template>
 <b-nav-item>
+    
     <b-button  v-for="(data,idx) in ButtonData" :key="idx" variant="primary" class="Hbutton m-1">
-        <i :class="data.icon">
-            
-            </i>&nbsp; {{ data.name }}
+        <i :class="data.icon"> </i>&nbsp; {{ data.name }}
     </b-button>
 
 </b-nav-item>

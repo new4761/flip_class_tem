@@ -8,6 +8,13 @@
 
 }
 
+.DHbutton {
+	cursor:pointer;
+    font-size:20px;
+    color: white;
+
+}
+
   
 .Pdropdown{
     right: 10px;

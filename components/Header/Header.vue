@@ -1,22 +1,24 @@
 <template>
 <header class="animated fadeIn">
+ 
   <b-navbar toggleable="md" type="dark" variant="info">
   
   <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-navbar-brand class="flipname mr-auto" href="#"><h2>Flip classroom</h2></b-navbar-brand>
+    <b-navbar-brand class="mr-auto" href="#"><h2>Flip classroom</h2></b-navbar-brand>
 
     
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav class="ml-auto">
-          <HButton  class="Pbutton"/>
-          <HeaderDropdown  v-if = "login ==='true'"/>
+          <HButton/>
       </b-navbar-nav>
     </b-collapse>
 
-          
+    <b-nav>
+    <HeaderDropdown  v-if = "login ==='true'"/>
+    </b-nav>
+
 
   </b-navbar>
-
 </header>
   
 </template>
