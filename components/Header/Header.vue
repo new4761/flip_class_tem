@@ -1,20 +1,30 @@
 <template>
-  <header class="app-header navbar">
-    
-    <b-link class="navbar-brand" to="#"></b-link>
+<header class="animated fadeIn">
+  <b-navbar toggleable="md" type="dark" variant="info">
+  
+  <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
+    <b-navbar-brand class="flipname mr-auto" href="#"><h2>Flip classroom</h2></b-navbar-brand>
 
-    <b-navbar-nav>
-      <b-nav-item class="d-md-down-none">
-        <HButton />
-      </b-nav-item>
-      <HeaderDropdown />
-    </b-navbar-nav>
-  </header>
+    
+    <b-collapse is-nav id="nav_collapse">
+      <b-navbar-nav class="ml-auto">
+          <HButton  class="Pbutton"/>
+          <HeaderDropdown  v-if = "login ==='true'"/>
+      </b-navbar-nav>
+    </b-collapse>
+
+          
+
+  </b-navbar>
+
+</header>
+  
 </template>
 
 <script>
 import HeaderDropdown from "./HeaderDropdown.vue";
 import HButton from "./HButton.vue";
+
 
 export default {
   name: "c-header",
@@ -22,6 +32,23 @@ export default {
     HeaderDropdown,
     HButton
   },
-  methods: {}
+
+  data() {
+    return {
+      login: "true"
+    };
+  },
+
+  methods: {
+ 
+  }
+
+  
 };
+
+
 </script>
+
+<style>
+@import './css/HeaderStyle.css';
+</style>

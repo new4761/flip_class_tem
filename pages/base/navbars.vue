@@ -5,7 +5,7 @@
         header-tag="header"
         footer-tag="footer">
         <div slot="header">
-          <i class="fa fa-align-justify"></i> <strong>Bootstrap Navbar</strong>
+          <i class="fa fa-align-justify"></i> <strong>Bootstrap</strong>
           <div class="card-actions">
             <a href="https://bootstrap-vue.js.org/docs/components/navbar" target="_blank">
               <small class="text-muted">docs</small>

@@ -1,5 +1,17 @@
+
+
 .Hbutton {
-    width: 100px;
-    padding: 5px 0px;
-    
+    border-radius:28px;
+	cursor:pointer;
+	font-size:17px;
+    padding:10px 40px;
+
 }
+
+  
+.Pdropdown{
+    right: 10px;
+    }
+
+    
+  

@@ -1,7 +1,9 @@
 <template>
   <footer class="app-footer">
-    <span><a href="http://coreui.io">CoreUI</a> &copy; 2018 creativeLabs.</span>
-    <span class="ml-auto">Powered by <a href="http://coreui.io">CoreUI</a></span>
+  <div class="text-center">
+    <span>Copyright&copy; 2019 By Nmk team & Comsci ez team.</span>
+  </div>
+    
   </footer>
 </template>
 <script>
