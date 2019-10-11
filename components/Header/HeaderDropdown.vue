@@ -1,24 +1,23 @@
 <template>
 
       <b-nav-item-dropdown right no-caret>
-
         <template slot="button-content">
             <v-btn class="DHbutton">
-            <i class="icon-user"></i>&nbsp; username
+            <i class="icon-user"></i>&nbsp; ชื่อผู้ใช้
             </v-btn>
         </template>
 
-        <b-dropdown-header tag="div" class="text-center"><strong>Study</strong></b-dropdown-header>
-        <b-dropdown-item><i class="fa fa-certificate"></i> Exercise<b-badge variant="danger">{{itemsCount}}</b-badge></b-dropdown-item>
-        <b-dropdown-item><i class="fa fa-book"></i> Lesson<b-badge variant="danger">{{itemsCount}}</b-badge></b-dropdown-item>
+        <b-dropdown-header tag="div" class="text-center"><strong>เรียน</strong></b-dropdown-header>
+        <b-dropdown-item><i class="fa fa-certificate"></i> แบบฝึกหัด<b-badge variant="danger">{{itemsCount}}</b-badge></b-dropdown-item>
+        <b-dropdown-item><i class="fa fa-book"></i> บทเรียน<b-badge variant="danger">{{itemsCount}}</b-badge></b-dropdown-item>
        
         
-        <b-dropdown-header tag="div" class="text-center"><strong>Account</strong></b-dropdown-header>
-        <b-dropdown-item><i class="fa fa-user"></i> Profile</b-dropdown-item>
-        <b-dropdown-item><i class="fa fa-history"></i> Activity</b-dropdown-item>
+        <b-dropdown-header tag="div" class="text-center"><strong>บัญชีผู้ใช้</strong></b-dropdown-header>
+        <b-dropdown-item><i class="fa fa-user"></i> ข้อมูลส่วนตัว</b-dropdown-item>
+        <b-dropdown-item><i class="fa fa-history"></i> กิจกรรม</b-dropdown-item>
        
         <b-dropdown-divider></b-dropdown-divider>
-        <b-dropdown-item @click="logout"><i class="fa fa-sign-out"></i> Logout</b-dropdown-item>
+        <b-dropdown-item @click="logout"><i class="fa fa-sign-out"></i> ออกจากระบบ</b-dropdown-item>
       </b-nav-item-dropdown>
 </template>
 

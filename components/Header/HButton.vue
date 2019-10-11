@@ -1,7 +1,7 @@
 <template>
 <b-nav-item>
     
-    <b-button  v-for="(data,idx) in ButtonData" :key="idx" variant="primary" class="Hbutton m-1">
+    <b-button  v-for="(data,idx) in ButtonData" :key="idx" variant="primary" class="Hbutton mx-3 my-0">
         <i :class="data.icon"> </i>&nbsp; {{ data.name }}
     </b-button>
 
@@ -14,11 +14,19 @@ export default {
 ButtonData:[
     {
      icon:"icon-home",
-     name:"Home"},
+     name:"หน้าหลัก"},
 
     {
-     icon:"icon-question",
-     name:"Help"},]
+     icon:"icon-bell",
+     name:"ประกาศ"},
+
+    {
+     icon:"icon-notebook",
+     name:"บทเรียน"},
+
+    {
+     icon:"icon-globe-alt",
+     name:"เเหล่งเรียนรู้ภายนอก"},]
 
     })
 }

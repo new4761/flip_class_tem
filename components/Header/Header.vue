@@ -1,58 +1,44 @@
 <template>
 <header class="animated fadeIn">
+
+<b-navbar class="nav justify-content-center fixed-bottom d-lg-none navbar-light bg-light"  >
+   <HButtombar/>
+</b-navbar>
  
-  <b-navbar toggleable="lg" type="dark" variant="info">
-  
-  <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-navbar-brand class="mr-auto" href="#"><h2>Flip classroom</h2></b-navbar-brand>
-  
-    <b-nav>
-    <HeaderDropdown class="d-lg-none" v-if = "login ==='true'"/>
-    </b-nav>
+<b-navbar  type="dark" variant="info">
+    <b-navbar-brand class="mr-auto" href="#"><h> Flip classroom</h></b-navbar-brand>
 
-    
-    <b-collapse is-nav id="nav_collapse">
-      <b-navbar-nav class="ml-auto">
-          <HButton/>
-      </b-navbar-nav>
-    </b-collapse>
+  <b-nav>
+    <HeaderDropdown class="ml-auto"/>
+  </b-nav>
 
-    <b-nav>
-    <HeaderDropdown class="d-md-down-none"  v-if = "login ==='true'"/>
-    </b-nav>
+</b-navbar>
 
+<b-navbar class="nav justify-content-center d-md-down-none" >
+  <b-navbar-nav>
+    <HButton/>
+  </b-navbar-nav>
+</b-navbar>
 
-  </b-navbar>
 </header>
   
 </template>
-
 <script>
+
+import HButtombar from "./HButtombar.vue";
 import HeaderDropdown from "./HeaderDropdown.vue";
 import HButton from "./HButton.vue";
 
 
 export default {
-  name: "c-header",
   components: {
     HeaderDropdown,
-    HButton
+    HButton,
+    HButtombar
   },
-
-  data() {
-    return {
-      login: "true"
-    };
-  },
-
   methods: {
- 
   }
-
-  
 };
-
-
 </script>
 
 <style>
