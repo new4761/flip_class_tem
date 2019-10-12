@@ -1,0 +1,38 @@
+.tag {
+    border-radius:5px;
+	cursor:pointer;
+	font-size:15px;
+    padding:5px 30px;
+}
+
+.line {
+    padding:1px;
+    margin:0px 200px;
+    background-color: rgb(44, 44, 44);
+}
+
+
+
+.tag:focus {
+    background: rgb(131, 131, 131);
+  }
+
+.cardbutton {
+    border-radius:10px;
+	cursor:pointer;
+	font-size:12px;
+    padding:0px 30px;
+    margin:0px 0px;
+}
+.input-group{
+    width: 300px;
+   
+}
+
+.form-control{
+    border-radius:10px;
+}
+
+.search{
+    border-radius:10px;
+}

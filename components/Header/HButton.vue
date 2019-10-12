@@ -1,11 +1,11 @@
 <template>
-<b-nav-item>
+<div>
     
     <b-button  v-for="(data,idx) in ButtonData" :key="idx" variant="primary" class="Hbutton mx-3 my-0">
         <i :class="data.icon"> </i>&nbsp; {{ data.name }}
     </b-button>
 
-</b-nav-item>
+</div>
 </template>
 <script>
 
