@@ -42,6 +42,7 @@ module.exports = {
    * Import CSS
    */
   css: [
+    '~/assets/css/main.css',
     /* Import Font Awesome Icons Set */
     '~/node_modules/flag-icon-css/css/flag-icon.min.css',
     /* Import Font Awesome Icons Set */
@@ -51,20 +52,22 @@ module.exports = {
     /* Import Bootstrap Vue Styles */
     '~/node_modules/bootstrap-vue/dist/bootstrap-vue.css',
     /* Import Core SCSS */
-    { src: '~/assets/scss/style.scss', lang: 'scss' }
+    { src: '~/assets/scss/style.scss', lang: 'scss' },
+
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    // Doc: https://material.io/resources/icons/?style=baseline add by new4761
+  'nuxt-material-design-icons',
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://github.com/bootstrap-vue/bootstrap-vue
@@ -81,7 +84,7 @@ module.exports = {
   ** Style resources configuration
   */
   styleResources: {
-    scss: './assets/scss/style.scss'
+    scss: './assets/scss/style.scss',
   },
 
   /*
