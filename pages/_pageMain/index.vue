@@ -1,36 +1,35 @@
 <template>
 <b-container class ="p-5">
 
-
     <div>
-        <h5><strong> ประกาศแจ้งเตือน</strong></h5>
+        <h1><strong>ประกาศแจ้งเตือน</strong></h1>
     </div>
 
-    <b-row class = "justify-content-center pt-4">
-        <p><strong>toggle1  </strong> </p>
-        <p><strong>toggle1  </strong> </p>
-        <p><strong>toggle1  </strong> </p>
+    <b-row class = "justify-content-center pt-4"> 
+        <Notitag/>
     </b-row>
 
-    <b-row class = "pt-4">
+    <b-row class = "pt-4"> 
+
+        <Sortdropdown/> 
+
         <b-col>
-            sort
-        </b-col>
-        <b-col>
-             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+             <div class="input-group ml-auto">
+                <input type="text" class="form-control" placeholder="ค้นหา..." aria-label="ค้นหา...">
                     <span class="input-group-btn">
-                        <button class="btn btn-secondary" type="button">Go!</button>
+                        <button class="btn btn-secondary" type="button">
+                            <i class="icon-magnifier"></i>
+                        </button>
                     </span>
             </div>
         </b-col>
     </b-row>
 
-    <Noticard/>
+    <Noticard v-for="index in 10" :key="index"/> <!-- fot testing -->
+    <pagebar/>
+
 
            
-
-  
 </b-container>
 
 
@@ -38,10 +37,16 @@
 
 <script>
 import Noticard from "./component/Noticard.vue";
+import Notitag from "./component/Notitag.vue";
+import Pagebar from "./component/Pagebar.vue";
+import Sortdropdown from "./component/Sortdropdown.vue";
 
 export default {
     components: {
-        Noticard
+        Noticard,
+        Notitag,
+        Pagebar,
+        Sortdropdown
   }
   
 }
@@ -49,9 +54,6 @@ export default {
 
 
 <style >
-html, body {
-    height:100%;
-}
 
 
 </style>

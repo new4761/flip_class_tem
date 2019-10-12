@@ -1,30 +1,61 @@
 <template>
 
-    <b-row  class = "justify-content-center  pt-4 ">
-        <b-card v-for="index in 5" :key="index" class="border-0 w-100">
+    <b-row class = "justify-content-center  pt-4 ">
+        <b-card v-for="(data,index) in CardData" :key="index" class="border-0 w-100">
             <b-row class = "justify-content-center  px-3">
                     <b-col class="col-4" >
-                         <img class="card-img" src="~static/img/500x500.jpg">
+                         <img class="card-img" src="~static/img/500x500.jpg"> <!-- why it not showing when use data.image -->
                     </b-col>
                     <b-col  class = "px-3">
                         <b-row class = "px-3">
-                            <a href="#" class="btn btn-primary">Button</a>
-                            <small class="text-muted">Last updated 3 mins ago </small>
+                            <h4>
+                                <b-badge :variant= data.tagtype>{{data.tagname}}</b-badge> 
+                                {{data.header}} </h4> 
                         </b-row>
                         <b-row class ="px-3">
-                        <small class="text-muted">time date</small>
-                        <small>by <i class="fa fa-user"></i>  </small>
-                         <br>text
+                        <small class="text-muted">{{data.time}} {{data.date}}</small>
+                        <small>&nbsp; โดย <i class="fa fa-user"></i> {{data.username}}  </small>
+                         <br>{{data.content}}
                         </b-row>
-                            
-                            <b-row class = "px-3">
-                                <small class="text-muted">Last updated 3 mins ago </small>
-                                <a href="#" class="btn btn-primary ml-auto small">Button</a>
-                            </b-row>     
+
                         </b-col>
                 </b-row>
+                    <b-row> 
+                    <b-col class="col-4" ></b-col>
+                      <b-col>                        
+                            <b-row class = "d-flex align-items-center px-3">
+                                <small class="text-muted"><i class="fa fa-eye"></i> &nbsp; {{data.view}} </small>
+                                <a :href= data.link class="cardbutton btn btn-primary ml-auto">
+                                    รายละเอียดเพิ่มเติม</a>
+                            </b-row>
+                        </b-col>
+                    </b-row>
         </b-card>
+        
+
     </b-row>
 
 
 </template>
+
+<script>
+
+export default {
+    data:()=>({
+CardData:[
+    {
+     tagtype:"warning",
+     tagname:"ชื่อtag",
+     image:"~static/img/500x500.jpg", //help
+     header:"นี่คือหัวเรื่อง",
+     time:"99.99",
+     date:"99/99/9999",
+     username:"username",
+     content:"นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์",
+     view:"3000",
+     link:"#"},
+]
+
+    })
+}
+</script>
