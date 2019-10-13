@@ -10,23 +10,8 @@
 <script>
 
 export default {
+    props:['ButtonData'],
     data:()=>({
-ButtonData:[
-    {
-     icon:"icon-home",
-     name:"หน้าหลัก"},
-
-    {
-     icon:"icon-bell",
-     name:"ประกาศ"},
-
-    {
-     icon:"icon-notebook",
-     name:"บทเรียน"},
-
-    {
-     icon:"icon-globe-alt",
-     name:"เเหล่งเรียนรู้ภายนอก"},]
 
     })
 }

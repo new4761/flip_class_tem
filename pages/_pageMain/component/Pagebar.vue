@@ -5,9 +5,9 @@
                 <li class="page-item disabled">
                 <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
                 </li>
-                    <li v-for="index in item " :key="index" class="page-item"><a class="page-link" href="#"> {{index}}</a></li>
+                    <li v-for="(data,idx) in PageBarData" :key="idx" class="page-item"><a class="page-link" href="#"> {{idx}}</a></li>
                     <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
+                    <a class="page-link" href="data.link">Next</a>
                 </li>
             </ul>
         </nav>
@@ -16,9 +16,9 @@
 
 <script>
 export default {
-        data:()=>{
-        return { item: 5 }
-    }
+     props:['PageBarData'],
+        data:()=>({
+    })
 }
 
 </script>

@@ -12,22 +12,8 @@
 <script>
 
 export default {
+    props:['TagData'],
     data:()=>({
-TagData:[
-    {  
-     name:"tag1",
-     type:"success"
-     },
-
-    {
-     name:"tag2",
-     type:"danger"
-     },
-
-    {
-     name:"tag3",
-     type:"warning"
-     },]
 
     })
 }
