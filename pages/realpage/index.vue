@@ -72,7 +72,7 @@
 </template>
 
 <script>
-import Carouesl from "./compoents/Carousel";
+import Carouesl from "./compoents/indexCarousel";
 
 import NewsBox from "./compoents/NewsBox";
 import Cardlesson from "~/components/lessonCard/LessonCard";
