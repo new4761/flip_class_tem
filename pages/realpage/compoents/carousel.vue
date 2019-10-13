@@ -1,15 +1,16 @@
 <template>
   <b-carousel 
-    style="text-shadow: 1px 1px 2px #333;"
+    style="text-shadow: 1px 1px 2px #333; min-height:200; "
     controls
     indicators
     background="#ababab"
     :interval="4000"
-    img-width="500"
-    img-height="230"
+    img-width="550"
+    
     v-model="slide"
     @sliding-start="onSlideStart"
     @sliding-end="onSlideEnd"
+    
   >
     <!-- Slides with custom text -->
     <b-carousel-slide v-for="(item ,index) in Data" :key="index" :img-src="item.src">
@@ -28,17 +29,17 @@ export default {
       sliding: null,
       Data: [
         {
-          src: "https://via.placeholder.com/500x230",
+          src: "https://via.placeholder.com/550x200",
           title: "Hello world!",
           des: "การเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้น  "
         },
         {
-          src: "https://via.placeholder.com/500x230",
+          src: "https://via.placeholder.com/550x200",
           title: "Hello world!2",
           des: "การเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้น  "
         },
         {
-          src: "https://via.placeholder.com/500x230",
+          src: "https://via.placeholder.com/550x200",
           title: "Hello world!3",
           des: "การเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้นการเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้นการเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้น  "
         }

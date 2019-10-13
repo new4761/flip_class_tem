@@ -60,6 +60,12 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // https://baianat.github.io/hooper/ doc
+    '~/plugins/hooper',
+    // https://vuetifyjs.com/en/getting-started/quick-start doc
+    '~/plugins/vuetify',
+
+
   ],
 
   /*
