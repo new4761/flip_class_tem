@@ -1,3 +1,5 @@
+
+
 const changeLoaderOptions = loaders => {
   if (loaders) {
     for (const loader of loaders) {
@@ -11,6 +13,7 @@ const changeLoaderOptions = loaders => {
 }
 
 module.exports = {
+
   /*
   ** Headers of the page
   */
@@ -25,13 +28,17 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-
+  //experr js api
+  serverMiddleware: [
+    { path: '/api', handler: '~/api/mockupDB' }
+  ],
   /*
   ** Set the link active classes
   */
   router: {
+    // middleware: ['auth'],
     linkActiveClass: 'active open'
-  },  
+  },
 
   /*
   ** Customize the progress bar color
@@ -68,12 +75,13 @@ module.exports = {
 
   ],
 
+
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://material.io/resources/icons/?style=baseline add by new4761
-  'nuxt-material-design-icons',
+    'nuxt-material-design-icons',
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
     // Doc: https://github.com/bootstrap-vue/bootstrap-vue
@@ -100,7 +108,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -110,9 +118,8 @@ module.exports = {
         })
 
         const vueLoader = config.module.rules.find(
-          ({loader}) => loader === 'vue-loader')
-        const { options: {loaders} } = vueLoader || { options: {} }
-        
+          ({ loader }) => loader === 'vue-loader')
+        const { options: { loaders } } = vueLoader || { options: {} }
         if (loaders) {
           for (const loader of Object.values(loaders)) {
             changeLoaderOptions(Array.isArray(loader) ? loader : [loader])

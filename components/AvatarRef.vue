@@ -5,7 +5,7 @@
     <img :src="CreaterData.src" :alt="CreaterData.name" />
     </v-avatar>
 
-    <strong class="text-dark"> {{ CreaterData.name }}</strong> 
+    <strong class="text-dark"> {{ CreaterData.name }}</strong>
   </p>
 </template>
 <script>

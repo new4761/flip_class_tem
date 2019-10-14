@@ -1,6 +1,7 @@
 {
     "lessonData": [
         {
+            "lastUpdate": "14/7/2542 10:24",
             "id": 1,
             "imgSrc": "https://placekitten.com/380/200",
             "typeVariant": "primary",
@@ -27,7 +28,7 @@
                 "src": "https://placekitten.com/380/200",
                 "name": "GodNewInwZa"
             },
-            "progress": 30 
+            "progress": 30
         }
     ]
 }
