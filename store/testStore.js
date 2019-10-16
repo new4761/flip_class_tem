@@ -8,7 +8,14 @@ export const mutations = {
     },
 }
 export const getters = {
-    get (state) {
+    testget (state) {
       return state.lessonData
     }
   }
+
+//   export const actions = {
+//     async GET_STARS ({ commit }) {
+//         const { data } = await axios.get('http://my-api/stars')
+//         commit('SET_STARS', data)
+//       }
+//   }

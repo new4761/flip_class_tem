@@ -11,7 +11,7 @@
 // }
 // context.store.commit('testStore/set', test)
 
-export default function ({ route, store, $axios }) {
+export default async function ({ store, $axios }) {
 
   return $axios.$get('/api')
     .then((response) => {

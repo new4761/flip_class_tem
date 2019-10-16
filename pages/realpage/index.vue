@@ -22,7 +22,7 @@
             <i class="fa fa-arrow-circle-right fa-lg"></i>
           </b-button>
           <br />
-          <Cardlesson class="mx-auto mt-2" :cardData="lessonData" />
+          <Cardlesson class="mx-auto mt-2" :cardData="lessonData.lessonData" />
         </div>
       </b-col>
     </b-row>
@@ -44,7 +44,7 @@
         <!-- <v-slide-group class="pa-4" prev-icon="mdi-minus" next-icon="mdi-plus" show-arrows> -->
         <v-slide-group class="pa-4" show-arrows>
           <v-slide-item v-for="n in 15" :key="n" class="m-4">
-            <Cardlesson class="mt-2;max-width:220px" :cardData="lessonData" />
+            <Cardlesson class="mt-2;max-width:220px" :cardData="lessonData.lessonData" />
           </v-slide-item>
         </v-slide-group>
       </b-col>
@@ -54,7 +54,7 @@
         <!-- <v-slide-group class="pa-4" prev-icon="mdi-minus" next-icon="mdi-plus" show-arrows> -->
         <v-slide-group class="pa-4" show-arrows>
           <v-slide-item v-for="n in 15" :key="n" class="m-4">
-            <Cardlesson class="mt-2;max-width:220px" :cardData="lessonData" />
+            <Cardlesson class="mt-2;max-width:220px" :cardData="lessonData.lessonData" />
           </v-slide-item>
         </v-slide-group>
       </b-col>
@@ -76,15 +76,20 @@ import Carouesl from "./compoents/indexCarousel";
 import NewsBox from "./compoents/NewsBox";
 import Cardlesson from "~/components/lessonCard/LessonCard";
 import { mapGetters } from "vuex";
+import { mapState } from "vuex";
 export default {
   components: {
     Carouesl,
     Cardlesson,
     NewsBox
   },
-  computed: mapGetters({
-    lessonData: "testStore/get"
+  // computed: mapGetters({
+  //     articles: "testStore/testget"
+  //   }),
+  computed: mapState({
+    lessonData: state => state.testStore.lessonData
   }),
+
   middleware: "testpage",
   // mounted: {
   //   lessonData: function() {

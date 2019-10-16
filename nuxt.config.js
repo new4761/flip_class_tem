@@ -72,6 +72,8 @@ module.exports = {
     // https://vuetifyjs.com/en/getting-started/quick-start doc
     '~/plugins/vuetify',
 
+    '~/plugins/vuex-orm',
+    // '~/plugins/graphql'
 
   ],
 
@@ -104,6 +106,12 @@ module.exports = {
   /*
   ** Build configuration
   */
+  buildModules: [
+    ['@nuxt/typescript-build', {
+      typeCheck: true,
+      ignoreNotFoundWarnings: true
+    }]
+  ],
   build: {
     /*
     ** You can extend webpack config here
