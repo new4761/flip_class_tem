@@ -1,32 +1,17 @@
 <template>
-<b-nav-item>
+<div>
     
     <b-button  v-for="(data,idx) in ButtonData" :key="idx" variant="primary" class="Hbutton mx-3 my-0">
         <i :class="data.icon"> </i>&nbsp; {{ data.name }}
     </b-button>
 
-</b-nav-item>
+</div>
 </template>
 <script>
 
 export default {
+    props:['ButtonData'],
     data:()=>({
-ButtonData:[
-    {
-     icon:"icon-home",
-     name:"หน้าหลัก"},
-
-    {
-     icon:"icon-bell",
-     name:"ประกาศ"},
-
-    {
-     icon:"icon-notebook",
-     name:"บทเรียน"},
-
-    {
-     icon:"icon-globe-alt",
-     name:"เเหล่งเรียนรู้ภายนอก"},]
 
     })
 }
