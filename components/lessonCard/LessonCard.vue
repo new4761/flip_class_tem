@@ -7,7 +7,7 @@
     class="cardradius align-content-center text-left"
     v-b-modal.lessonModal
   >-->
-  <b-card no-body class="cardradius align-content-center text-left" v-b-modal.lessonModal>
+  <b-card no-body  class="cardradius align-content-center text-left" v-b-modal.lessonModal style="width:240px;">
     <!-- <v-card
           :hover="hover ? 16 : 2"
           class="mx-auto"
@@ -23,25 +23,26 @@
       @mouseleave="expand=false"
       :src="cardData.imgSrc"
       aspect-ratio="2"
-      class="m-2"
+      class="m-1"
       transition="slide-x-transition"
     ></v-img>
 
-    <b-card-body>
-      <b-card-title class="d-flex align-items-start">
-        <b-badge
-          :variant="cardData.typeVariant "
-          class="mr-1 p-2 font-weight-light"
-        >{{ cardData.typeName }}</b-badge>
-        {{cardData.cardTitle}}
-      </b-card-title>
+    <b-card-body class="px-3">
+      <h6 class="align-items-start text-wrap">
+        <b-row no-gutters>
+          <b-col cols="2">
+            <b-badge
+              :variant="cardData.typeVariant "
+              class="font-weight-light"
+            >{{ cardData.typeName }}</b-badge>
+          </b-col >
+          <b-col cols="9">{{cardData.cardTitle}}adasdasdasdasdasdasdqweqweqwdzdxasdasdasdasdsdadz</b-col>
+        </b-row>
+      </h6>
       <div>
-        <b-card-text class="small text-muted">
-          <AvatarRef class="m-1" :CreaterData="cardData.cardCreaterData" />
-          <div class="m-1 text-muted flex-wrap">
-            อัพเดทล่าสุด
-            <strong class="mr-2 text-dark">{{cardData.lastUpdate}}</strong>
-          </div>
+        <b-card-text class="small text-muted pt-1">
+          <AvatarRef class="m-1 small" :CreaterData="cardData.cardCreaterData" />
+          <div class="m-1 pt-1 text-muted flex-wrap small">{{cardData.lastUpdate}}</div>
         </b-card-text>
       </div>
     </b-card-body>
@@ -66,7 +67,7 @@
       >รายละเอียดเพิ่มเติม</b-button>
     </div>-->
 
-    <v-speed-dial
+    <!-- <v-speed-dial
       absolute
       top
       right
@@ -85,30 +86,16 @@
       <v-btn fab green small class="bg-primary text-white">
         <v-icon>chat</v-icon>
       </v-btn>
-      <!-- <v-btn fab  small class="text-warning">
+      <v-btn fab  small class="text-warning">
         <v-icon>mdi-plus</v-icon>
-      </v-btn>-->
+      </v-btn>
       <v-btn fab small color="bg-red text-white">
         <v-icon>mdi-delete</v-icon>
       </v-btn>
-    </v-speed-dial>
-    <div class="d-flex small align-items-center px-3 mb-2 text-muted" sm="12" md="6">
-      <i class="d-inline material-icons">remove_red_eye</i>
-      <small class="d-inline ml-1">{{cardData.cardViewCount}}</small>
-      <i class="d-inline material-icons ml-1">check_box</i>
-      <small class="d-inline ml-1 mr-2">{{cardData.cardDoneCount}}</small>
-      <b-button
-        sm="12"
-        md="6"
-        variant="cyan"
-        class="text-white ml-auto px-lg-2 px-md-0"
-        size="sm"
-        pill
-      >รายละเอียดเพิ่มเติม</b-button>
-    </div>
-    <v-progress-linear height="14" :value="cardData.progress" color="bg-green radiusButton  ">
+    </v-speed-dial> -->
+    <!-- <v-progress-linear height="14" :value="cardData.progress" color="bg-green radiusButton  ">
       <strong class="small text-dark">{{cardData.progress}}%</strong>
-    </v-progress-linear>
+    </v-progress-linear>-->
   </b-card>
 </template>
 <script>

@@ -13,9 +13,3 @@ export const getters = {
     }
   }
 
-//   export const actions = {
-//     async GET_STARS ({ commit }) {
-//         const { data } = await axios.get('http://my-api/stars')
-//         commit('SET_STARS', data)
-//       }
-//   }

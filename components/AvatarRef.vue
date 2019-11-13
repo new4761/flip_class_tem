@@ -1,11 +1,10 @@
 <template>
   <p v-b-modal.accountModal class="justify-content-start text-muted d-inline">
-      โดย
+      by
     <v-avatar size="25">
     <img :src="CreaterData.src" :alt="CreaterData.name" />
     </v-avatar>
-
-    <strong class="text-dark"> {{ CreaterData.name }}</strong>
+   {{ CreaterData.name }}
   </p>
 </template>
 <script>

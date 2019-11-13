@@ -29,8 +29,10 @@ module.exports = {
     ]
   },
   //experr js api
+
   serverMiddleware: [
     { path: '/api', handler: '~/api/mockupDB' }
+    ,'~/database/mongodb.js'
   ],
   /*
   ** Set the link active classes
@@ -71,8 +73,6 @@ module.exports = {
     '~/plugins/hooper',
     // https://vuetifyjs.com/en/getting-started/quick-start doc
     '~/plugins/vuetify',
-
-    '~/plugins/vuex-orm',
     // '~/plugins/graphql'
 
   ],
@@ -107,10 +107,10 @@ module.exports = {
   ** Build configuration
   */
   buildModules: [
-    ['@nuxt/typescript-build', {
-      typeCheck: true,
-      ignoreNotFoundWarnings: true
-    }]
+    // ['@nuxt/typescript-build', {
+    //   typeCheck: true,
+    //   ignoreNotFoundWarnings: true
+    // }]
   ],
   build: {
     /*
