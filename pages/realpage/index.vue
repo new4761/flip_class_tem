@@ -1,14 +1,15 @@
 <template>
   <div class="justify-content-center text-md-left text-sm-center">
     <b-row class="mx-2 justify-content-center">
-      <b-col md="10" >
+      <b-col md="10">
         <b-row class="justify-content-center align-items-stretch">
           <b-col sm="12" md="8">
             <Carouesl />
-          </b-col>        <b-col md="4" sm="12" class="mx-sm-auto">
-          <h3 class="text-md-left text-sm-center text-muted mb-3" >ประกาศเเจ้งเตือน</h3>
-          <NewsBox />
-        </b-col>
+          </b-col>
+          <b-col md="4" sm="12" class="mx-sm-auto">
+            <h3 class="text-md-left text-sm-center text-muted mb-3">ประกาศเเจ้งเตือน</h3>
+            <NewsBox />
+          </b-col>
         </b-row>
 
         <b-row class="justify-content-center my-5">
@@ -26,13 +27,17 @@
             <!-- <h5 class="text-muted ml-2">ดำเนินการล่าสุด</h5>
         <br />
             <DoingCardlesson class="mx-4" :cardData="lessonData.lessonData" />-->
-            <b-col  cols="12" class="mt-md-3 mt-sm-0" >
+            <b-col cols="12" class="mt-md-3 mt-sm-0">
               <b-row>
-                <b-col md="8" sm="12">   <UserCard /></b-col>
-                  <b-col sm="12">   <h5 class="text-muted ml-2">ดำเนินการล่าสุด</h5>
-        <DoingCardlesson :cardData="lessonData.lessonData" /></b-col>
+                <b-col md="8" sm="12">
+                  <UserCard />
+                </b-col>
+                <b-col md="4" sm="12">
+                  <h5 class="text-muted ml-2">ดำเนินการล่าสุด</h5>
+                  <DoingCardlesson :cardData="lessonData.lessonData" />
+                </b-col>
               </b-row>
-      </b-col >
+            </b-col>
             <b-row>
               <b-col sm="12" md="12">
                 <h5 class="text-muted text-sm-center text-md-left ml-2">บทเรียนของคุณ</h5>
