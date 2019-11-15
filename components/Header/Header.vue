@@ -5,7 +5,7 @@
 
     <b-navbar type="dark" variant="info">
       <b-navbar-brand class="mr-auto" href="#">
-        <h>Flip classroom</h>
+        <h4>Flip classroom</h4>
       </b-navbar-brand>
 
       <b-nav  class="nav justify-content-center mx-auto d-md-down-none"> 
