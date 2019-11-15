@@ -28,8 +28,8 @@
             <DoingCardlesson class="mx-4" :cardData="lessonData.lessonData" />-->
             <b-col  cols="12" class="mt-md-3 mt-sm-0" >
               <b-row>
-                <b-col cols="8">   <UserCard /></b-col>
-                  <b-col>   <h5 class="text-muted ml-2">ดำเนินการล่าสุด</h5>
+                <b-col md="8" sm="12">   <UserCard /></b-col>
+                  <b-col sm="12">   <h5 class="text-muted ml-2">ดำเนินการล่าสุด</h5>
         <DoingCardlesson :cardData="lessonData.lessonData" /></b-col>
               </b-row>
       </b-col >
