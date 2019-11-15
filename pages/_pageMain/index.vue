@@ -6,7 +6,7 @@
     </div>
 
     <b-row class = "justify-content-center pt-4"> 
-        <Notitag v-bind:CardData="CardData"/>
+        <Notitag v-bind:TagData="TagData"/>
     </b-row>
 
     <b-row class = "pt-4"> 
@@ -24,8 +24,10 @@
             </div>
         </b-col>
     </b-row>
-
-    <Noticard v-bind:CardData="CardData" v-for="index in 10" :key="index"/> <!-- fot testing -->
+    
+    <b-row style="padding:0px 100px;">
+    <Noticard v-bind:CardData="CardData" v-for="index in 10" :key="index"/> 
+    </b-row>
     <pagebar v-bind:PageBarData="PageBarData"/>
 
 
@@ -52,13 +54,13 @@ export default {
       return{
     CardData:[
     {tagtype:"warning",
-     tagname:"ชื่อtag",
-     image:"~static/img/500x500.jpg", //help
-     header:"นี่คือหัวเรื่อง",
+     tagname:"tag",
+     imgsrc:"https://via.placeholder.com/400x200", //help
+     header:"This is Title!!!",
      time:"99.99",
      date:"99/99/9999",
      username:"username",
-     content:"นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์ นี่คือตัวอย่างบทความในการด์",
+     content:"Short description",
      view:"3000",
      link:"#"}
     ],

@@ -1,13 +1,29 @@
 
 
+
 .Hbutton {
-    border-radius:15px;
+    border-radius:10px;
 	cursor:pointer;
 	font-size:15px;
-    padding:5px 20px;
+    padding:5px 10px;
     margin:0px 0px;
+    color: rgb(255, 255, 255);
+
 
 }
+
+.Hbutton:hover {
+    color: rgb(68, 255, 246);
+    text-decoration: none;
+    transition: all 0.35s linear;
+    
+  }
+
+.Hbutton:focus{
+    color: rgb(0, 99, 180);
+    transition: all 0.35s linear;
+}
+
 
 .DHbutton {
 	cursor:pointer;
