@@ -3,7 +3,7 @@
     <b-row no-gutters>
 
         <b-row  class="text-left">
-            <b-col>
+        <b-col>
           <b-img
             class="mr-3 ml-3"
             left
@@ -15,10 +15,13 @@
           ></b-img>
           <h4 class="mt-1 ml-1">Godinwzza dasdqwe</h4>
           <h6 class="text-muted ml-1">std@19692</h6>
-          </b-col>
-        </b-row>
-<br>
-                                  <h4 class="text-center mt-3">การดำเนินการของคุณ</h4>
+          <br>
+
+        </b-col>
+      </b-row>
+
+
+
            <b-row >
             <b-col>
               <p class="text-muted">บทเรียน</p>
@@ -41,6 +44,9 @@
                 <small class="text-muted">30</small>
               </v-progress-circular>
             </b-col>
+          </b-row>
+
+          <b-row >
           </b-row>
 
 

@@ -8,7 +8,7 @@
         <h4>Flip classroom</h4>
       </b-navbar-brand>
 
-      <b-nav  class="nav justify-content-center mx-auto d-md-down-none"> 
+      <b-nav  class="nav justify-content-center mx-auto d-md-down-none" id="navcontent"> 
         <HButton v-bind:ButtonData="ButtonData" />
       </b-nav>
 
@@ -50,7 +50,7 @@ export default {
         { icon: "icon-home", name: "หน้าหลัก"  ,link:"/realpage" },
         { icon: "icon-bell", name: "ประกาศ" ,link:"pageMain" },
         { icon: "icon-notebook", name: "บทเรียน" ,link:"#" },
-        { icon: "icon-globe-alt", name: "เเหล่งเรียนรู้ภายนอก" ,link:"#" }
+      // { icon: "icon-globe-alt", name: "เเหล่งเรียนรู้ภายนอก" ,link:"#" }
       ]
     };
   }

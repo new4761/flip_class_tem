@@ -12,14 +12,15 @@
           </b-col>
         </b-row>
 
-        <b-row class="justify-content-center my-5">
-          <b-col class="text-center justify-content-center" md="8" sm="12">
-            <h2>คำอธิบายเว็บพร้อมภาพอะไรก็ได้</h2>
-            <h6
-              md="8"
-              class
-            >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6>
-          </b-col>
+        <b-row class="justify-content-center my-5 text-center " md="8" sm="12">
+          <!-- <b-col class="text-center" md="8" sm="12"> -->
+
+            <IntroCard/>
+
+            <!-- <h2>คำอธิบายเว็บพร้อมภาพอะไรก็ได้</h2>
+            <h6 md="8" class
+            >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6> -->
+          <!-- </b-col> -->
         </b-row>
         <b-row class="mb-sm-5" no-gutters>
           <b-col sm="12" md="12">
@@ -30,6 +31,7 @@
             <b-col cols="12" class="mt-md-3 mt-sm-0">
               <b-row>
                 <b-col md="8" sm="12">
+                  <h5 class="text-muted ml-2">ดำเนินการของคุณ</h5>
                   <UserCard />
                 </b-col>
                 <b-col md="4" sm="12">
@@ -81,6 +83,7 @@
 import UserCard from "~/components/UserCardProfile";
 import Carouesl from "./compoents/indexCarousel";
 import NewsBox from "./compoents/NewsBox";
+import IntroCard from "./compoents/IntroCard";
 import DoingCardlesson from "~/components/lessonCard/DoingCard";
 import Cardlesson from "~/components/lessonCard/LessonCard";
 import { mapGetters } from "vuex";
@@ -91,7 +94,8 @@ export default {
     Cardlesson,
     NewsBox,
     DoingCardlesson,
-    UserCard
+    UserCard,
+    IntroCard
   },
   computed: mapState({
     lessonData: state => state.testStore.lessonData
