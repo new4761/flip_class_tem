@@ -32,7 +32,7 @@ module.exports = {
 
   serverMiddleware: [
     { path: '/api', handler: '~/api/mockupDB' }
-    ,'~/database/mongodb.js'
+    // ,'~/database/mongodb.js'
   ],
   /*
   ** Set the link active classes
@@ -70,7 +70,7 @@ module.exports = {
   */
   plugins: [
     // https://baianat.github.io/hooper/ doc
-    '~/plugins/hooper',
+    // '~/plugins/hooper',
     // https://vuetifyjs.com/en/getting-started/quick-start doc
     '~/plugins/vuetify',
     // '~/plugins/graphql'

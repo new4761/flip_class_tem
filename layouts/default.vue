@@ -2,9 +2,7 @@
   <div class="app" style="background-color:white;">
     <AppHeader />
     <div class="container-fluid" >
-      <b-col md="10" class="mx-auto" sm="12" >
         <nuxt />
-      </b-col>
     </div>
     <AppFooter />
   </div>

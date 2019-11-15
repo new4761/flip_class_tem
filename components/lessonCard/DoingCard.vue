@@ -1,7 +1,7 @@
 <template>
   <b-card no-body class="text-left">
-    <b-row no-gutters align-h="between">
-      <b-col md="8" sm="6">
+    <b-row no-gutters >
+      <b-col cols="10">
         <div class="m-3">
           <b-card-title class="font-weight-light">
             <h5>
@@ -22,9 +22,9 @@
             <strong class="small text-dark">{{cardData.progress}}%</strong>
           </v-progress-linear>-->
         </div>
-      </b-col>
+      </b-col >
       <!-- <b-button class='text-center'  size="lg" block variant="primary"> ดำเนินการต่อ <i class="fa fa-arrow-circle-right fa-lg ml-1 pb-1"></i></b-button> -->
-      <b-col md="1" sm="2">
+      <b-col vertical>
         <b-button style="height:100%;" block variant="primary">
           <i class="fa fa-chevron-right" style="font-size:30px"></i>
         </b-button>
