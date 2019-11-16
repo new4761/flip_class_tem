@@ -8,13 +8,24 @@
         </template>
 
         <b-dropdown-header tag="div" class="text-center"><strong>เรียน</strong></b-dropdown-header>
-        <b-dropdown-item><i class="fa fa-certificate"></i> แบบฝึกหัด<b-badge variant="danger">{{itemsCount}}</b-badge></b-dropdown-item>
-        <b-dropdown-item><i class="fa fa-book"></i> บทเรียน<b-badge variant="danger">{{itemsCount}}</b-badge></b-dropdown-item>
+        <b-dropdown-item>
+          <n-link to="#">
+            <i class="fa fa-certificate"></i> 
+            แบบฝึกหัด<b-badge variant="danger">{{itemsCount}}</b-badge>
+            </n-link>
+            </b-dropdown-item>
+
+        <b-dropdown-item>
+           <n-link to="#">
+             <i class="fa fa-book">
+              </i> บทเรียน<b-badge variant="danger">{{itemsCount}}</b-badge>
+           </n-link>
+        </b-dropdown-item>
        
         
         <b-dropdown-header tag="div" class="text-center"><strong>บัญชีผู้ใช้</strong></b-dropdown-header>
-        <b-dropdown-item><i class="fa fa-user"></i> ข้อมูลส่วนตัว</b-dropdown-item>
-        <b-dropdown-item><i class="fa fa-history"></i> กิจกรรม</b-dropdown-item>
+        <b-dropdown-item><n-link to="#"><i class="fa fa-user"></i> ข้อมูลส่วนตัว</n-link></b-dropdown-item>
+        <b-dropdown-item><n-link to="#"><i class="fa fa-history"></i> กิจกรรม</n-link></b-dropdown-item>
        
         <b-dropdown-divider></b-dropdown-divider>
         <b-dropdown-item @click="logout"><i class="fa fa-sign-out"></i> ออกจากระบบ</b-dropdown-item>

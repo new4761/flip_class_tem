@@ -2,8 +2,8 @@
     <b-container fluid>
       
       <b-nav-item v-for="(data,idx) in ButtonData" :key="idx" 
-      class="container mx-auto px-3 flex justify-between">
-        <i :class="data.icon"> </i>&nbsp; {{ data.name }}
+     class="mx-auto px-0 flex justify-between text-nowrap text-center"> 
+        <i :class="data.icon"> </i><br>{{ data.name }} 
       </b-nav-item>
     </b-container>
 </template>

@@ -2,12 +2,12 @@
   <b-card no-body class="p-1 my-auto">
     <b-carousel
    
-      style="text-shadow: 1px 1px 2px #333; min-height:150px; "
+      style="text-shadow: 1px 1px 2px #333; min-height:350px; "
       controls
       indicators
       background="#ababab"
       :interval="4000"
-      img-height="150"
+      img-height="350"
       img-width="400"
       v-model="slide"
       @sliding-start="onSlideStart"
@@ -31,17 +31,17 @@ export default {
     sliding: null,
     Data: [
       {
-        src: "https://via.placeholder.com/400x150",
+        src: "https://via.placeholder.com/400x200",
         title: "Hello world!",
         des: "การเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้น  "
       },
       {
-        src: "https://via.placeholder.com/400x150",
+        src: "https://via.placeholder.com/400x200",
         title: "Hello world!2",
         des: "การเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้น  "
       },
       {
-        src: "https://via.placeholder.com/400x150",
+        src: "https://via.placeholder.com/400x200",
         title: "Hello world!3",
         des:
           "การเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้นการเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้นการเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้น  "

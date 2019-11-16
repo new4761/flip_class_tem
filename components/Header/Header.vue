@@ -3,9 +3,9 @@
 
 
 
-    <b-navbar type="dark" variant="info">
+    <b-navbar class ="navbar-light bg-white" > 
       <b-navbar-brand class="mr-auto" href="#">
-        <h4>Flip classroom</h4>
+        <h2>Flip classroom</h2>
       </b-navbar-brand>
 
       <b-nav  class="nav justify-content-center mx-auto d-md-down-none" id="navcontent"> 
@@ -28,6 +28,8 @@
     <b-navbar class="nav justify-content-center fixed-bottom d-lg-none navbar-light bg-light">
       <HButtombar v-bind:ButtonData="ButtonData" />
     </b-navbar>
+
+    <v-divider></v-divider>
 
 
   </header>

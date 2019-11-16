@@ -1,9 +1,18 @@
 <template>
   <div class="justify-content-center text-md-left text-sm-center">
+
+              <b-row class="justify-content-center text-md-left text-sm-center">
+                <b-col md="10" sm="12">
+                  <h5 class="text-muted ml-2">ดำเนินการของคุณ</h5>
+                  <UserCard />
+                </b-col>
+              </b-row>
+
     <b-row class="mx-2 justify-content-center">
       <b-col md="10">
         <b-row class="justify-content-center align-items-stretch">
           <b-col sm="12" md="8">
+            <h3 class="text-md-left text-sm-center text-muted mb-3">ประกาศสำคัญ</h3>
             <Carouesl />
           </b-col>
           <b-col md="4" sm="12" class="mx-sm-auto">
@@ -12,7 +21,7 @@
           </b-col>
         </b-row>
 
-        <b-row class="justify-content-center my-5 text-center " md="8" sm="12">
+        <b-row class="justify-content-center my-1 text-center d-md-down-none" md="8" sm="12">
           <!-- <b-col class="text-center" md="8" sm="12"> -->
 
             <IntroCard/>
@@ -24,10 +33,8 @@
         </b-row>
         <b-row class="mb-sm-5" no-gutters>
           <b-col sm="12" md="12">
-            <h2 class="mr-auto">หลักสูตรที่คุณสามารถดำเนินการได้</h2>
-            <!-- <h5 class="text-muted ml-2">ดำเนินการล่าสุด</h5>
-        <br />
-            <DoingCardlesson class="mx-4" :cardData="lessonData.lessonData" />-->
+            <!-- <h2 class="mr-auto">หลักสูตรที่คุณสามารถดำเนินการได้</h2>
+
             <b-col cols="12" class="mt-md-3 mt-sm-0">
               <b-row>
                 <b-col md="8" sm="12">
@@ -39,7 +46,7 @@
                   <DoingCardlesson :cardData="lessonData.lessonData" />
                 </b-col>
               </b-row>
-            </b-col>
+            </b-col> -->
             <b-row>
               <b-col sm="12" md="12">
                 <h5 class="text-muted text-sm-center text-md-left ml-2">บทเรียนของคุณ</h5>

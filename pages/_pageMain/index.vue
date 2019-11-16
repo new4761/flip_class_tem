@@ -9,7 +9,7 @@
         <Notitag v-bind:TagData="TagData"/>
     </b-row>
 
-    <b-row class = "pt-4"> 
+    <b-row class = "pt-4"  style="padding:0px 100px;"> 
 
         <Sortdropdown v-bind:SortData="SortData"/> 
 
@@ -25,7 +25,7 @@
         </b-col>
     </b-row>
     
-    <b-row style="padding:0px 100px;">
+    <b-row style="padding:0px 150px;">
     <Noticard v-bind:CardData="CardData" v-for="index in 10" :key="index"/> 
     </b-row>
     <pagebar v-bind:PageBarData="PageBarData"/>
