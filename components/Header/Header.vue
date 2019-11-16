@@ -3,7 +3,7 @@
 
 
 
-    <b-navbar class ="navbar-light bg-white" > 
+    <b-navbar class ="header navbar-dark bg-myblue" > 
       <b-navbar-brand class="mr-auto" href="#">
         <h2>Flip classroom</h2>
       </b-navbar-brand>
