@@ -3,6 +3,7 @@
 
 html,body{
     font-family: 'Mitr', sans-serif !important;
+    height: 100% !important;
 }
 .radiusButton-lg{
     border-radius: 20px !important;

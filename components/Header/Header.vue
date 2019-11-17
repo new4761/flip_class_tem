@@ -2,8 +2,7 @@
   <header class="animated fadeIn">
 
 
-
-    <b-navbar class ="navbar-light bg-white" > 
+    <b-navbar class ="navbar-light bg-white" >
       <b-navbar-brand class="mr-auto" href="#">
         <h2>Flip classroom</h2>
       </b-navbar-brand>
@@ -28,10 +27,6 @@
     <b-navbar class="nav justify-content-center fixed-bottom d-lg-none navbar-light bg-light">
       <HButtombar v-bind:ButtonData="ButtonData" />
     </b-navbar>
-
-    <v-divider></v-divider>
-
-
   </header>
 </template>
 
