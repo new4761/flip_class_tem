@@ -4,22 +4,19 @@
       <b-img
         width="60"
         height="60"
-        fluid
         rounded
         src="https://picsum.photos/250/250/?image=58"
         alt="Image 1"
       ></b-img>
     </template>
-     <h6 class="align-items-start  ">
-        <b-row no-gutters>
-          <b-col cols="auto">
+     <h6 class="align-items-start ">
+
             <b-badge
               :variant="MediaData.type.variant"
-              class="font-weight-light"
+              class="font-weight-light float-left mr-1"
             >{{ MediaData.type.name }}</b-badge>
-          </b-col >
-          <b-col  class="text-left ml-1 text-wrap" >{{MediaData.title}}</b-col>
-        </b-row>
+{{MediaData.title}}
+
       </h6>
     <p class="mb-0">
       <small class="small text-muted">
