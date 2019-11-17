@@ -1,0 +1,9 @@
+.background {
+    box-sizing: border-box;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.st0{fill:#C2E3FF;}
+.st1{fill:#36E3FF;}
+.st2{fill:#0078E9;}

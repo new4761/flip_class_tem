@@ -26,6 +26,7 @@ $yellow:                          #ffc107 !default;
 $green:                           #4dbd74;
 $teal:                            #20c997 !default;
 $cyan:                            #63c2de;
+$myblue:                          #0078e9;
 
 $colors: (
   blue:                           $blue,
@@ -40,7 +41,8 @@ $colors: (
   cyan:                           $cyan,
   white:                          $white,
   gray:                           $gray-600,
-  gray-dark:                      $gray-800
+  gray-dark:                      $gray-800,
+  myblue:                         $myblue
 );
 
 $theme-colors: (
@@ -63,6 +65,7 @@ $theme-colors: (
   green:                          $green,
   teal:                           $teal,
   cyan:                           $cyan,
+  myblue:                         $myblue,
 
   gray-100:                       $gray-100,
   gray-200:                       $gray-200,

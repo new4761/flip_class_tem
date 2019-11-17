@@ -2,9 +2,18 @@
 
       <b-nav-item-dropdown right no-caret>
         <template slot="button-content">
-            <v-btn class="DHbutton">
-            <i class="icon-user"></i>&nbsp; ชื่อผู้ใช้
-            </v-btn>
+            <b-btn pill class="DHbutton bg-white text-myblue ">
+
+              
+    <v-avatar class="mx-auto" size="36">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiPBeloxh97nLE084M0KPmYpvh-IuH3uF8YhOKMmFnIvxjmUzV"
+        alt="John"
+      >
+    </v-avatar>
+
+           <a class="d-sm-down-none">สมจันทร์ หมายชาย</a>
+            </b-btn>
         </template>
 
         <b-dropdown-header tag="div" class="text-center"><strong>เรียน</strong></b-dropdown-header>

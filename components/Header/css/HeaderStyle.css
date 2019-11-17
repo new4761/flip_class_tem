@@ -1,26 +1,28 @@
 
 
 
+
 .Hbutton {
     border-radius:10px;
 	cursor:pointer;
 	font-size:20px;
     padding:5px 20px;
     margin:0px 0px;
-    color: #000000;
+    color: #ffffff;
 
 
 }
 
 .Hbutton:hover {
     color: rgb(68, 255, 246);
+    font-size:22px;
     text-decoration: none;
-    transition: all 0.35s linear;
+    transition: all 0.25s linear;
     
   }
 
 .Hbutton:focus{
-    color: rgb(0, 99, 180);
+    color: rgb(117, 192, 253);
     transition: all 0.35s linear;
 }
 

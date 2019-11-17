@@ -1,55 +1,81 @@
 <template>
-  <div class="justify-content-center text-md-left text-sm-center">
-
-              <b-row class="justify-content-center text-md-left text-sm-center">
-                <b-col md="10" sm="12">
-                  <h5 class="text-muted ml-2">ดำเนินการของคุณ</h5>
-                  <UserCard />
-                </b-col>
-              </b-row>
+  <div class="background bg-myblue justify-content-center text-md-left text-sm-center">
+    <!-- <b-row  class="justify-content-center text-md-left text-sm-center mx-2">
+      <b-col md="4" sm="12">
+        <DoingCardlesson :cardData="lessonData.lessonData" />
+      </b-col> 
+    </b-row>-->
 
     <b-row class="mx-2 justify-content-center">
       <b-col md="10">
         <b-row class="justify-content-center align-items-stretch">
           <b-col sm="12" md="8">
-            <h3 class="text-md-left text-sm-center text-muted mb-3">ประกาศสำคัญ</h3>
+            <h3 class="text-md-left-sm-center text-white mb-3">ประกาศสำคัญ</h3>
             <Carouesl />
           </b-col>
           <b-col md="4" sm="12" class="mx-sm-auto">
-            <h3 class="text-md-left text-sm-center text-muted mb-3">ประกาศเเจ้งเตือน</h3>
+            <h3 class="text-md-left-sm-center text-white mb-3">ประกาศ</h3>
             <NewsBox />
           </b-col>
         </b-row>
+      </b-col>
 
-        <b-row class="justify-content-center my-1 text-center d-md-down-none" md="8" sm="12">
-          <!-- <b-col class="text-center" md="8" sm="12"> -->
+      <div class="background bg-white">
+        <svg class="background bg-white"
+          x="0px"
+          y="0px"
+          viewBox="0 0 1400 200"
+        >
+          <g id="Layer_4">
+            <path
+              class="st0"
+              d="M1716.99,75.41c-180.95,78.05-290.76,62.26-359.03,29.74c-54.97-26.19-68.74-56.45-127.75-67.18
+c-106.51-19.37-144.1,64.18-266.52,74.89c-128.29,11.22-141.22-75.8-268.72-68.28C550.28,53.1,518.37,168.03,409.73,148.1
+C308.05,129.43,268.2,16.28,208.19,35.76c-47.37,15.38-51.1,95.15-67.18,92.51c-20.6-3.38-43.49-139.04,16.52-186.12
+c32.27-25.32,62.88-4.9,179.51,4.41c74.09,5.91,64.73-2.1,258.81-2.2c26.1-0.01,58.94,0.11,180.61,2.2
+c310.73,5.34,278.36,7.64,375.55,7.71c202.46,0.15,241.57-9.89,379.95,1.1c76.58,6.08,139.43,15.1,181.72,22.03"
+            />
+          </g>
+          <g id="Layer_3">
+            <path
+              class="st1"
+              d="M1407.57,123.9c-205.32-107.38-333.29-99.23-413.73-68.66c-75.61,28.74-122.87,82.48-210.87,74.2
+c-84.5-7.95-93.69-62.47-182.22-76.41c-61.74-9.72-77.81,13.56-249.84,65.34C138.6,182.27,95.32,167.21,73.56,156.01
+C18.25,127.56,7.41,75.44-34.17,78.49c-49.78,3.66-62.61,80.46-106.58,78.63c-36.61-1.53-62.61-56.23-71.06-83.06
+c-4.45-14.12-21.18-67.27,4.58-97.45c36.44-42.69,113.47,12.56,276.2,4.43c78.59-3.93,84.15-17.99,210.87-26.58
+c62.18-4.21,113.25-4.38,142.11-4.43c46.4-0.08,80.21,1.16,187.95,6.64c167.42,8.53,205.66,11.67,299.12,14.4
+c91.32,2.67,123.99,1.7,139.82,1.11c95.01-3.54,95.72-12.4,152.43-8.86c78.08,4.88,91.12,22.58,148.99,13.29
+c35.52-5.7,66.28-18.1,73.35-7.75c5.3,7.76-5.71,23.91-16.04,36.55"
+            />
+          </g>
+          <g id="Layer_2">
+            <path
+              class="st2"
+              d="M1403.99,75.03c-202.17,111.92-299.59,102.41-351,68c-35.25-23.6-41.01-53.65-84-67
+c-78.98-24.53-118.77,58.52-228,64c-96.53,4.85-106.7-57.93-209-55c-104.16,2.99-110.07,68.54-205,73
+c-131.65,6.19-199.06-116.16-278-80c-50.45,23.11-58.72,89.47-73,86c-22.77-5.53-39.34-156.15,11-255
+c192.66-378.33,1345.55,43.08,1408,86c29.07,19.98,30,41,30,41C1425.73,52.88,1413.06,66.9,1403.99,75.03z"
+            />
+          </g>
+        </svg>
+      </div>
 
-            <IntroCard/>
+      <b-row class="background justify-content-center bg-white">
+        <b-col md="10" sm="12" align="center">
+          <UserCard />
+        </b-col>
+      </b-row>
 
-            <!-- <h2>คำอธิบายเว็บพร้อมภาพอะไรก็ได้</h2>
-            <h6 md="8" class
-            >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6> -->
-          <!-- </b-col> -->
-        </b-row>
+      <b-row class="background justify-content-center text-center d-md-down-none bg-white">
+        <IntroCard />
+      </b-row>
+
+      <b-col md="10">
         <b-row class="mb-sm-5" no-gutters>
           <b-col sm="12" md="12">
-            <!-- <h2 class="mr-auto">หลักสูตรที่คุณสามารถดำเนินการได้</h2>
-
-            <b-col cols="12" class="mt-md-3 mt-sm-0">
-              <b-row>
-                <b-col md="8" sm="12">
-                  <h5 class="text-muted ml-2">ดำเนินการของคุณ</h5>
-                  <UserCard />
-                </b-col>
-                <b-col md="4" sm="12">
-                  <h5 class="text-muted ml-2">ดำเนินการล่าสุด</h5>
-                  <DoingCardlesson :cardData="lessonData.lessonData" />
-                </b-col>
-              </b-row>
-            </b-col> -->
             <b-row>
               <b-col sm="12" md="12">
-                <h5 class="text-muted text-sm-center text-md-left ml-2">บทเรียนของคุณ</h5>
+                <h5 class="text-white text-sm-center text-md-left ml-2">บทเรียนของคุณ</h5>
                 <v-slide-group class show-arrows>
                   <v-slide-item v-for="n in 15" :key="n" class="m-md-4 m-sm-2">
                     <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
@@ -58,21 +84,9 @@
               </b-col>
             </b-row>
           </b-col>
-          <!-- <v-divider vertical></v-divider> -->
         </b-row>
 
-        <b-row no-gutters>
-          <b-col sm="12" md="12">
-            <h5 class="text-muted text-sm-center text-md-left ml-2">เเบบฝึกหัดของคุณ</h5>
-            <!-- <v-slide-group class="pa-4" prev-icon="mdi-minus" next-icon="mdi-plus" show-arrows> -->
-            <v-slide-group class show-arrows>
-              <v-slide-item v-for="n in 15" :key="n" class="m-md-4 m-sm-2">
-                <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
-              </v-slide-item>
-            </v-slide-group>
-          </b-col>
-        </b-row>
-        <b-row class="justify-content-center my-5">
+        <b-row class="background bg-white justify-content-center my-5">
           <b-col class="text-center justify-content-center" md="8" sm="12">
             <h2>ใส่รายละเอียดการจัดทำเเละเครติด</h2>
             <h6
@@ -140,3 +154,6 @@ export default {
   })
 };
 </script>
+<style>
+@import "./css/realpagestyle.css";
+</style>
