@@ -1,7 +1,7 @@
 <template>
 
   <a :href="link">
-    <b-button size="md" variant="blue" pill class=" m-1">
+    <b-button size="lg" variant="blue" pill class=" m-1">
       {{buttonText}}
       <i class="fa fa-external-link pl-1"></i>
     </b-button>

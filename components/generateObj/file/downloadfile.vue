@@ -1,6 +1,6 @@
 <template>
   <a :href="link">
-    <b-button size="md" variant="yellow" pill class=" m-1">
+    <b-button size="lg" variant="yellow" pill class=" m-1">
       <b-badge pill variant="light">
         <i class="fa fa-download"></i>
       </b-badge>
