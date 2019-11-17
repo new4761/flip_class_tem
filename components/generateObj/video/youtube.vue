@@ -1,9 +1,9 @@
 <template>
-    <b-col md="12" sm="12">
+ <b-col md="12" sm="12">
        <b-embed
-    type="iframe"
+ type="iframe"
     aspect="16by9"
-    :src="iframeLink"
+    :src="youtubeLink"
     allowfullscreen
   ></b-embed>
     </b-col>
@@ -12,12 +12,12 @@
 export default {
   props: {
 
-    iframeLink: {
+    youtubeLink: {
       type: String
     }
   },
   data: () => ({
-  
+
   })
 };
 </script>

@@ -1,12 +1,12 @@
 <template>
-  <b-col md="12">
-    <h2 class="text-left">{{title}}</h2>
+  <b-col>
+    <b-img-lazy :src="srcLink" fluid-grow alt="Responsive image"></b-img-lazy>
   </b-col>
 </template>
 <script>
 export default {
   props: {
-    title: {
+    srcLink: {
       type: String
     }
   }
