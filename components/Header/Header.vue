@@ -29,8 +29,6 @@
       <HButtombar v-bind:ButtonData="ButtonData" />
     </b-navbar>
 
-    <v-divider></v-divider>
-
 
   </header>
 </template>

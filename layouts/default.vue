@@ -1,10 +1,10 @@
 <template>
   <div class="app" style="background-color:white;">
     <AppHeader />
-    <div class="container-fluid" >
-        <nuxt />
+    <div class="container-fluid">
+        <nuxt/>
     </div>
-    <AppFooter />
+    <AppFooter/>
   </div>
 </template>
 
