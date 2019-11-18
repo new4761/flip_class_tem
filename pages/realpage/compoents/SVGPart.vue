@@ -1,6 +1,6 @@
 <template>
      <div>
-        <svg class="background bg-white  "
+        <svg class="background bg-white"
           x="0px"
           y="0px"
           viewBox="0 0 1400 200"

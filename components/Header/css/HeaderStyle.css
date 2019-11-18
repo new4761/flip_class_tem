@@ -9,6 +9,7 @@
     padding:5px 20px;
     margin:0px 0px;
     color: #ffffff;
+    transition: all 0.20s linear;
 
 
 }
@@ -17,13 +18,11 @@
     color: rgb(68, 255, 246);
     font-size:22px;
     text-decoration: none;
-    transition: all 0.25s linear;
     
   }
 
 .Hbutton:focus{
     color: rgb(117, 192, 253);
-    transition: all 0.35s linear;
 }
 
 
