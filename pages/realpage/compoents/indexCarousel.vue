@@ -14,7 +14,7 @@
       @sliding-end="onSlideEnd"
     >
       <!-- Slides with custom text -->
-      <b-carousel-slide v-for="(item ,index) in Data" :key="index" :img-src="item.src">
+      <b-carousel-slide v-for="(item ,index) in Data" :key="index" :img-src="item.src" max-hight="200">
         <div class="d-none d-lg-block">
           <h3>{{item.title}}</h3>
           <p class="lead">{{item.des}}</p>
