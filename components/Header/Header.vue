@@ -3,7 +3,7 @@
 
 
 
-    <b-navbar class ="header navbar-dark bg-myblue" > 
+    <b-navbar class ="shadow header navbar-dark bg-myblue" > 
       <b-navbar-brand class="mr-auto" href="#">
         <h2>Flip classroom</h2>
       </b-navbar-brand>
@@ -30,6 +30,7 @@
     </b-navbar>
 
 
+
   </header>
 </template>
 
@@ -48,8 +49,8 @@ export default {
     return {
       ButtonData: [
         { icon: "icon-home", name: "หน้าหลัก"  ,link:"/realpage" },
-        { icon: "icon-bell", name: "ประกาศ" ,link:"pageMain" },
-        { icon: "icon-notebook", name: "บทเรียน" ,link:"#" },
+        { icon: "icon-bell", name: "ประกาศ" ,link:"/pageMain" },
+        { icon: "icon-notebook", name: "บทเรียน" ,link:"/realpage/lesson" },
       // { icon: "icon-globe-alt", name: "เเหล่งเรียนรู้ภายนอก" ,link:"#" }
       ]
     };
