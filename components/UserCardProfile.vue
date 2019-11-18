@@ -4,12 +4,14 @@
       <b-col class="text-left mx-1 my-1">
         <v-card max-width="600" height="100%" class="centerBlock bg-myblue text-white">
           <v-list-item>
-            <v-list-item-avatar class="my-2" size="70"><img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiPBeloxh97nLE084M0KPmYpvh-IuH3uF8YhOKMmFnIvxjmUzV"
-        alt="John"
-      > </v-list-item-avatar>
+            <v-list-item-avatar class="my-2" size="70">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiPBeloxh97nLE084M0KPmYpvh-IuH3uF8YhOKMmFnIvxjmUzV"
+                alt="John"
+              />
+            </v-list-item-avatar>
             <v-list-item-content class="text-white">
-               <v-card-title>สมชาย นามสกุลที่ยาวจนเหลือคณานับ</v-card-title>
+              <v-card-title>สมชาย นามสกุลที่ยาวจนเหลือคณานับ</v-card-title>
               <v-card-subtitle class="mx-3 text-muted">std@42069</v-card-subtitle>
             </v-list-item-content>
           </v-list-item>
@@ -40,7 +42,6 @@
           </v-card-text>
         </v-card>
       </b-col>
-
     </b-row>
   </b-card>
 </template>

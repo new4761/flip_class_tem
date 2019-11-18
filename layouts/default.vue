@@ -1,13 +1,16 @@
 <template>
   <div class="app" style="background-color:white;">
+    <header>
     <AppHeader />
-    <div class="container-fluid">
-        <nuxt/>
-    </div>
-    <AppFooter/>
+    </header>
+  <div>
+        <nuxt />
+</div>
+<footer>
+    <AppFooter />
+    </footer>
   </div>
 </template>
-
 <style scoped>
 
 </style>

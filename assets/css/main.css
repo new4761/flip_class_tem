@@ -14,3 +14,8 @@ html,body{
 .radiusObj{
     border-radius: 20px !important;
 }
+.animated-witdh {
+
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s;
+  }
