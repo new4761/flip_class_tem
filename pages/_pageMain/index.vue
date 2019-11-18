@@ -1,20 +1,20 @@
 <template>
-<b-container class ="p-5">
+<b class ="p-5">
 
-    <div>
+    <b-row class = "px-5">
         <h1><strong>ประกาศแจ้งเตือน</strong></h1>
-    </div>
+    </b-row>
 
-    <b-row class = "justify-content-center pt-4"> 
+    <b-row class = "pt-4 px-5 justify-content-center"> 
         <Notitag v-bind:TagData="TagData"/>
     </b-row>
 
-    <b-row class = "pt-4"  style="padding:0px 100px;"> 
-
-        <Sortdropdown v-bind:SortData="SortData"/> 
-
-        <b-col>
-             <div class="input-group ml-auto">
+    <b-row class = "pt-4 px-4 justify-content-end" >
+        <b-col cols="auto" class = "d-flex">
+            <Sortdropdown v-bind:SortData="SortData"/>
+        </b-col>
+        <b-col cols="auto" class = "d-flex">  
+            <div class="input-group ml-auto">
                 <input type="text" class="form-control" placeholder="ค้นหา..." aria-label="ค้นหา...">
                     <span class="input-group-btn">
                         <button class="btn btn-secondary" type="button">
@@ -22,17 +22,17 @@
                         </button>
                     </span>
             </div>
-        </b-col>
+        </b-col>        
     </b-row>
     
-    <b-row style="padding:0px 150px;">
+    <b-row class = "px-5">
     <Noticard v-bind:CardData="CardData" v-for="index in 10" :key="index"/> 
     </b-row>
     <pagebar v-bind:PageBarData="PageBarData"/>
 
 
            
-</b-container>
+</b>
 
 </template>
 
