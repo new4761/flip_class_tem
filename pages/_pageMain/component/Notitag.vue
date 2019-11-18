@@ -1,8 +1,8 @@
 <template>
 <div>
-
+ 
     <b-button v-for="(data,idx) in TagData" :key="idx" :variant="data.type" 
-              class="tag mx-2 my-0">
+              class="tag m-2">
         {{ data.name }}
     </b-button>
 
