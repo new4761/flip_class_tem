@@ -48,7 +48,7 @@
           <b-col sm="12" md="12">
             <b-row>
               <b-col sm="12" md="12">
-                <h3 class="text-white text-sm-center text-md-left ml-2">บทเรียนของคุณ</h3>
+                <h3 class="text-white text-sm-center text-md-left ml-2">ห้องเรียนของคุณ</h3>
                 <v-slide-group class show-arrows>
                   <v-slide-item v-for="n in 15" :key="n" class="m-md-4 m-sm-2">
                     <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
@@ -60,7 +60,6 @@
         </b-row>
 
         <b-row class="background justify-content-center my-5">
-                      
 <!-- <div >
       <SVGPart/>
 </div> -->
