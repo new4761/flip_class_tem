@@ -49,7 +49,7 @@ export default {
     return {
       ButtonData: [
         { icon: "icon-home", name: "หน้าหลัก"  ,link:"/realpage" },
-        { icon: "icon-bell", name: "ประกาศ" ,link:"/pageMain" },
+        { icon: "icon-bell", name: "ประกาศ" ,link:"/realpage/news" },
         { icon: "icon-notebook", name: "บทเรียน" ,link:"/realpage/lesson" },
       // { icon: "icon-globe-alt", name: "เเหล่งเรียนรู้ภายนอก" ,link:"#" }
       ]

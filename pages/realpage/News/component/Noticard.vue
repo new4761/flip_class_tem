@@ -4,12 +4,12 @@
         <b-media v-for="(data,index) in CardData" :key="index" class="border-0 w-100">
             <b-row class = "justify-content-center d-md-none">
                 <b-col>
-                     <img class="card-img" :src="data.imgsrc"> <!-- why it not showing when use data.image -->
+                     <img class="card-img" :src="data.imgsrc"> 
                 </b-col>
             </b-row>
             <b-row class = "justify-content-center px-md-5">
                     <b-col class="col-4 d-sm-down-none" >
-                         <img class="card-img" :src="data.imgsrc"> <!-- why it not showing when use data.image -->
+                         <img class="card-img" :src="data.imgsrc">
                     </b-col>
                     <b-col  class = "px-3">
                         <b-row class = "px-3">
@@ -21,7 +21,7 @@
                           <small class="text-muted">{{data.time}} {{data.date}}&nbsp;</small>
                           <small>โดย <i class="fa fa-user"></i> {{data.username}}  </small>        
                         </b-row>
-                        <b-row class ="px-3 "> <!--Hide description on sm display-->
+                        <b-row class ="px-3 ">
                             {{data.content}}
                         </b-row>
                         

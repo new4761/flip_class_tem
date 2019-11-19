@@ -30,10 +30,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0078e9",endCo
     text-decoration: none;
   }
 
-  .cardtext {
+
+
+  .cardstat {
     font-size: 18px;
+    transition: all 0.20s linear;
   }
-  
+
+  .cardstat:hover {
+    text-shadow: 2px 2px 2px #000000;
+    font-size: 20px;
+    
+  }
+
   .centerBlock {
     margin: auto;
   }

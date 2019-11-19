@@ -9,15 +9,15 @@
         <Notitag v-bind:TagData="TagData"/>
     </b-row>
 
-    <b-row class = "pt-4 px-4 justify-content-md-center justify-content-sm-start" >
-        
-        <b-col md="4" sm="2" class="mx-4">
+   <b-row align-h="around" class = "pt-4 px-4" >
+       
+        <b-col cols="auto" class = "d-flex">
             <Sortdropdown v-bind:SortData="SortData"/>
         </b-col>
-
-        <b-col md="4" sm="2" class="mx-4">  
+        
+        <b-col cols="auto" class = "d-flex">  
             <div class="input-group ml-auto">
-                <input type="text" class="form-control" placeholder="ค้นหา...">
+                <input type="text" class="form-control" placeholder="ค้นหา..." aria-label="ค้นหา...">
                     <span class="input-group-btn">
                         <button class="btn btn-secondary" type="button">
                             <i class="icon-magnifier"></i>
@@ -28,7 +28,7 @@
     </b-row>
     
     <b-row  class = "justify-content-center">
-        <b-col md="9" sm="7">
+        <b-col md="9" sm="7" class="px-4">
     <Noticard v-bind:CardData="CardData" v-for="index in 10" :key="index"/> 
         </b-col>
     </b-row>
@@ -77,9 +77,9 @@ export default {
     ],
 
     SortData:[
-    {  sorting:"แบบ1",icon:"fa fa-sort-alpha-asc"},
-    {  sorting:"แบบ2", icon:"fa fa-sort-amount-asc"},
-    {  sorting:"แบบ3",icon:"fa fa-sort-numeric-asc"},
+    {  sorting:"ประเภท1",icon:"fa fa-sort-alpha-asc"},
+    {  sorting:"ประเภท2", icon:"fa fa-sort-amount-asc"},
+    {  sorting:"ประเภท3",icon:"fa fa-sort-numeric-asc"},
     ],
 
     PageBarData:[

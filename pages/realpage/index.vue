@@ -134,7 +134,7 @@ export default {
   },
       {title:"งาน",
       icon:"fa fa-folder-open",
-     value:"5",
+     value:"9",
      maxvalue:"20",
      link:"#"
   },

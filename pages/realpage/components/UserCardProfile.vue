@@ -25,11 +25,11 @@
       >
       <nuxt-link :to=data.link class="usercard">
         <v-card max-width="300" height="100%" class="centerBlock bg-myblue text-white">
-          <v-card-text class="cardtext text-white">
+          <v-card-text class="cardstat text-white">
             <i :class="data.icon"></i>
             {{data.title}} &nbsp;
-            <v-progress-circular
-              class="circle my-1"
+            <v-progress-circular 
+              class="my-1"
               :size="70"
               :width="8"
               :value="(data.value/data.maxvalue)*100"
@@ -53,12 +53,10 @@ export default {
       username:"สมชาย นามสกุลที่ยาวจนเหลือคณานับ",
       stdid:"std@42069",
       imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiPBeloxh97nLE084M0KPmYpvh-IuH3uF8YhOKMmFnIvxjmUzV"
-
     })
 }
 
 </script>
-
 
 <style>
 @import '../css/realpagestyle.css';
