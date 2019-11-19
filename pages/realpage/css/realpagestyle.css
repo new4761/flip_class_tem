@@ -39,12 +39,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0078e9",endCo
 
   .cardstat:hover {
     text-shadow: 2px 2px 2px #000000;
-    font-size: 20px;
     
   }
 
   .centerBlock {
     margin: auto;
+  }
+
+  .overlay{
+    background: url(https://i.imgur.com/7n4DjMG.png) no-repeat ;
+    background-size: cover;
   }
 
 

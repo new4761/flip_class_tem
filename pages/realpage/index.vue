@@ -1,5 +1,5 @@
 <template>
-  <div class="background bg-myblue justify-content-center text-md-left text-sm-center">
+  <div class="overlay background bg-myblue justify-content-center text-md-left text-sm-center">
 
     <!-- <b-row  class="justify-content-center text-md-left text-sm-center mx-2">
       <b-col md="4" sm="12">
@@ -24,7 +24,7 @@
       </b-col>
 
       
-<div>
+<div class="rt180">
       <SVGPart/>
 </div>
 
@@ -40,7 +40,7 @@
         <IntroCard />
       </b-row>
       
-<div  class="rt180">
+<div >
       <SVGPart/>
 </div>
 
@@ -62,7 +62,7 @@
 
         <b-row class="bg-white background justify-content-center my-5">
                       
-<div >
+<div class="rt180" >
       <SVGPart/>
 </div>
           <b-col class="text-center justify-content-center" md="8" sm="12">
@@ -74,7 +74,7 @@
             >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6>
           </b-col>
 
-  <div  class="rt180">
+  <div>
       <SVGPart/>
 </div>
 
