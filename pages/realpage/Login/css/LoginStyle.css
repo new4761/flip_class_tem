@@ -4,5 +4,15 @@
 }
 
 .cardbg{
-    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+    /* background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);  */
+    background: url(https://www.onlygfx.com/wp-content/uploads/2018/03/blue-polygonal-background-fade-4.png) no-repeat ;
+    background-size: cover;
+
+    
 }
+.tab{
+right:0;
+font-size:12px;
+height: 20px;
+}
+
