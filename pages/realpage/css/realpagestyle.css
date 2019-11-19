@@ -26,5 +26,20 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0078e9",endCo
 }
 
 
+.usercard:hover {
+    text-decoration: none;
+  }
+
+  .cardtext {
+    font-size: 18px;
+  }
+  
+  .centerBlock {
+    margin: auto;
+  }
+
+
+
+
 
   

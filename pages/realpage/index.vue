@@ -1,5 +1,6 @@
 <template>
   <div class="background bgtop justify-content-center text-md-left text-sm-center">
+
     <!-- <b-row  class="justify-content-center text-md-left text-sm-center mx-2">
       <b-col md="4" sm="12">
         <DoingCardlesson :cardData="lessonData.lessonData" />
@@ -31,7 +32,7 @@
 
       <b-row class="background justify-content-center">
         <b-col md="10" sm="12" align="center">
-          <UserCard />
+          <UserCard v-bind:UserCardData="UserCardData" />
         </b-col>
       </b-row>
 
@@ -84,11 +85,11 @@
 </template>
 
 <script>
-import UserCard from "~/components/UserCardProfile";
-import Carouesl from "./compoents/indexCarousel";
-import NewsBox from "./compoents/NewsBox";
-import SVGPart from "./compoents/SVGPart";
-import IntroCard from "./compoents/IntroCard";
+import UserCard from "./components/UserCardProfile";
+import Carouesl from "./components/indexCarousel";
+import NewsBox from "./components/NewsBox";
+import SVGPart from "./components/SVGPart";
+import IntroCard from "./components/IntroCard";
 import DoingCardlesson from "~/components/lessonCard/DoingCard";
 import Cardlesson from "~/components/lessonCard/LessonCard";
 
@@ -115,7 +116,30 @@ export default {
   //   }
   // },
   data: () => ({
-    maxSmallcardWight: 300
+    maxSmallcardWight: 300,
+
+     UserCardData:[
+     
+    {title:"บทเรียน",
+     icon:"fa fa-book",
+     value:"20",
+     maxvalue:"30",
+     link:"#"
+  },
+      {title:"แบบฝึกหัด",
+      icon:"fa fa-certificate",
+     value:"10",
+     maxvalue:"60",
+     link:"#"
+  },
+      {title:"งาน",
+      icon:"fa fa-folder-open",
+     value:"5",
+     maxvalue:"20",
+     link:"#"
+  },
+    ],
+
     //  lessonData: {
     //   lastUpdate: "14/7/2542 10:24",
     //   imgSrc: "https://placekitten.com/380/200",

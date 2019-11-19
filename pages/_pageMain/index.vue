@@ -10,9 +10,12 @@
     </b-row>
 
     <b-row class = "pt-4 px-4 justify-content-end" >
+        
+
         <b-col cols="auto" class = "d-flex">
             <Sortdropdown v-bind:SortData="SortData"/>
         </b-col>
+
         <b-col cols="auto" class = "d-flex">  
             <div class="input-group ml-auto">
                 <input type="text" class="form-control" placeholder="ค้นหา..." aria-label="ค้นหา...">
@@ -25,9 +28,12 @@
         </b-col>        
     </b-row>
     
-    <b-row class = "px-5">
+    <b-row  class = "justify-content-center">
+        <b-col md="9" sm="7">
     <Noticard v-bind:CardData="CardData" v-for="index in 10" :key="index"/> 
+        </b-col>
     </b-row>
+    
     <pagebar v-bind:PageBarData="PageBarData"/>
 
 
