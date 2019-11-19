@@ -9,16 +9,15 @@
         <Notitag v-bind:TagData="TagData"/>
     </b-row>
 
-    <b-row class = "pt-4 px-4 justify-content-end" >
+    <b-row class = "pt-4 px-4 justify-content-md-center justify-content-sm-start" >
         
-
-        <b-col cols="auto" class = "d-flex">
+        <b-col md="4" sm="2" class="mx-4">
             <Sortdropdown v-bind:SortData="SortData"/>
         </b-col>
 
-        <b-col cols="auto" class = "d-flex">  
+        <b-col md="4" sm="2" class="mx-4">  
             <div class="input-group ml-auto">
-                <input type="text" class="form-control" placeholder="ค้นหา..." aria-label="ค้นหา...">
+                <input type="text" class="form-control" placeholder="ค้นหา...">
                     <span class="input-group-btn">
                         <button class="btn btn-secondary" type="button">
                             <i class="icon-magnifier"></i>

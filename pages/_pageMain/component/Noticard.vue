@@ -54,9 +54,15 @@
 </template>
 
 <script>
+import AvatarRef from "~/components/AvatarRef";
 
 export default {
     props:['CardData'],
+
+    
+components: {
+    AvatarRef
+  },
     data:()=>({
 
     })

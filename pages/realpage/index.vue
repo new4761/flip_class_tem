@@ -1,5 +1,5 @@
 <template>
-  <div class="background bgtop justify-content-center text-md-left text-sm-center">
+  <div class="background bg-myblue justify-content-center text-md-left text-sm-center">
 
     <!-- <b-row  class="justify-content-center text-md-left text-sm-center mx-2">
       <b-col md="4" sm="12">
@@ -24,25 +24,25 @@
       </b-col>
 
       
-<!-- <div>
+<div>
       <SVGPart/>
-</div> -->
+</div>
 
      
 
-      <b-row class="background justify-content-center">
+      <b-row class="bg-white background justify-content-center">
         <b-col md="10" sm="12" align="center">
           <UserCard v-bind:UserCardData="UserCardData" />
         </b-col>
       </b-row>
 
-      <!-- <b-row class="background justify-content-center text-center d-md-down-none bg-white">
+      <b-row class="background justify-content-center text-center d-md-down-none bg-white">
         <IntroCard />
-      </b-row> -->
+      </b-row>
       
-<!-- <div  class="rt180">
+<div  class="rt180">
       <SVGPart/>
-</div> -->
+</div>
 
       <b-col md="10">
         <b-row class="mb-sm-5" no-gutters>
@@ -60,11 +60,11 @@
           </b-col>
         </b-row>
 
-        <b-row class="background justify-content-center my-5">
+        <b-row class="bg-white background justify-content-center my-5">
                       
-<!-- <div >
+<div >
       <SVGPart/>
-</div> -->
+</div>
           <b-col class="text-center justify-content-center" md="8" sm="12">
 
             <h2>ใส่รายละเอียดการจัดทำเเละเครติด</h2>
@@ -74,9 +74,9 @@
             >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6>
           </b-col>
 
-                <!-- <div  class="rt180">
+  <div  class="rt180">
       <SVGPart/>
-</div> -->
+</div>
 
         </b-row>
       </b-col>
