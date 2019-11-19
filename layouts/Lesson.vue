@@ -4,7 +4,8 @@
       <AppHeader />
     </header>
     <div>
-      <div class="d-flex">
+      <div  class="d-flex">
+           <my-aside :dataType="'Exercise'" :ChapterName="'testdasdadasdsdsa'"  />
         <div class="flex-fill">
           <b-navbar justified type="dark" variant="dark">
             <b-navbar-nav>
@@ -13,10 +14,11 @@
               <b-nav-item href="#">Link</b-nav-item>
             </b-navbar-nav>
           </b-navbar>
+
           <nuxt style="height:100vh;" class="animated-witdh overflow-auto" />
         </div>
-        <div class="overflow">
-          <b-button
+
+          <!-- <b-button
             type="button"
             style="height:53px;background-color:#D3D9DE;"
             @click="myexpand = !myexpand"
@@ -24,30 +26,17 @@
           >
             <i v-if="myexpand" class="fa fa-chevron-circle-right fa-lg "><p class="ml-1 d-inline">ข้อมูลบทเรียน</p></i>
             <i v-else class="fa fa-chevron-circle-left fa-lg"></i>
-          </b-button>
-          <a @click="myexpand ?'' :myexpand=true">
+          </b-button> -->
+          <!-- <a @click="myexpand ?'' :myexpand=true" class="animated-witdh">
             <myAside
               style="height:100vh;"
               class="animated-witdh overflow-auto"
               :expand="myexpand"
-              :style="{ 'width': (myexpand ? 200:50) + 'px'}"
+              :style="{ 'max-width': (myexpand ? 220:50) + 'px'}"
             />
-          </a>
-        </div>
+          </a> -->
       </div>
-      <!-- <b-row no-gutters>
-        <div class="d-flex">
-          <div class="flex-grow">
-            <b-navbar toggleable="lg" type="dark" variant="dark">
-              <b-navbar-brand href="#">ชื่อบทเรียน</b-navbar-brand>
-            </b-navbar>
-            <nuxt />
-          </div>
-          <div class>
-            <myAside style="max-width:200px;" />
-          </div>
-        </div>
-      </b-row>-->
+
     </div>
     <footer>
       <AppFooter />
@@ -79,8 +68,10 @@ export default {
   //   },
   data() {
     return {
+      fakeasidedata:[
+      ],
       nav: nav.items,
-      myexpand: true
+      myexpand: false
     };
   },
   computed: {

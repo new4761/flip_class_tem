@@ -16,6 +16,6 @@ html,body{
 }
 .animated-witdh {
 
-    -webkit-transition: width 0.2s;
-    transition: width 0.2s;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
   }
