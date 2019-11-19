@@ -1,8 +1,8 @@
 <template>
-  <b-card no-body class="p-1 my-auto">
+  <b-card no-body class="p-1 my-auto bg-transparent  border-0">
     <b-carousel
    
-      style="text-shadow: 1px 1px 2px #333; min-height:350px; "
+      style="text-shadow: 1px 1px 2px #333; min-height:250px;"
       controls
       indicators
       background="#ababab"

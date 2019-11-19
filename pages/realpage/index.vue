@@ -1,10 +1,10 @@
 <template>
-  <div class="background bg-myblue justify-content-center text-md-left text-sm-center">
+  <div class="background bgtop justify-content-center text-md-left text-sm-center">
     <!-- <b-row  class="justify-content-center text-md-left text-sm-center mx-2">
       <b-col md="4" sm="12">
         <DoingCardlesson :cardData="lessonData.lessonData" />
       </b-col> 
-    </b-row>-->
+    </b-row> -->
 
 
     <b-row class="mx-2 justify-content-center">
@@ -21,33 +21,34 @@
           </b-col>
         </b-row>
       </b-col>
+
       
-<div>
+<!-- <div>
       <SVGPart/>
-</div>
+</div> -->
 
      
 
-      <b-row class="background justify-content-center bg-white">
+      <b-row class="background justify-content-center">
         <b-col md="10" sm="12" align="center">
           <UserCard />
         </b-col>
       </b-row>
-<!-- 
-      <b-row class="background justify-content-center text-center d-md-down-none bg-white">
+
+      <!-- <b-row class="background justify-content-center text-center d-md-down-none bg-white">
         <IntroCard />
-      </b-row>
-       -->
-<div  class="rt180">
+      </b-row> -->
+      
+<!-- <div  class="rt180">
       <SVGPart/>
-</div>
+</div> -->
 
       <b-col md="10">
         <b-row class="mb-sm-5" no-gutters>
           <b-col sm="12" md="12">
             <b-row>
               <b-col sm="12" md="12">
-                <h5 class="text-white text-sm-center text-md-left ml-2">บทเรียนของคุณ</h5>
+                <h3 class="text-white text-sm-center text-md-left ml-2">บทเรียนของคุณ</h3>
                 <v-slide-group class show-arrows>
                   <v-slide-item v-for="n in 15" :key="n" class="m-md-4 m-sm-2">
                     <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
@@ -58,11 +59,11 @@
           </b-col>
         </b-row>
 
-        <b-row class="background bg-white justify-content-center my-5">
+        <b-row class="background justify-content-center my-5">
                       
-<div >
+<!-- <div >
       <SVGPart/>
-</div>
+</div> -->
           <b-col class="text-center justify-content-center" md="8" sm="12">
 
             <h2>ใส่รายละเอียดการจัดทำเเละเครติด</h2>
@@ -72,9 +73,9 @@
             >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6>
           </b-col>
 
-                <div  class="rt180">
+                <!-- <div  class="rt180">
       <SVGPart/>
-</div>
+</div> -->
 
         </b-row>
       </b-col>

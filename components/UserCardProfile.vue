@@ -1,5 +1,5 @@
 <template>
-  <b-card class="text-center border-0" no-body>
+  <b-card class="bg-transparent text-center border-0" no-body style="max-width: 1000px;">
     <b-row no-gutters>
       <b-col class="text-left mx-1 my-1">
         <v-card max-width="600" height="100%" class="centerBlock bg-myblue text-white">
