@@ -1,8 +1,8 @@
 <template>
-  <v-app style="  font-family: 'Mitr', sans-serif !important; background-color:#d9d9d9;">
+  <v-app style=" font-family: 'Mitr', sans-serif !important; background-color:#d9d9d9;">
     <div @mouseover="drawer = true" @mouseleave="drawer = false">
       <v-navigation-drawer dark fixed expand-on-hover permanent style="background-color:#004485;">
-        <v-list class="p-0">
+        <v-list>
           <div style="background-color:#0078e9; ">
             <myHead v-if="drawer" />
             <adminProfile :myDrawer="drawer" />
@@ -31,7 +31,7 @@
         </b-card>
 
         <b-breadcrumb :items="items" class="cardradius"></b-breadcrumb>
-        <b-card class="cardradius overflow-auto" style="height:100vh; ">
+        <b-card no-body class="cardradius overflow-auto p-1" style="height:100vh; ">
           <nuxt />
         </b-card>
       </b-container>
