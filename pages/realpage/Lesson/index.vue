@@ -1,5 +1,5 @@
 <template>
-  <b-container style="background-color: white; " class="p-md-5 m-md-2">
+  <b-container style="background-color: white; " >
     <div v-for="n in 1" :key="n" class="p-md-5 justify-content-center">
       <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <textTitle title="ข้อความขนาดใหญ่" />
