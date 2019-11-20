@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay background bg-myblue justify-content-center text-md-left text-sm-center">
+  <div class="overlay background justify-content-center text-md-left text-sm-center">
 
     <!-- <b-row  class="justify-content-center text-md-left text-sm-center mx-2">
       <b-col md="4" sm="12">
@@ -13,43 +13,45 @@
       <b-col md="10">
         <b-row class="justify-content-center align-items-stretch">
           <b-col sm="12" md="8">
-            <h3 class="text-md-left-sm-center text-white mb-3">ประกาศสำคัญ</h3>
+            <h3 class="text-md-left-sm-center mb-3">ประกาศสำคัญ</h3>
             <Carouesl />
           </b-col>
           <b-col md="4" sm="12" class="mx-sm-auto">
-            <h3 class="text-md-left-sm-center text-white mb-3">ประกาศ</h3>
+            <h3 class="text-md-left-sm-center mb-3">ประกาศ</h3>
             <NewsBox />
           </b-col>
+
         </b-row>
+
       </b-col>
 
       
-<div class="rt180">
+<!-- <div class="rt180">
       <SVGPart/>
-</div>
+</div> -->
 
      
 
-      <b-row class="bg-white background justify-content-center">
+      <b-row class="background justify-content-center">
         <b-col md="10" sm="12" align="center">
           <UserCard v-bind:UserCardData="UserCardData" />
         </b-col>
       </b-row>
 
-      <b-row class="background justify-content-center text-center d-md-down-none bg-white">
+      <!-- <b-row class="background justify-content-center text-center d-md-down-none">
         <IntroCard />
-      </b-row>
+      </b-row> -->
       
-<div >
+<!-- <div >
       <SVGPart/>
-</div>
+</div> -->
 
       <b-col md="10">
         <b-row class="mb-sm-5" no-gutters>
           <b-col sm="12" md="12">
             <b-row>
               <b-col sm="12" md="12">
-                <h3 class="text-white text-sm-center text-md-left ml-2">บทเรียนของคุณ</h3>
+                <h3 class="text-sm-center text-md-left ml-2">บทเรียนของคุณ</h3>
                 <v-slide-group class show-arrows>
                   <v-slide-item v-for="n in 15" :key="n" class="m-md-4 m-sm-2">
                     <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
@@ -60,11 +62,11 @@
           </b-col>
         </b-row>
 
-        <b-row class="bg-white background justify-content-center my-5">
+        <b-row class="background justify-content-center my-5">
                       
-<div class="rt180" >
+<!-- <div class="rt180" >
       <SVGPart/>
-</div>
+</div> -->
           <b-col class="text-center justify-content-center" md="8" sm="12">
 
             <h2>ใส่รายละเอียดการจัดทำเเละเครติด</h2>
@@ -74,9 +76,9 @@
             >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6>
           </b-col>
 
-  <div>
+  <!-- <div>
       <SVGPart/>
-</div>
+</div> -->
 
         </b-row>
       </b-col>

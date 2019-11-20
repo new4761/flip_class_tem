@@ -3,18 +3,20 @@
 
 
 
-    <b-navbar class ="shadow header navbar-dark bg-myblue" > 
+    <b-navbar class ="shadow header navbar-dark bg-myblue py-1" > 
       <b-navbar-brand class="mr-auto" href="#">
         <h2>Flip classroom</h2>
       </b-navbar-brand>
 
-      <b-nav  class="nav justify-content-center mx-auto d-md-down-none" id="navcontent"> 
+      <div  class="nav justify-content-center mx-auto d-md-down-none" id="navcontent"> 
         <HButton v-bind:ButtonData="ButtonData" />
-      </b-nav>
+      </div>
 
-      <b-nav>
+        <b-nav>
         <HeaderDropdown class="ml-auto" />
-      </b-nav>
+        </b-nav>
+
+
 
     </b-navbar>
 
@@ -28,6 +30,8 @@
     <b-navbar class="nav justify-content-center fixed-bottom d-lg-none navbar-light bg-light">
       <HButtombar v-bind:ButtonData="ButtonData" />
     </b-navbar>
+
+
 
 
 

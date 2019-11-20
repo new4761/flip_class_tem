@@ -1,7 +1,8 @@
 <template>
   <b-card class="bg-transparent text-center border-0" no-body style="max-width: 1000px;">
-    <b-row no-gutters>
-      <b-col class="text-left mx-1 my-1">
+    <b-row no-gutters class="justify-content-center ">
+      
+      <!-- <b-col class="text-left mx-1 my-1">
         <v-card max-width="600" height="100%" class="centerBlock bg-myblue text-white">
           <v-list-item>
             <v-list-item-avatar class="my-2" size="70">
@@ -15,12 +16,12 @@
             </v-list-item-content>
           </v-list-item>
         </v-card>
-      </b-col>
+      </b-col> -->
 
       <b-col
         sm="12"
         md="2"
-        class="justify-content-center mx-1 my-1"
+        class="mx-1 my-1"
         v-for="(data,idx) in UserCardData" :key="idx"
       >
       <nuxt-link :to=data.link class="usercard">
