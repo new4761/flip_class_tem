@@ -37,19 +37,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0078e9",endCo
     transition: all 0.20s linear;
   }
 
-  .cardstat:hover {
+  /* .cardstat:hover {
     text-shadow: 2px 2px 2px #000000;
-  }
+  } */
 
   .centerBlock {
     margin: auto;
   }
 
-  /* .overlay{
-    background: url(https://i.imgur.com/7n4DjMG.png) no-repeat ;
+  .overlay{
+    background: url(https://i.imgur.com/HJMyKem.png) no-repeat ;
     background-size: cover;
   }
- */
+
 
 
 

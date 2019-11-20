@@ -8,15 +8,13 @@
         <h2>Flip classroom</h2>
       </b-navbar-brand>
 
-      <div  class="nav justify-content-center mx-auto d-md-down-none" id="navcontent"> 
+      <b-nav class=" justify-content-center mx-auto d-md-down-none" id="navcontent"> 
         <HButton v-bind:ButtonData="ButtonData" />
-      </div>
+      </b-nav>
 
         <b-nav>
         <HeaderDropdown class="ml-auto" />
         </b-nav>
-
-
 
     </b-navbar>
 

@@ -9,7 +9,7 @@
           />
         </v-avatar>
 
-        <a class="DHbutton d-sm-down-none text-myblue" >สมจันทร์ หมายชาย</a>
+        <a class="DHbutton d-sm-down-none text-white" >สมจันทร์ หมายชาย</a>
 
     </template>
 

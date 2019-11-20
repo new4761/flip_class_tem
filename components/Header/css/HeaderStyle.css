@@ -5,7 +5,7 @@
 .Hbutton {
     border-radius:10px;
 	cursor:pointer;
-	font-size:20px;
+	font-size:15px;
     padding:5px 20px;
     margin:0px 0px;
     color: #ffffff;
@@ -15,7 +15,7 @@
 
 .Hbutton:hover {
     color:  #ffffff;
-    font-size:22px;
+    font-size:17px;
     text-decoration: none;
   }
 
@@ -54,11 +54,14 @@
 }
 
 .header{
-  background: rgb(0,120,233);
+  /* background: rgb(0,120,233);
 background: -moz-linear-gradient(90deg, rgba(0,120,233,1) 0%, rgba(11,255,234,1) 100%);
 background: -webkit-linear-gradient(90deg, rgba(0,120,233,1) 0%, rgba(11,255,234,1) 100%);
 background: linear-gradient(90deg, rgba(0,120,233,1) 0%, rgba(11,255,234,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0078e9",endColorstr="#0bffea",GradientType=1);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0078e9",endColorstr="#0bffea",GradientType=1); */
+
+background: url(https://i.imgur.com/mXmiwDV.png) no-repeat ;
+background-size: cover;
 }
 
 #navcontent {

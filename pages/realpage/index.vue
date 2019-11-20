@@ -1,5 +1,9 @@
 <template>
-  <div class="overlay background justify-content-center text-md-left text-sm-center">
+  <div class="overlay justify-content-center text-md-left text-sm-center">
+
+
+
+
 
     <!-- <b-row  class="justify-content-center text-md-left text-sm-center mx-2">
       <b-col md="4" sm="12">
@@ -9,6 +13,9 @@
 
 
     <b-row class="mx-2 justify-content-center">
+            
+      <b-row class="background justify-content-center">
+
 
       <b-col md="10">
         <b-row class="justify-content-center align-items-stretch">
@@ -20,11 +27,17 @@
             <h3 class="text-md-left-sm-center mb-3">ประกาศ</h3>
             <NewsBox />
           </b-col>
+          
 
         </b-row>
-
+     
       </b-col>
 
+      </b-row>
+
+    
+
+       
       
 <!-- <div class="rt180">
       <SVGPart/>
@@ -46,21 +59,35 @@
       <SVGPart/>
 </div> -->
 
+
+
       <b-col md="10">
-        <b-row class="mb-sm-5" no-gutters>
-          <b-col sm="12" md="12">
-            <b-row>
+        <b-row>
+          <v-tabs>
+           <v-tab> ห้องเรียน </v-tab>
+           <v-tab> บทเรียน </v-tab>
+           <v-tab> กิจกรรมล่าสุด </v-tab>
+          </v-tabs>
+
+
               <b-col sm="12" md="12">
+
+
                 <h3 class="text-sm-center text-md-left ml-2">บทเรียนของคุณ</h3>
-                <v-slide-group class show-arrows>
+                <v-slide-group prev-icon="fa fa-arrow-left"
+                               next-icon="fa fa-arrow-right" 
+                               show-arrows>
                   <v-slide-item v-for="n in 15" :key="n" class="m-md-4 m-sm-2">
                     <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
                   </v-slide-item>
                 </v-slide-group>
-              </b-col>
-            </b-row>
-          </b-col>
+        </b-col>
+
+
+
+
         </b-row>
+        
 
         <b-row class="background justify-content-center my-5">
                       
@@ -82,7 +109,10 @@
 
         </b-row>
       </b-col>
+     
     </b-row>
+     
+  
   </div>
 </template>
 
