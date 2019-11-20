@@ -1,6 +1,6 @@
 <template>
   <b-container fluid>
-       <classCreaterModal :modalShow="showModal"/>
+       <classCreaterModal @HideModal="statusModal"  :modalShow="showModal"/>
     <b-row no-gutters>
       <b-col v-for="n in 8" :key="n" lg="3" xl="2" sm="6" class="p-1">
         <roomCreated />
@@ -16,7 +16,8 @@
 //card ClassRoom
 import roomCreated from "~/components/adminComponent/classroom/cardCreatedRoom";
 //modal obj
-import classCreaterModal from "~/components/adminComponent/buildingObj/newClass";
+import classCreaterModal from "~/components/adminComponent/buildingObj/classroom/newClass";
+
 export default {
   layout: "admin",
   components: {
@@ -25,6 +26,12 @@ export default {
   },
   data: () => ({
     showModal: false
-  })
+  }),
+    methods: {
+    statusModal(e) {
+   this.showModal = e
+    },
+
+    }
 };
 </script>
