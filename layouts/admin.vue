@@ -50,31 +50,31 @@ export default {
   data: () => ({
     drawer: false,
     items: [
-      { icon: "class", text: "ห้องเรียน", link: "/realpage/admin" },
+      { icon: "class", text: "ห้องเรียน", link: "/admin" },
       {
         icon: "mdi-library-books",
         text: "บทเรียน",
-        link: "/realpage/admin/lesson"
+        link: "/admin/lesson"
       },
       {
         icon: "assignment",
         text: "เเบบฝึกหัด",
-        link: "/realpage/admin/exercise"
+        link: "/admin/exercise"
       },
       {
         icon: "mdi-newspaper-variant",
         text: "ประกาศขนาดใหญ่",
-        link: "/realpage/admin/mainNews"
+        link: "/admin/mainNews"
       },
       {
         icon: "mdi-format-list-bulleted",
         text: "ประกาศเเจ้งเตือน",
-        link: "/realpage/admin/subNews"
+        link: "/admin/subNews"
       },
       {
         icon: "web",
         text: "จัดการหน้าเว็บไซต์",
-        link: "/realpage/admin/editpage"
+        link: "/admin/editpage"
       }
     ]
   })

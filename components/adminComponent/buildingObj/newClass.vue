@@ -29,10 +29,6 @@
         <b-button type="reset" size="md" pill variant="danger">ยกเลิก</b-button>
       </div>
     </b-form>
-
-    <!-- Emulate built in modal footer ok and cancel button actions -->
-
-    <!-- Button with custom close trigger value -->
   </b-modal>
 </template>
 <script>
