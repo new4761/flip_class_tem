@@ -10,11 +10,9 @@
           <b-navbar justified type="dark" variant="dark">
             <b-navbar-nav>
               <b-navbar-brand href="#">ชื่อบทเรียน /</b-navbar-brand>
-
               <b-nav-item href="#">Link</b-nav-item>
             </b-navbar-nav>
           </b-navbar>
-
           <nuxt style="height:100vh;" class="animated-witdh overflow-auto" />
         </div>
 

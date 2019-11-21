@@ -11,7 +11,7 @@
             <v-expansion-panel v-for="(item,i) in 30" :key="i">
               <v-expansion-panel-header expand-icon="none" class="text-sm-center ">
                 <b-row >
-                  <b-col cols="3" >
+                  <b-col cols="3"  class="text-nowrap">
                   <h6>{{ i + 1 }}</h6>
                   </b-col>
                   <b-col cols="9">

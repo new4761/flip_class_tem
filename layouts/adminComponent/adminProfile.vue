@@ -18,7 +18,7 @@
 <script>
 export default {
    props: {
-    myDrawer: Object
+    myDrawer:Boolean
   },
 }
 </script>

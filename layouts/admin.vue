@@ -1,73 +1,40 @@
 <template>
-  <v-app style="  font-family: 'Mitr', sans-serif !important;">
-      <div       @mouseover="drawer = true"
-      @mouseleave="drawer = false">
-    <v-navigation-drawer
-      dark
-      fixed
-      expand-on-hover
-
-      permanent
-      style="background-color:#004485;"
-    >
-      <v-list class="p-0">
-        <div style="background-color:#0078e9; ">
-          <myHead v-if="drawer" />
-          <adminProfile :myDrawer="drawer" />
-          <v-divider></v-divider>
-        </div>
-
-        <template v-for="item in items">
-          <v-row v-if="item.heading" :key="item.heading" align="center">
-            <v-col cols="6">
-              <v-subheader v-if="item.heading">{{ item.heading }}</v-subheader>
-            </v-col>
-            <v-col cols="6" class="text-center">
-              <a href="#!" class="body-2 black--text">EDIT</a>
-            </v-col>
-          </v-row>
-
-          <v-list-group
-            v-else-if="item.children"
-            :key="item.text"
-            v-model="item.model"
-            :prepend-icon="item.model ? item.icon : item['icon-alt']"
-            append-icon
-          >
-            <template v-slot:activator>
-              <v-list-item>
+  <v-app style=" font-family: 'Mitr', sans-serif !important; background-color:#d9d9d9;">
+    <div @mouseover="drawer = true" @mouseleave="drawer = false">
+      <v-navigation-drawer dark fixed expand-on-hover permanent style="background-color:#004485;">
+        <v-list>
+          <div style="background-color:#0078e9; ">
+            <myHead v-if="drawer" />
+            <adminProfile :myDrawer="drawer" />
+            <v-divider></v-divider>
+          </div>
+          <template v-for="item in items">
+            <nuxt-link :to="item.link" :key="item.text">
+              <v-list-item link>
+                <v-list-item-action>
+                  <v-icon>{{ item.icon }}</v-icon>
+                </v-list-item-action>
                 <v-list-item-content>
                   <v-list-item-title>{{ item.text }}</v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
-            </template>
-            <v-list-item v-for="(child, i) in item.children" :key="i" link>
-              <v-list-item-action v-if="child.icon">
-                <v-icon>{{ child.icon }}</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title>{{ child.text }}</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-group>
+            </nuxt-link>
+          </template>
+          <v-divider></v-divider>
+        </v-list>
+      </v-navigation-drawer>
+    </div>
+    <v-content style="margin-left:80px; margin-top:20px; ">
+      <b-container fluid class="cardradius">
+        <b-card class="cardradius">
+          <h2 class="text-myblue">{{$nuxt.$route.name}}</h2>
+        </b-card>
 
-          <v-list-item v-else :key="item.text" link>
-            <v-list-item-action>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>{{ item.text }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </template>
-        <v-divider></v-divider>
-      </v-list>
-    </v-navigation-drawer>
-      </div>
-    <v-content>
-      <v-container class="fill-height" fluid>
-        <nuxt />
-      </v-container>
+        <b-breadcrumb :items="items" class="cardradius"></b-breadcrumb>
+        <b-card no-body class="cardradius overflow-auto p-1" style="height:100vh; ">
+          <nuxt />
+        </b-card>
+      </b-container>
     </v-content>
   </v-app>
 </template>
@@ -83,12 +50,32 @@ export default {
   data: () => ({
     drawer: false,
     items: [
-      { icon: "class", text: "ห้องเรียน" },
-      { icon: "mdi-library-books", text: "บทเรียน" },
-      { icon: "assignment", text: "เเบบฝึกหัด" },
-      { icon: "mdi-newspaper-variant", text: "ประกาศขนาดใหญ่" },
-      { icon: "mdi-format-list-bulleted", text: "ประกาศเเจ้งเตือน" },
-      { icon: "web", text: "จัดการหน้าเว็บไซต์" }
+      { icon: "class", text: "ห้องเรียน", link: "/admin" },
+      {
+        icon: "mdi-library-books",
+        text: "บทเรียน",
+        link: "/admin/lesson"
+      },
+      {
+        icon: "assignment",
+        text: "เเบบฝึกหัด",
+        link: "/admin/exercise"
+      },
+      {
+        icon: "mdi-newspaper-variant",
+        text: "ประกาศขนาดใหญ่",
+        link: "/admin/mainNews"
+      },
+      {
+        icon: "mdi-format-list-bulleted",
+        text: "ประกาศเเจ้งเตือน",
+        link: "/admin/subNews"
+      },
+      {
+        icon: "web",
+        text: "จัดการหน้าเว็บไซต์",
+        link: "/admin/editpage"
+      }
     ]
   })
 };
