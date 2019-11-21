@@ -50,9 +50,9 @@ export default {
   data() {
     return {
       ButtonData: [
-        { icon: "icon-home", name: "หน้าหลัก"  ,link:"/realpage" },
-        { icon: "icon-bell", name: "ประกาศ" ,link:"/realpage/news" },
-        { icon: "icon-notebook", name: "บทเรียน" ,link:"/realpage/lesson" },
+        { icon: "icon-home", name: "หน้าหลัก"  ,link:"/" },
+        { icon: "icon-bell", name: "ประกาศ" ,link:"/news" },
+        { icon: "icon-notebook", name: "บทเรียน" ,link:"/lesson" },
       // { icon: "icon-globe-alt", name: "เเหล่งเรียนรู้ภายนอก" ,link:"#" }
       ]
     };
