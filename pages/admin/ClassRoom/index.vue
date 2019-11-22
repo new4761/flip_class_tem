@@ -1,9 +1,9 @@
 <template>
   <b-container fluid>
-    <newExerciseModal @HideModal="statusModal" :modalShow="showModal" />
+    <classCreaterModal @HideModal="statusModal" :modalShow="showModal" />
     <b-row no-gutters>
-      <b-col v-for="data in ExerciseList" :key="data.cardID" lg="3" xl="2" sm="6" class="p-2">
-        <exerciseCreated :cardData="data"/>
+      <b-col v-for="data in classRoomList" :key="data.cardId" lg="3" xl="2" sm="6" class="p-1">
+        <roomCreated :cardData="data" />
       </b-col>
     </b-row>
     <v-btn
@@ -22,53 +22,56 @@
 </template>
 <script>
 //card ClassRoom
-import exerciseCreated from "~/components/adminComponent/exercise/cardCreatedExercise";
+import roomCreated from "~/components/adminComponent/classroom/cardCreatedRoom";
 //modal obj
-import newExerciseModal from "~/components/adminComponent/buildingObj/exercise/newExercise";
+import classCreaterModal from "~/components/adminComponent/buildingObj/classroom/newClass";
 
 export default {
   layout: "admin",
   components: {
-    newExerciseModal,
-    exerciseCreated
+    roomCreated,
+    classCreaterModal
   },
   data: () => ({
     showModal: false,
-    ExerciseList: [
+    classRoomList: [
       {
         cardId: "1",
-        name: "ทดสอบชื่อเเบบฝึกหัด",
+        imgsrc: "https://picsum.photos/1024/400/?image=41",
+        name: "ทดสอบชื่อห้องเรียน",
         createDate: "14/8/2561",
         desc:
           "Usually though, you’ll want every prop to be a specific type of value. In these cases, you can list props as an object, where the properties’ names and values contain the prop names and types, respectively:",
         countList: {
-          choice: 30,
-          upload: 60,
-          text:80
+          student: 30,
+          lesson: 60,
+          exercise: 10
         }
       },
       {
         cardId: "2",
-        name: "ทดสอบชื่อบทเรียนขนาฟหใญ่asdasdasdasdqweqweqew",
+        imgsrc: "https://picsum.photos/1024/400/?image=51",
+        name: "ทดสอบชื่อบทเรียนขนาฟหใญ่",
         createDate: "14/8/2561",
         desc:
           "Usually though, you’ll want every prop to be a specific type of value. In these cases, you can list props as an object, where the properties’ names and values contain the prop names and types, respectively:",
         countList: {
-             choice: 30,
-          upload: 60,
-          text:80
+          student: 30,
+          lesson: 60,
+          exercise: 10
         }
       },
       {
         cardId: "3",
+        imgsrc: "https://picsum.photos/1024/400/?image=68",
         name: "ทดสอบชื่อบทเรียนขนาฟหใญ่มากๆๆๆๆ",
         createDate: "14/8/2561",
         desc:
           "Usually though, you’ll want every prop to be a specific type of value. In these cases, you can list props as an object, where the properties’ names and values contain the prop names and types, respectively:",
         countList: {
-          choice: 30,
-          upload: 60,
-          text:80
+          student: 30,
+          lesson: 60,
+          exercise: 10
         }
       }
     ]
