@@ -6,15 +6,22 @@
 }
 
 .bgtop{
-background: rgb(0,120,233);
+  background: url(https://i.imgur.com/HJMyKem.png) no-repeat ;
+  background-size: cover;}
+
+
+
+/* background: rgb(0,120,233);
 background: -moz-linear-gradient(180deg, rgba(0,120,233,1) 0%, rgba(65,243,255,1) 100%);
 background: -webkit-linear-gradient(180deg, rgba(0,120,233,1) 0%, rgba(65,243,255,1) 100%);
 background: linear-gradient(180deg, rgba(0,120,233,1) 0%, rgba(65,243,255,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0078e9",endColorstr="#41f3ff",GradientType=1);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0078e9",endColorstr="#41f3ff",GradientType=1); */
+
+
+
+.st0{
+  fill:rgb(255, 255, 255);
 }
-
-
-.st0{fill:#C2E3FF;}
 .st1{fill:#36E3FF;}
 .st2{fill:#0078E9;}
 

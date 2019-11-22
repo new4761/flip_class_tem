@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay justify-content-center text-md-left text-sm-center">
+  <div class="justify-content-center text-md-left text-sm-center">
 
 
     <!-- <b-row  class="justify-content-center text-md-left text-sm-center mx-2">
@@ -11,7 +11,7 @@
 
     <b-row class="mx-2 justify-content-center">
             
-      <b-row class="background justify-content-center">
+      <b-row class="background bgtop  justify-content-center">
 
 
       <b-col md="10">
@@ -30,15 +30,14 @@
      
       </b-col>
 
+      <SVGdivide/>
+
       </b-row>
 
     
 
        
       
-<!-- <div class="rt180">
-      <SVGPart/>
-</div> -->
 
      
 
@@ -59,16 +58,22 @@
 
 
       <b-col md="10">
-        <b-row>
-          <v-tabs>
+        <b-row class="justify-content-between">
+          <v-tabs grow centered multiple>
            <v-tab> ห้องเรียน </v-tab>
            <v-tab> บทเรียน </v-tab>
            <v-tab> กิจกรรมล่าสุด </v-tab>
-          </v-tabs>
+           </v-tabs>
+         
+      
+
+      <b-col md="4" class="mx-2">
+        <SVGpic/>
+      </b-col>
 
 
-      <b-col sm="12" md="12">
-                <h3 class="text-sm-center text-md-left ml-2">บทเรียนของคุณ</h3>
+      <b-col md="6" class="mx-0">
+                <h3 class="text-sm-center text-md-left ml-2">ห้องเรียนของคุณ</h3>
                 <v-slide-group prev-icon="fa fa-arrow-left"
                                next-icon="fa fa-arrow-right" 
                                show-arrows>
@@ -78,13 +83,15 @@
                 </v-slide-group>
         </b-col>
 
-
-
-
+       
+      
         </b-row>
         
 
-        <b-row class="background justify-content-center my-5">
+        <b-row class="background bgtop justify-content-center my-5">
+
+
+          <SVGdivide2/>
                       
 <!-- <div class="rt180" >
       <SVGPart/>
@@ -101,6 +108,7 @@
   <!-- <div>
       <SVGPart/>
 </div> -->
+        <SVGdivide/>
 
         </b-row>
       </b-col>
@@ -115,7 +123,9 @@
 import UserCard from "./components/UserCardProfile";
 import Carouesl from "./components/indexCarousel";
 import NewsBox from "./components/NewsBox";
-import SVGPart from "./components/SVGPart";
+import SVGdivide from "./components/SVGdivide";
+import SVGdivide2 from "./components/SVGdivide2";
+import SVGpic from "./components/SVGpic";
 import IntroCard from "./components/IntroCard";
 import DoingCardlesson from "~/components/lessonCard/DoingCard";
 import Cardlesson from "~/components/lessonCard/LessonCard";
@@ -130,7 +140,9 @@ export default {
     DoingCardlesson,
     UserCard,
     IntroCard,
-    SVGPart
+    SVGdivide,
+    SVGdivide2,
+    SVGpic
   },
   computed: mapState({
     lessonData: state => state.testStore.lessonData
