@@ -2,13 +2,6 @@
   <div class="justify-content-center text-md-left text-sm-center">
 
 
-    <!-- <b-row  class="justify-content-center text-md-left text-sm-center mx-2">
-      <b-col md="4" sm="12">
-        <DoingCardlesson :cardData="lessonData.lessonData" />
-      </b-col> 
-    </b-row> -->
-
-
     <b-row class="mx-2 justify-content-center">
             
       <b-row class="background bgtop  justify-content-center">
@@ -17,11 +10,11 @@
       <b-col md="10">
         <b-row class="justify-content-center align-items-stretch">
           <b-col sm="12" md="8">
-            <h2 class="text-md-left-sm-center mb-3">ประกาศสำคัญ</h2>
+            <h2 class="text-md-left-sm-center mb-3"><strong>ประกาศสำคัญ</strong></h2>
             <Carouesl />
           </b-col>
           <b-col md="4" sm="12" class="mx-sm-auto">
-            <h2 class="text-md-left-sm-center mb-3">ประกาศ</h2>
+            <h2 class="text-md-left-sm-center mb-3"><strong>ประกาศ</strong></h2>
             <NewsBox />
           </b-col>
           
@@ -53,45 +46,19 @@
 
 
 
-      <b-col md="10">
+      <b-col md="10" style="max-width: 1200px;">
         <b-row>
           <v-tabs grow centered multiple >
-           <v-tab> <h3>ห้องเรียน</h3> </v-tab>
-           <v-tab> <h3>บทเรียน</h3></v-tab>
-           <v-tab> <h3>กิจกรรมล่าสุด</h3>  </v-tab>
-           
-         
-       <v-tab-item>
+           <v-tab> <h3>บทเรียน</h3> </v-tab>
+           <v-tab> <h3>แบบฝึกหัด</h3></v-tab>
+           <v-tab> <h3>กิจกรรมล่าสุด</h3></v-tab>
+          <v-tab-item>
          
 
       <b-row class="justify-content-around">
 
       <b-col md="4" align="center" class="mx-2 d-md-down-none">
         <SVGpicRoom/>
-      </b-col>
-
-
-      <b-col md="6" sm="12" align="center" class="mx-0">
-                <h3 class="text-muted text-sm-center text-md-left ml-2">ห้องเรียนของคุณ</h3>
-                <v-slide-group prev-icon="fa fa-arrow-left"
-                               next-icon="fa fa-arrow-right" 
-                               show-arrows>
-                  <v-slide-item v-for="n in 15" :key="n" class="m-md-4 m-sm-2">
-                    <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
-                  </v-slide-item>
-                </v-slide-group>
-        </b-col>
-        </b-row>
-        
-        </v-tab-item>
-
-               <v-tab-item>
-         
-
-      <b-row class="justify-content-around">
-
-      <b-col md="4" align="center" class="mx-2 d-md-down-none">
-        <SVGpicLesson/>
       </b-col>
 
 
@@ -115,12 +82,12 @@
       <b-row class="justify-content-around">
 
       <b-col md="4" align="center" class="mx-2 d-md-down-none">
-        <SVGpicWork/>
+        <SVGpicLesson/>
       </b-col>
 
 
       <b-col md="6" sm="12" align="center" class="mx-0">
-                <h3 class="text-muted text-sm-center text-md-left ml-2">กิจกรรมล่าสุดของคุณ</h3>
+                <h3 class="text-muted text-sm-center text-md-left ml-2">แบบฝึกหัดของคุณ</h3>
                 <v-slide-group prev-icon="fa fa-arrow-left"
                                next-icon="fa fa-arrow-right" 
                                show-arrows>
@@ -128,6 +95,26 @@
                     <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
                   </v-slide-item>
                 </v-slide-group>
+        </b-col>
+        </b-row>
+        
+        </v-tab-item>
+
+               <v-tab-item>
+         
+
+      <b-row class="justify-content-around">
+
+      <b-col md="4" align="center" class="mx-2 d-md-down-none">
+        <SVGpicWork/>
+      </b-col>
+
+
+      <b-col md="6" sm="12" align="center" class="mx-0 pt-5">
+          <h3 class="text-muted text-sm-center text-md-left ml-2">กิจกรรมล่าสุดของคุณ</h3>
+ 
+        <DoingCardlesson :cardData="lessonData.lessonData" />
+  
         </b-col>
         </b-row>
         
