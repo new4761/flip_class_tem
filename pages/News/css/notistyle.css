@@ -32,3 +32,15 @@
 .search{
     border-radius:10px;
 }
+
+.background {
+    box-sizing: border-box;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.bgtop{
+  background: url(https://i.imgur.com/HJMyKem.png) no-repeat ;
+  background-size: cover;
+}
+

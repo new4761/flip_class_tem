@@ -1,7 +1,8 @@
 <template>
+<div class="background bgtop">
 <b class ="p-5">
 
-    <b-row class = "px-5">
+    <b-row class = "pl-5 ml-5">
         <h1><strong>ประกาศแจ้งเตือน</strong></h1>
     </b-row>
 
@@ -28,16 +29,19 @@
     </b-row>
     
     <b-row  class = "justify-content-center">
-        <b-col md="9" sm="7" class="px-4">
+        <b-col md="9" sm="7" class="px-4 bg-white cardradius">
     <Noticard v-bind:CardData="CardData" v-for="index in 10" :key="index"/> 
+        
+        <pagebar v-bind:PageBarData="PageBarData"/>
+
         </b-col>
     </b-row>
     
-    <pagebar v-bind:PageBarData="PageBarData"/>
-
+    
 
            
 </b>
+</div>
 
 </template>
 

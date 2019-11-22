@@ -17,7 +17,7 @@
                 <i class="fa fa-user"></i>
               </b-input-group-text>
             </b-input-group-prepend>
-            <input type="text" class="form-control" placeholder="Student id" />
+            <input type="text" class="form-control" required  placeholder="Student id" />
           </b-input-group>
           <b-input-group class="mb-4">
             <b-input-group-prepend>
@@ -25,7 +25,7 @@
                 <i class="fa fa-lock"></i>
               </b-input-group-text>
             </b-input-group-prepend>
-            <input type="password" class="form-control" placeholder="Password" />
+            <input type="password" class="form-control" required placeholder="Password" />
           </b-input-group>
         </b-card-body>
       </v-tab-item>
