@@ -32,8 +32,6 @@
        
       
 
-     
-
       <b-row class="background justify-content-center">
         <b-col md="10" sm="12" align="center">
           <UserCard v-bind:UserCardData="UserCardData" />
@@ -42,7 +40,7 @@
       
 <!-- <div >
       <SVGPart/>
-</div> -->
+      </div>-->
 
 
 
@@ -139,7 +137,6 @@
 </div> -->
 
           <b-col class="text-center justify-content-center" md="8" sm="12">
-
             <h2>ใส่รายละเอียดการจัดทำเเละเครติด</h2>
             <h6
               md="8"
@@ -159,10 +156,7 @@
 
         </b-row>
       </b-col>
-     
     </b-row>
-     
-  
   </div>
 </template>
 
@@ -208,27 +202,29 @@ export default {
   data: () => ({
     maxSmallcardWight: 300,
 
-     UserCardData:[
-     
-    {title:"บทเรียน",
-     icon:"fa fa-book",
-     value:"20",
-     maxvalue:"30",
-     link:"#"
-  },
-      {title:"แบบฝึกหัด",
-      icon:"fa fa-certificate",
-     value:"10",
-     maxvalue:"60",
-     link:"#"
-  },
-      {title:"งาน",
-      icon:"fa fa-folder-open",
-     value:"9",
-     maxvalue:"20",
-     link:"#"
-  },
-    ],
+    UserCardData: [
+      {
+        title: "บทเรียน",
+        icon: "fa fa-book",
+        value: "20",
+        maxvalue: "30",
+        link: "#"
+      },
+      {
+        title: "แบบฝึกหัด",
+        icon: "fa fa-certificate",
+        value: "10",
+        maxvalue: "60",
+        link: "#"
+      },
+      {
+        title: "งาน",
+        icon: "fa fa-folder-open",
+        value: "9",
+        maxvalue: "20",
+        link: "#"
+      }
+    ]
 
     //  lessonData: {
     //   lastUpdate: "14/7/2542 10:24",

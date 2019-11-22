@@ -12,10 +12,11 @@ html,body{
 
 }
 .radiusObj{
-    border-radius: 20px !important;
+    border-radius: 20px  !important;
 }
 .animated-witdh {
 
     -webkit-transition: width 0.5s;
     transition: width 0.5s;
   }
+.rmLink{text-decoration: none !important;}

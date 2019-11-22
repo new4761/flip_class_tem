@@ -27,10 +27,15 @@
     <v-content style="margin-left:80px; margin-top:20px; ">
       <b-container fluid class="cardradius">
         <b-card class="cardradius">
-          <h2 class="text-myblue">{{$nuxt.$route.name}}</h2>
-        </b-card>
+          <div v-for="(item,index) in pathSp " :key="item.name" class="d-inline rmLink">
+            <h5  class="d-inline px-2 text-muted" v-if="index!==0">/</h5>
+            <nuxt-link :to="item.path" >
+              <h3 v-if="index===0" class="d-inline ">{{item.name}}</h3>
+              <h5 v-else class="d-inline ">{{item.name}}</h5>
+            </nuxt-link>
 
-        <b-breadcrumb :items="items" class="cardradius"></b-breadcrumb>
+          </div>
+        </b-card>
         <b-card no-body class="cardradius overflow-auto p-1" style="height:100vh; ">
           <nuxt />
         </b-card>
@@ -47,34 +52,49 @@ export default {
     source: String
   },
   components: { myHead, adminProfile },
+  computed: {
+    pathSp() {
+      let splitPathArray = this.$route.path.split("/");
+      splitPathArray.shift();
+      splitPathArray.shift();
+      let routePath = "/admin";
+      let pathArray = [];
+      splitPathArray.forEach(element => {
+        routePath = routePath + "/" + element;
+        pathArray.push({ name: element, path: routePath });
+      });
+      return pathArray;
+    }
+  },
   data: () => ({
+    pathList: [],
     drawer: false,
     items: [
-      { icon: "class", text: "ห้องเรียน", link: "/admin" },
+      { icon: "class", text: "ห้องเรียน", link: "/admin/ClassRoom" },
       {
         icon: "mdi-library-books",
         text: "บทเรียน",
-        link: "/admin/lesson"
+        link: "/admin/Lesson"
       },
       {
         icon: "assignment",
         text: "เเบบฝึกหัด",
-        link: "/admin/exercise"
+        link: "/admin/Exercise"
       },
       {
         icon: "mdi-newspaper-variant",
         text: "ประกาศขนาดใหญ่",
-        link: "/admin/mainNews"
+        link: "/admin/MainNews"
       },
       {
         icon: "mdi-format-list-bulleted",
         text: "ประกาศเเจ้งเตือน",
-        link: "/admin/subNews"
+        link: "/admin/SubNews"
       },
       {
         icon: "web",
         text: "จัดการหน้าเว็บไซต์",
-        link: "/admin/editpage"
+        link: "/admin/EditPage"
       }
     ]
   })
