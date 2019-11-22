@@ -1,51 +1,43 @@
 <template>
   <b-container style="background-color: white; " >
     <div v-for="n in 1" :key="n" class="p-md-5 justify-content-center">
+
       <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <textTitle title="ข้อความขนาดใหญ่" />
       </b-row>
-      <b-row v-for="n in 3" :key="n" class="justify-content-center">
+
+      <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <textContent :conntent="faketext" />
       </b-row>
+
       <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <youtube youtubeLink="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" />
       </b-row>
+
       <b-row class="justify-content-center text-center">
-        <linkButton link="https://nuxtjs.org/api/components-nuxt-link/" buttonText="test" />
-        <linkButton link="https://nuxtjs.org/api/components-nuxt-link/" buttonText="test" />
-        <linkButton link="https://nuxtjs.org/api/components-nuxt-link/" buttonText="test" />
+        <linkButton link="https://nuxtjs.org/api/components-nuxt-link/" buttonText="title" />
       </b-row>
+
       <b-row class="justify-content-center">
-        <downLoadFile link="https://nuxtjs.org/api/components-nuxt-link/" buttonText="test" />
-        <downLoadFile link="https://nuxtjs.org/api/components-nuxt-link/" buttonText="test" />
+        <downLoadFile link="https://nuxtjs.org/api/components-nuxt-link/" buttonText="long title" />
       </b-row>
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <upLoadFile fileName="ชื่อไฟล์" desc="คำอธิบายขนาดเล็ก" />
-        <upLoadFile fileName="ชื่อไฟล์" desc="คำอธิบายขนาดเล็ก" />
-        <upLoadFile fileName="ชื่อไฟล์" desc="คำอธิบายขนาดเล็ก" />
-      </b-row>
+
       <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <upLoadFile fileName="ชื่อไฟล์" desc="คำอธิบายขนาดเล็ก" />
       </b-row>
+
       <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <textArea title="ชื่อคำถาม" desc="คำอธิบายขนาดเล็ก" />
-        <textArea title="ชื่อไฟล์" desc="คำอธิบายขนาดเล็ก" />
       </b-row>
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <textArea title="ชื่อไฟล์" desc="คำอธิบายขนาดเล็ก" />
-      </b-row>
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <textInput title="ชื่อคำถาม" desc="คำอธิบายขนาดเล็ก" />
-        <textInput title="ชื่อคำถาม" desc="คำอธิบายขนาดใหญ่ขึ้นมานิดหนึ่ง" />
-        <textInput title="ชื่อคำถาม" desc="คำอธิบายขนาดใหญ่ขึ้นมานิดหนึ่ง" />
-      </b-row>
+
       <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <textInput
           title="ชื่อคำถามเเเบบยาวมากๆๆๆระดับหนึ่ง"
           desc="คำอธิบายขนาดใหญ่ขึ้นมานิดดดดดดดดดดดหนึ่ง"
         />
       </b-row>
-      <b-row v-for="n in 3" :key="n" class="justify-content-center">
+
+      <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <radioInput
           title="ชื่อคำถามเเเบบยาวมากๆๆๆระดับหนึ่งasdwqeqweqwejkhkqkbdkbiuabi"
           desc="คำอธิบายขนาดใหญ่ขึ้นมานิดดดดดดดดดดดหนึ่qweqweqweqweqweqweqweqweqweqweqweqeqwง"
@@ -53,32 +45,28 @@
         />
       </b-row>
 
-      <b-row v-for="n in 3" :key="n" class="justify-content-center">
+      <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <selectionInput
           title="ชื่อคำถามเเเบบยาวมากๆๆๆระดับหนึ่งasdwqeqweqwejkhkqkbdkbiuabi"
           desc="คำอธิบายขนาดใหญ่ขึ้นมานิดดดดดดดดดดดหนึ่qweqweqweqweqweqweqweqweqweqweqweqeqwง"
           :myOptions="testdata "
         />
       </b-row>
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <smallImg srcLink="https://picsum.photos/300/150/?image=41" />
-        <smallImg srcLink="https://picsum.photos/300/150/?image=41" />
-        <smallImg srcLink="https://picsum.photos/300/150/?image=41" />
-      </b-row>
+
       <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <smallImg srcLink="https://picsum.photos/300/150/?image=41" />
       </b-row>
+
       <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <bigImage srcLink="https://picsum.photos/300/150/?image=41" />
       </b-row>
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <bigImage srcLink="https://picsum.photos/300/150/?image=41" />
-      </b-row>
+
       <b-row v-for="n in 1" :key="n" class="justify-content-center">
         <iflameSlider
           iframeLink="https://docs.google.com/presentation/d/e/2PACX-1vSK4ZirU1tcdF2FOzRUnLO375H5eZAlZ3FA2SJlltXWlXcOo_Zh1NXcnC8vjzAzsnshh7DStbO6VRo0/embed?start=false&loop=false&delayms=3000"
         />
       </b-row>
+
     </div>
   </b-container>
 </template>
