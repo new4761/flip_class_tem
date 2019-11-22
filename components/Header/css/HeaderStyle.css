@@ -47,10 +47,10 @@
 
 
 
-.DHbutton {
-	  cursor:pointer;
-    font-size:16px;
-    color: white;
+
+
+.DHbutton:hover {
+  text-decoration: none;
 }
 
 .header{

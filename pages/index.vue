@@ -17,11 +17,11 @@
       <b-col md="10">
         <b-row class="justify-content-center align-items-stretch">
           <b-col sm="12" md="8">
-            <h3 class="text-md-left-sm-center mb-3">ประกาศสำคัญ</h3>
+            <h2 class="text-md-left-sm-center mb-3">ประกาศสำคัญ</h2>
             <Carouesl />
           </b-col>
           <b-col md="4" sm="12" class="mx-sm-auto">
-            <h3 class="text-md-left-sm-center mb-3">ประกาศ</h3>
+            <h2 class="text-md-left-sm-center mb-3">ประกาศ</h2>
             <NewsBox />
           </b-col>
           
@@ -46,10 +46,6 @@
           <UserCard v-bind:UserCardData="UserCardData" />
         </b-col>
       </b-row>
-
-      <!-- <b-row class="background justify-content-center text-center d-md-down-none">
-        <IntroCard />
-      </b-row> -->
       
 <!-- <div >
       <SVGPart/>
@@ -58,22 +54,25 @@
 
 
       <b-col md="10">
-        <b-row class="justify-content-between">
-          <v-tabs grow centered multiple>
-           <v-tab> ห้องเรียน </v-tab>
-           <v-tab> บทเรียน </v-tab>
-           <v-tab> กิจกรรมล่าสุด </v-tab>
-           </v-tabs>
+        <b-row>
+          <v-tabs grow centered multiple >
+           <v-tab> <h3>ห้องเรียน</h3> </v-tab>
+           <v-tab> <h3>บทเรียน</h3></v-tab>
+           <v-tab> <h3>กิจกรรมล่าสุด</h3>  </v-tab>
+           
          
-      
+       <v-tab-item>
+         
 
-      <b-col md="4" class="mx-2">
-        <SVGpic/>
+      <b-row class="justify-content-around">
+
+      <b-col md="4" align="center" class="mx-2 d-md-down-none">
+        <SVGpicRoom/>
       </b-col>
 
 
-      <b-col md="6" class="mx-0">
-                <h3 class="text-sm-center text-md-left ml-2">ห้องเรียนของคุณ</h3>
+      <b-col md="6" sm="12" align="center" class="mx-0">
+                <h3 class="text-muted text-sm-center text-md-left ml-2">ห้องเรียนของคุณ</h3>
                 <v-slide-group prev-icon="fa fa-arrow-left"
                                next-icon="fa fa-arrow-right" 
                                show-arrows>
@@ -82,6 +81,61 @@
                   </v-slide-item>
                 </v-slide-group>
         </b-col>
+        </b-row>
+        
+        </v-tab-item>
+
+               <v-tab-item>
+         
+
+      <b-row class="justify-content-around">
+
+      <b-col md="4" align="center" class="mx-2 d-md-down-none">
+        <SVGpicLesson/>
+      </b-col>
+
+
+      <b-col md="6" sm="12" align="center" class="mx-0">
+                <h3 class="text-muted text-sm-center text-md-left ml-2">บทเรียนของคุณ</h3>
+                <v-slide-group prev-icon="fa fa-arrow-left"
+                               next-icon="fa fa-arrow-right" 
+                               show-arrows>
+                  <v-slide-item v-for="n in 15" :key="n" class="m-md-4 m-sm-2">
+                    <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
+                  </v-slide-item>
+                </v-slide-group>
+        </b-col>
+        </b-row>
+        
+        </v-tab-item>
+
+               <v-tab-item>
+         
+
+      <b-row class="justify-content-around">
+
+      <b-col md="4" align="center" class="mx-2 d-md-down-none">
+        <SVGpicWork/>
+      </b-col>
+
+
+      <b-col md="6" sm="12" align="center" class="mx-0">
+                <h3 class="text-muted text-sm-center text-md-left ml-2">กิจกรรมล่าสุดของคุณ</h3>
+                <v-slide-group prev-icon="fa fa-arrow-left"
+                               next-icon="fa fa-arrow-right" 
+                               show-arrows>
+                  <v-slide-item v-for="n in 15" :key="n" class="m-md-4 m-sm-2">
+                    <Cardlesson class="mt-2 mx-3" :cardData="lessonData.lessonData" />
+                  </v-slide-item>
+                </v-slide-group>
+        </b-col>
+        </b-row>
+        
+        </v-tab-item>
+
+        
+
+        </v-tabs>
 
        
       
@@ -96,6 +150,7 @@
 <!-- <div class="rt180" >
       <SVGPart/>
 </div> -->
+
           <b-col class="text-center justify-content-center" md="8" sm="12">
 
             <h2>ใส่รายละเอียดการจัดทำเเละเครติด</h2>
@@ -105,9 +160,14 @@
             >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6>
           </b-col>
 
+                <b-row class="background justify-content-center text-center d-md-down-none">
+        <IntroCard />
+      </b-row>
+
   <!-- <div>
       <SVGPart/>
 </div> -->
+
         <SVGdivide/>
 
         </b-row>
@@ -123,9 +183,11 @@
 import UserCard from "./components/UserCardProfile";
 import Carouesl from "./components/indexCarousel";
 import NewsBox from "./components/NewsBox";
-import SVGdivide from "./components/SVGdivide";
-import SVGdivide2 from "./components/SVGdivide2";
-import SVGpic from "./components/SVGpic";
+import SVGdivide from "./components/SVG/SVGdivide";
+import SVGdivide2 from "./components/SVG/SVGdivide2";
+import SVGpicWork from "./components/SVG/SVGpicWork";
+import SVGpicRoom from "./components/SVG/SVGpicRoom";
+import SVGpicLesson from "./components/SVG/SVGpicLesson";
 import IntroCard from "./components/IntroCard";
 import DoingCardlesson from "~/components/lessonCard/DoingCard";
 import Cardlesson from "~/components/lessonCard/LessonCard";
@@ -142,7 +204,9 @@ export default {
     IntroCard,
     SVGdivide,
     SVGdivide2,
-    SVGpic
+    SVGpicWork,
+    SVGpicRoom,
+    SVGpicLesson
   },
   computed: mapState({
     lessonData: state => state.testStore.lessonData

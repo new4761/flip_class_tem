@@ -1,7 +1,7 @@
 <template>
     <svg id="f70d1d67-2307-47c9-95aa-2ba80c7f80c2" 
     data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" 
-    width="500" height="500" viewBox="0 0 895.59736 639.82439">
+    width="400" height="400" viewBox="0 0 895.59736 639.82439">
     <title>Working</title><rect x="250.162" y="150.83166" width="207.97236" 
     height="302.01031" rx="13.4354" transform="translate(-210.09179 -44.46974) rotate(-12.75221)" 
     fill="#3f3d56"/><circle cx="87.59736" cy="87" r="6" fill="#fff"/>
