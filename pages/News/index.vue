@@ -30,7 +30,7 @@
     
     <b-row  class = "justify-content-center">
         <b-col md="9" sm="7" class="px-4 bg-white cardradius">
-    <Noticard v-bind:CardData="CardData" v-for="index in 10" :key="index"/> 
+    <Noticard v-bind:CardData="CardData"/> 
         
         <pagebar v-bind:PageBarData="PageBarData"/>
 
@@ -64,14 +64,101 @@ export default {
     CardData:[
     {tagtype:"warning",
      tagname:"tag",
-     imgsrc:"https://via.placeholder.com/400x200", //help
-     header:"This is Title!!!",
-     time:"99.99",
-     date:"99/99/9999",
+     imgsrc:"https://i.imgur.com/o3LF5o5.jpg?1",
+     header:"ประกาศที่ 1",
+     time:"9:00",
+     date:"20/11/19",
      username:"username",
-     content:"Short description",
-     view:"3000",
-     link:"#"}
+     content:"แล้วสอนว่าอย่าไว้ใจมนุษย์ มันแสนสุดลึกล้ำเหลือกำหนด ถึงเถาวัลย์พันเกี่ยวที่เลี้ยวลด ก็ไม่คดเหมือนหนึ่งในน้ำใจคน",
+     link:"#"
+     },
+
+    {tagtype:"success",
+     tagname:"tag",
+     imgsrc:"https://i.imgur.com/ANGVYVG.jpg?1",
+     header:"ประกาศที่ 2",
+     time:"21:00",
+     date:"15/11/19",
+     username:"username",
+     content:"อันความคิดวิทยาเหมือนอาวุธ ประเสริฐสุดซ่อนใส่เสียในฝัก สงวนคมสมนึกใครฮึกฮัก จึงค่อยชักเชือดฟันให้บรรลัย",
+     link:"#"
+     },
+
+    {tagtype:"success",
+     tagname:"tag",
+     imgsrc:"https://i.imgur.com/QmaCxKV.jpg?1",
+     header:"ประกาศที่ 3",
+     time:"13:50",
+     date:"12/11/19",
+     username:"username",
+     content:"อันนินทากาเลเหมือนเทน้ำ ไม่ชอกช้ำเหมือนเอามีดมากรีดหิน แม้องค์พระปฏิมายังราคิน คนเดินหรือจะสิ้นคนนินทา",
+     link:"#"
+     },
+
+    {tagtype:"danger",
+     tagname:"tag",
+     imgsrc:"https://i.imgur.com/QdKfkU4.jpg?1",
+     header:"ประกาศที่ 4",
+     time:"17:25",
+     date:"11/11/19",
+     username:"username",
+     content:"เป็นมนุษย์สุดนิยมเพียงลมปาก จะได้ยากโหยหิวเพราะชิวหา แม้นพูดดีมีคนเขาเมตตา จะพูดจาพิเคราะห์ให้เหมาะความ",
+     link:"#"
+     },
+
+    {tagtype:"warning",
+     tagname:"tag",
+     imgsrc:"https://i.imgur.com/RLvtcYE.jpg?1",
+     header:"ประกาศที่ 5",
+     time:"11:11",
+     date:"10/11/19",
+     username:"username",
+     content:"พระโหยหวนครวญเพลงวังเวงจิต ให้คนคิดถึงถิ่นถวิลหวัง ว่าจากเรือนเหมือนนกมาจากรัง อยู่ข้างหลังก็จะแลชะแง้คอย",
+     link:"#"
+     },
+
+    {tagtype:"warning",
+     tagname:"tag",
+     imgsrc:"https://i.imgur.com/6O2tKQZ.jpg?1",
+     header:"ประกาศที่ 6",
+     time:"10:30",
+     date:"10/11/19",
+     username:"username",
+     content:"ถึงม้วยดินสิ้นฟ้ามหาสมุทร ไม่สิ้นสุดความรักสมัครสมาน แม้อยู่ในใต้หล้าสุธาธาร ขอพบพานพิสวาทมิคลาดคลา แม้เนื้อเย็นเป็นห้วงมหรรณพ",
+     link:"#"
+     },
+
+    {tagtype:"danger",
+     tagname:"tag",
+     imgsrc:"https://i.imgur.com/VsjYWPn.jpg",
+     header:"ประกาศที่ 7",
+     time:"11:30",
+     date:"9/11/19",
+     username:"username",
+     content:"จะหักอื่น ขืนหัก ก็จักได้ หักอาลัย นี้ไม่หลุด สุดจะหัก สารพัด ตัดขาด ประหลาดนัก แต่ตัดรัก นี้ไม่ขาด ประหลาดใจ",
+     link:"#"
+     },
+
+    {tagtype:"danger",
+     tagname:"tag",
+     imgsrc:"https://i.imgur.com/Buxhv2M.jpg?1",
+     header:"ประกาศที่ 8",
+     time:"10:30",
+     date:"9/11/19",
+     username:"username",
+     content:"ถึงบางพูดพูดดีเป็นศรีศักดิ์ มีคนรักรสถ้อยอร่อยจิต แม้พูดชั่วตัวตายทำลายมิตร จะชอบผิดในมนุษย์เพราะพูดจา",
+     link:"#"
+     },
+
+
+
+     
+
+
+     
+
+
+
     ],
 
     TagData:[

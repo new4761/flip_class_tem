@@ -2,12 +2,6 @@
   <b-container style="background-color: white; " >
     <div  class="p-md-5 justify-content-center">
 
-        <h3>{{getID}}</h3>
-
-        {{pathSp}}
-
-        {{this.$route.params.id}}
-
     <b-row v-for="(data,idx) in ComponentData" :key="idx">
 
 
@@ -134,12 +128,12 @@ export default {
         },
         {
           type:"textContent",
-          content:"content"
+          content:"content1"
         },
 
         {
           type:"textContent",
-          content:"content"
+          content:"content2"
         },
         
         {
@@ -149,11 +143,11 @@ export default {
 
         {
           type:"linkButton",
-          title:"this is download button",
+          title:"this is linked button",
           link:"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         },
         {
-          type:"linkButton",
+          type:"downLoadFile",
           title:"this is download button",
           link:"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         },

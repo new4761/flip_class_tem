@@ -7,6 +7,7 @@
                      <img class="card-img" :src="data.imgsrc"> 
                 </b-col>
             </b-row>
+            
             <b-row class = "justify-content-center px-md-5">
                     <b-col class="col-4 d-sm-down-none" >
                          <img class="card-img" :src="data.imgsrc">
@@ -21,13 +22,13 @@
                           <small class="text-muted">{{data.time}} {{data.date}}&nbsp;</small>
                           <small>โดย <i class="fa fa-user"></i> {{data.username}}  </small>        
                         </b-row>
-                        <b-row class ="px-3 ">
+                        <b-row class ="px-3 text-muted">
                             {{data.content}}
                         </b-row>
                         
                         <b-row class = "justify-content-center pt-4 ">
-                            <a :href= data.link class="cardbutton btn btn-primary ml-md-auto mr-3 text-nowrap "> 
-                            <b class="h6">รายละเอียดเพิ่มเติม</b> </a>
+                            <nuxt-link :to=data.link class="cardbutton btn btn-primary ml-md-auto mr-3 text-nowrap "> 
+                            <b class="h6">รายละเอียดเพิ่มเติม</b> </nuxt-link>
                         </b-row>
 
 

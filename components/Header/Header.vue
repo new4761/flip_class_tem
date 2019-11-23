@@ -52,7 +52,7 @@ export default {
       ButtonData: [
         { icon: "icon-home", name: "หน้าหลัก"  ,link:"/" },
         { icon: "icon-bell", name: "ประกาศ" ,link:"/news" },
-        { icon: "icon-notebook", name: "บทเรียน" ,link:"/lesson" },
+        { icon: "icon-notebook", name: "ห้องเรียน" ,link:"/classroom" },
       // { icon: "icon-globe-alt", name: "เเหล่งเรียนรู้ภายนอก" ,link:"#" }
       ]
     };
