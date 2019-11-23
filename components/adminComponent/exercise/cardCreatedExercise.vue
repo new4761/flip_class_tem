@@ -3,7 +3,7 @@
     class="text-dark rmLink"
     :to="{ name: 'admin-exercise-id', params: { id: cardData.cardId }}"
   >
-    <b-card    no-body
+    <b-card  no-body
       class="cardradius"
       :class="{'shadow-lg':hover}"
       @mouseover="hover = true"
@@ -40,6 +40,7 @@
     </b-card>
   </nuxt-link>
 </template><script>
+
 export default {
   props: {
     cardData: {

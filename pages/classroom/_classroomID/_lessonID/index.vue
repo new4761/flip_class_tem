@@ -2,6 +2,12 @@
   <b-container style="background-color: white; " >
     <div  class="p-md-5 justify-content-center">
 
+        <h3>{{getID}}</h3>
+
+        {{pathSp}}
+
+        {{this.$route.params.id}}
+
     <b-row v-for="(data,idx) in ComponentData" :key="idx">
 
 
@@ -142,7 +148,7 @@ export default {
         },
 
         {
-          type:"downLoadFile",
+          type:"linkButton",
           title:"this is download button",
           link:"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         },
@@ -220,6 +226,25 @@ export default {
 
       ]
     };
-  }
+  },
+
+
+   computed: {
+    pathSp() {
+      let pathArray = this.$route.path.split("/");
+      pathArray.shift();
+      return pathArray;
+    },
+    getID() {
+      return this.$route.params.id;
+    },
+    post: function() {
+      return this.posts.find(post => post.id === this.$route.params.id);
+    }
+  },
+
+  
 };
+
+
 </script>

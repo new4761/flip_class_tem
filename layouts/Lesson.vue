@@ -5,7 +5,12 @@
     </header>
     <div>
       <div  class="d-flex">
+
+        
            <my-aside :dataType="'Exercise'" :ChapterName="'testdasdadasdsdsa'"  />
+
+
+
         <div class="flex-fill">
           <b-navbar justified type="dark" variant="dark">
             <b-navbar-nav>

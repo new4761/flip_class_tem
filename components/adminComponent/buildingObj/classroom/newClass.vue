@@ -23,7 +23,7 @@
         <v-divider></v-divider>
         <div class="mt-2 text-right">
           <b-button type="submit" style="width:40%;" size="md" pill variant="blue">ดำเนินการต่อไป</b-button>
-          <b-button type="reset" size="md" pill variant="danger">ละทิ้งข้อมูล</b-button>
+          <b-button type  ="reset" size="md" pill variant="danger">ละทิ้งข้อมูล</b-button>
         </div>
       </b-form>
     </b-modal>
