@@ -1,6 +1,7 @@
 <template>
   <v-app style=" font-family: 'Mitr', sans-serif !important; background-color:#d9d9d9;">
     <div @mouseover="drawer = true" @mouseleave="drawer = false">
+  
       <v-navigation-drawer dark fixed expand-on-hover permanent style="background-color:#004485;">
         <v-list>
           <div style="background-color:#0078e9; ">
@@ -26,6 +27,7 @@
     </div>
     <v-content style="margin-left:80px; margin-top:20px; ">
       <b-container fluid class="cardradius">
+           <p>{{ this.$route.path}}</p>
         <b-card class="cardradius">
           <div v-for="(item,index) in pathSp " :key="item.name" class="d-inline rmLink">
             <h5  class="d-inline px-2 text-muted" v-if="index!==0">/</h5>
@@ -65,12 +67,14 @@ export default {
       });
       return pathArray;
     }
+
   },
   data: () => ({
     pathList: [],
     drawer: false,
     items: [
       { icon: "class", text: "ห้องเรียน", link: "/admin/ClassRoom" },
+
       {
         icon: "mdi-library-books",
         text: "บทเรียน",

@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     class="text-dark rmLink"
-    :to="{ name: 'admin-Lesson-id', params: { id: cardData.cardId }}"
+    :to="{ name: 'admin-lesson-id', params: { id: cardData.cardId }}"
   >
     <b-card
       no-body

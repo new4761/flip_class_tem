@@ -1,71 +1,80 @@
 <template>
   <b-container style="background-color: white; " >
-    <div v-for="n in 1" :key="n" class="p-md-5 justify-content-center">
+    <div  class="p-md-5 justify-content-center">
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <textTitle title="ข้อความขนาดใหญ่" />
+    <b-row v-for="(data,idx) in ComponentData" :key="idx">
+
+
+      <b-row v-if="data.type == 'textTitle'"  class="justify-content-center">
+        <textTitle :title="data.title" />
+      </b-row>
+ 
+      <b-row v-if="data.type == 'textContent'" class="justify-content-center">
+        <textContent :conntent="data.content" />
       </b-row>
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <textContent :conntent="faketext" />
+      <b-row v-if="data.type == 'youtube'" class="justify-content-center">
+        <youtube :youtubeLink="data.link" />
       </b-row>
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <youtube youtubeLink="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" />
+      <b-row v-if="data.type == 'linkButton'" class="justify-content-center text-center">
+        <linkButton :link="data.link" :buttonText="data.title" />
       </b-row>
 
-      <b-row class="justify-content-center text-center">
-        <linkButton link="https://nuxtjs.org/api/components-nuxt-link/" buttonText="title" />
+      <b-row v-if="data.type == 'downLoadFile'"  class="justify-content-center">
+        <downLoadFile :link="data.link" :buttonText="data.title" />
       </b-row>
 
-      <b-row class="justify-content-center">
-        <downLoadFile link="https://nuxtjs.org/api/components-nuxt-link/" buttonText="long title" />
+        <b-row v-if="data.type == 'upLoadFile'" class="justify-content-center">
+        <upLoadFile :fileName="data.title" :desc="data.desc" />
       </b-row>
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <upLoadFile fileName="ชื่อไฟล์" desc="คำอธิบายขนาดเล็ก" />
+      <b-row v-if="data.type == 'textArea'" class="justify-content-center">
+        <textArea :title="data.title" :desc="data.desc" />
       </b-row>
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <textArea title="ชื่อคำถาม" desc="คำอธิบายขนาดเล็ก" />
-      </b-row>
-
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
+      <b-row v-if="data.type == 'textInput'" class="justify-content-center">
         <textInput
-          title="ชื่อคำถามเเเบบยาวมากๆๆๆระดับหนึ่ง"
-          desc="คำอธิบายขนาดใหญ่ขึ้นมานิดดดดดดดดดดดหนึ่ง"
+          :title="data.title"
+          :desc="data.desc"
         />
       </b-row>
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
+      <b-row v-if="data.type == 'radioInput'" class="justify-content-center">
         <radioInput
-          title="ชื่อคำถามเเเบบยาวมากๆๆๆระดับหนึ่งasdwqeqweqwejkhkqkbdkbiuabi"
-          desc="คำอธิบายขนาดใหญ่ขึ้นมานิดดดดดดดดดดดหนึ่qweqweqweqweqweqweqweqweqweqweqweqeqwง"
-          :myOptions="testdata "
+          :title="data.title"
+          :desc="data.desc"
+          :myOptions="data.testdata "
         />
       </b-row>
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
+      <b-row v-if="data.type == 'selectionInput'" class="justify-content-center">
         <selectionInput
-          title="ชื่อคำถามเเเบบยาวมากๆๆๆระดับหนึ่งasdwqeqweqwejkhkqkbdkbiuabi"
-          desc="คำอธิบายขนาดใหญ่ขึ้นมานิดดดดดดดดดดดหนึ่qweqweqweqweqweqweqweqweqweqweqweqeqwง"
-          :myOptions="testdata "
+          :title="data.title"
+          :desc="data.desc"
+          :myOptions="data.testdata "
         />
       </b-row>
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <smallImg srcLink="https://picsum.photos/300/150/?image=41" />
+      
+      <b-row v-if="data.type == 'smallImg'" class="justify-content-center">
+        <smallImg :srcLink="data.link" />
       </b-row>
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
-        <bigImage srcLink="https://picsum.photos/300/150/?image=41" />
+      <b-row v-if="data.type == 'bigImage'" class="justify-content-center">
+        <bigImage :srcLink="data.link" />
       </b-row>
 
-      <b-row v-for="n in 1" :key="n" class="justify-content-center">
+      <b-row v-if="data.type == 'iflameSlider'" class="justify-content-center">
         <iflameSlider
-          iframeLink="https://docs.google.com/presentation/d/e/2PACX-1vSK4ZirU1tcdF2FOzRUnLO375H5eZAlZ3FA2SJlltXWlXcOo_Zh1NXcnC8vjzAzsnshh7DStbO6VRo0/embed?start=false&loop=false&delayms=3000"
+          :iframeLink="data.link"
         />
       </b-row>
+
+    </b-row>
+
+
+     
 
     </div>
   </b-container>
@@ -111,27 +120,104 @@ export default {
   layout: "Lesson",
   data() {
     return {
-      faketext:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      items: [
+
+      ComponentData:[
         {
-          text: "Admin",
-          href: "#"
+          type:"textTitle",
+          title:"Bigtitle"
         },
         {
-          text: "Manage",
-          href: "#"
+          type:"textContent",
+          content:"content"
+        },
+
+        {
+          type:"textContent",
+          content:"content"
+        },
+        
+        {
+          type:"youtube",
+          link:"https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"
+        },
+
+        {
+          type:"downLoadFile",
+          title:"this is download button",
+          link:"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         },
         {
-          text: "Library",
-          active: true
-        }
-      ],
-      e1: 0,
-      testdata: [
-        { text: "First radio", value: "first" },
-        { text: "Second radio", value: "second" },
-        { text: "Third radio", value: "third" }
+          type:"linkButton",
+          title:"this is download button",
+          link:"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+
+        {
+          type:"upLoadFile",
+          title:"this is for upload",
+          desc:"sample desc"
+        },
+
+        {
+          type:"textArea",
+          title:"this is text area",
+          desc:"sample desc"
+        },
+
+        {
+          type:"textInput",
+          title:"this is text input",
+          desc:"sample desc"
+        },
+
+        {
+          type:"radioInput",
+          title:"Question",
+          desc:"question desc",
+           testdata: [
+                      { text: "First radioInput", value: "first" },
+                      { text: "Second radioInput", value: "second" },
+                      { text: "Third radioInput", value: "third" }
+           ]
+        },
+
+        {
+          type:"radioInput",
+          title:"Question2",
+          desc:"question desc",
+           testdata: [
+                      { text: "hi", value: "first" },
+                      { text: "yo", value: "second" },
+                      { text: "ok", value: "third" }
+           ]
+        },
+
+        {
+          type:"selectionInput",
+          title:"Question2",
+          desc:"question desc",
+           testdata: [
+                      { text: "hi", value: "first" },
+                      { text: "yo", value: "second" },
+                      { text: "ok", value: "third" }
+           ]
+        },
+
+        {
+          type:"smallImg",
+          link:"https://picsum.photos/300/150/?image=41"
+        },
+
+        {
+          type:"bigImage",
+          link:"https://picsum.photos/300/150/?image=41"
+        },
+
+        {
+          type:"iflameSlider",
+          link:"https://docs.google.com/presentation/d/e/2PACX-1vSK4ZirU1tcdF2FOzRUnLO375H5eZAlZ3FA2SJlltXWlXcOo_Zh1NXcnC8vjzAzsnshh7DStbO6VRo0/embed?start=false&loop=false&delayms=3000"
+        },
+
       ]
     };
   }

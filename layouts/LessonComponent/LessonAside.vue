@@ -8,7 +8,7 @@
             <v-divider></v-divider>
           </div>
           <v-expansion-panels accordion>
-            <v-expansion-panel v-for="(item,i) in 30" :key="i">
+            <v-expansion-panel v-for="(item,i) in 2" :key="i">
               <v-expansion-panel-header expand-icon="none" class="text-sm-center ">
                 <b-row >
                   <b-col cols="3"  class="text-nowrap">
