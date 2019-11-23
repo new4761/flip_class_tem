@@ -1,0 +1,74 @@
+
+
+
+
+.Hbutton {
+    border-radius:10px;
+	cursor:pointer;
+	font-size:15px;
+    padding:5px 20px;
+    margin:0px 0px;
+    color: #ffffff;
+    transition: all 0.20s linear;
+
+}
+
+.Hbutton:hover {
+    color:  #ffffff;
+    font-size:17px;
+    text-decoration: none;
+  }
+
+.Hbutton:focus{
+    color: rgb(117, 192, 253);
+}
+
+.hoverline{
+    letter-spacing: 0.1em;
+    position: relative;
+  }
+
+.hoverline:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .hoverline:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+
+
+
+
+.DHbutton:hover {
+  text-decoration: none;
+}
+
+.header{
+  /* background: rgb(0,120,233);
+background: -moz-linear-gradient(90deg, rgba(0,120,233,1) 0%, rgba(11,255,234,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(0,120,233,1) 0%, rgba(11,255,234,1) 100%);
+background: linear-gradient(90deg, rgba(0,120,233,1) 0%, rgba(11,255,234,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0078e9",endColorstr="#0bffea",GradientType=1); */
+
+background: url(https://i.imgur.com/mXmiwDV.png) no-repeat ;
+background-size: cover;
+}
+
+#navcontent {
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 500px;
+  }
