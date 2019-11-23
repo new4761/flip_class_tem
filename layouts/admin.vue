@@ -70,7 +70,7 @@ export default {
     pathList: [],
     drawer: false,
     items: [
-      { icon: "class", text: "ห้องเรียน", link: "/admin/ClassRoom" },
+      { icon: "class", text: "ห้องเรียน", link: "/admin/Classroom" },
       {
         icon: "mdi-library-books",
         text: "บทเรียน",
