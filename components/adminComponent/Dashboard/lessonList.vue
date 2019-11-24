@@ -2,7 +2,7 @@
   <div>
     <b-navbar type="dark" variant="dark">
       <h3 class="px-3 text-white">
-        <v-icon class="pr-3 text-white">mdi-library-books</v-icon>บทเรียนทั้งหมด
+        <v-icon class="pr-3 text-white">mdi-library-books</v-icon>บทเรียน
       </h3>
     </b-navbar>
 

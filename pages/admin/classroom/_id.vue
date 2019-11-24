@@ -6,7 +6,7 @@
     <br />
     {{getClassData.imgsrc}}
     <br />-->
-    <v-parallax dark :src="getClassData.imgsrc" style="height:300px; opacity:0.8;">
+    <v-parallax dark :src="getClassData.imgsrc" style="height:300px; opacity:0.8; text-shadow: 3px 2px 6px #000000;">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
           <h1

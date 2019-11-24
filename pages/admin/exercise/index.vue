@@ -1,7 +1,14 @@
 <template>
   <b-container fluid>
     <newExerciseModal @HideModal="statusModal" :modalShow="showModal" />
-    <b-row no-gutters>
+
+      <b-navbar type="dark" variant="dark">
+      <h3 class="px-3 text-white">
+        <v-icon class="pr-3 text-white">assignment</v-icon>แบบฝึกหัดทั้งหมด
+      </h3>
+    </b-navbar>
+
+    <b-row class="mt-3" no-gutters>
       <b-col v-for="data in ExerciseList" :key="data.cardID" xl="3" md="4" sm="12" class="p-2">
         <exerciseCreated :cardData="data" />
       </b-col>

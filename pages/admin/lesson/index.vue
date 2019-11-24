@@ -2,7 +2,14 @@
   <b-container fluid>
     <lessonCreaterModal @HideModal="statusModal" :modalShow="showModal" />
 
-    <b-row no-gutters>
+      <b-navbar type="dark" variant="dark">
+      <h3 class="px-3 text-white">
+        <v-icon class="pr-3 text-white">mdi-library-books</v-icon>บทเรียนทั้งหมด
+      </h3>
+    </b-navbar>
+    
+    <b-row class="mt-3" no-gutters>
+
       <b-col v-for="item in lessonList" :key="item.cardId" xl="3" md="4" sm="12" class="p-2">
         <lessonCreated :cardData="item" />
       </b-col>
