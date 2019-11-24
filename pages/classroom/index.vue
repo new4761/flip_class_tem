@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import RoomCard from "./components/roomCard";
+import RoomCard from "./components/RoomCard";
 
 export default {
   components: {

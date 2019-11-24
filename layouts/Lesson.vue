@@ -69,7 +69,7 @@ export default {
     return {
       fakeasidedata:[
       ],
-      nav: nav.items,
+      // nav: nav.items,
       myexpand: false
     };
   },
