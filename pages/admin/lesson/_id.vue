@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <b-container fluid>
     <b-row>
       <b-col md="8" sm="12">
         <h3>{{getID}}</h3>

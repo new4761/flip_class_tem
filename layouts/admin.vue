@@ -23,23 +23,31 @@
           </template>
           <v-divider></v-divider>
         </v-list>
+
+        <div class="p-3">
+        <nuxt-link to="/login">
+        <b-button block pill variant="danger" v-if="drawer" >
+          <i class="fa fa-sign-out"></i> ออกจากระบบ
+        </b-button>
+        </nuxt-link>
+        </div>
       </v-navigation-drawer>
     </div>
     <v-content style="margin-left:80px; margin-top:20px; ">
       <b-container fluid class="cardradius">
-           <p>{{ this.$route.path}}</p>
+           <!-- <p>{{ this.$route.path}}</p> -->
         <b-card class="cardradius">
           <div v-for="(item,index) in pathSp " :key="item.name" class="d-inline rmLink">
             <h5  class="d-inline px-2 text-muted" v-if="index!==0">/</h5>
             <nuxt-link :to="item.path" >
-              <h3 v-if="index===0" class="d-inline ">{{item.name}}</h3>
-              <h5 v-else class="d-inline ">{{item.name}}</h5>
+              <h3 v-if="index===0" class="d-inline ">{{item.name  | capitalize }}</h3>
+              <h5 v-else class="d-inline ">{{item.name  | capitalize }}</h5>
             </nuxt-link>
 
           </div>
         </b-card>
         <b-card no-body class="cardradius overflow-auto p-1" style="height:100vh; ">
-          <nuxt />
+          <nuxt  class="pt-2"/>
         </b-card>
       </b-container>
     </v-content>
@@ -50,6 +58,15 @@
 import adminProfile from "./adminComponent/adminProfile";
 import myHead from "./adminComponent/Header";
 export default {
+
+filters: {
+  capitalize: function (value) {
+    if (!value) return ''
+    value = value.toString()
+    return value.charAt(0).toUpperCase() + value.slice(1)
+  }
+},
+
   props: {
     source: String
   },

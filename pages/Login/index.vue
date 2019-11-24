@@ -107,5 +107,5 @@ export default {
 };
 </script>
 <style>
-@import "./css/Loginstyle.css";
+@import "./css/LoginStyle.css";
 </style>

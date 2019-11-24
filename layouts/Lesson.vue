@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import nav from "./menu";
 import myAside from "./LessonComponent/LessonAside";
 import { Header as AppHeader, Footer as AppFooter } from "~/components/";
 
@@ -70,7 +69,7 @@ export default {
     return {
       fakeasidedata:[
       ],
-      nav: nav.items,
+      // nav: nav.items,
       myexpand: false
     };
   },
