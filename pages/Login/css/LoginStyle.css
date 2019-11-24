@@ -12,6 +12,17 @@
 
 }
 
+
+.tlogin{
+    background: rgb(104,0,255);
+background: -moz-linear-gradient(90deg, rgba(104,0,255,1) 0%, rgba(218,17,255,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(104,0,255,1) 0%, rgba(218,17,255,1) 100%);
+background: linear-gradient(90deg, rgba(104,0,255,1) 0%, rgba(218,17,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6800ff",endColorstr="#da11ff",GradientType=1);
+
+}
+
+
 .cardbg{
     /* background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);  */
     background: rgb(0,120,233);
