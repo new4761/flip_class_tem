@@ -124,21 +124,49 @@ export default {
       ComponentData:[
         {
           type:"textTitle",
-          title:"Bigtitle"
+          title:"Fermi paradox"
         },
+
         {
-          type:"textContent",
-          content:"content1"
+          type:"bigImage",
+          link:"https://i.imgur.com/GIDPZtx.png"
         },
 
         {
           type:"textContent",
-          content:"content2"
+          content:"This article is about the absence of evidence for extraterrestrial intelligence. For a type of estimation problem, see Fermi problem. For the album by Tub Ring, see Fermi Paradox (album).Where is everybody redirects here. For the Twilight Zone episode, see Where Is Everybody? For the television production company, see Where's Everybody"
+        },
+
+        {
+          type:"textContent",
+          content:"The Fermi paradox, named after Italian-American physicist Enrico Fermi, is the apparent contradiction between the lack of evidence for extraterrestrial civilizations elsewhere in the Milky Way galaxy and various high estimates for their probability (such as those that result from optimistic parameters for the Drake equation)."
+        },
+                
+        {
+          type:"textContent",
+          content:"The Fermi paradox is a conflict between the argument that scale and probability seem to favor intelligent life being common in the universe, and the total lack of evidence of intelligent life having ever arisen anywhere other than on the Earth. The first aspect of the Fermi paradox is a function of the scale or the large numbers involved: there are an estimated 200–400 billion stars in the Milky Way and 70 sextillion  in the observable universe. Even if intelligent life occurs on only a minuscule percentage of planets around these stars, there might still be a great number of extant civilizations, and if the percentage were high enough it would produce a significant number of extant civilizations in the Milky Way. This assumes the mediocrity principle, by which the Earth is a typical planet."
+        },
+                
+        {
+          type:"textContent",
+          content:"The second aspect of the Fermi paradox is the argument of probability: given intelligent life's ability to overcome scarcity, and its tendency to colonize new habitats, it seems possible that at least some civilizations would be technologically advanced, seek out new resources in space, and colonize their own star system and, subsequently, surrounding star systems. Since there is no significant evidence on Earth, or elsewhere in the known universe, of other intelligent life after 13.8 billion years of the universe's history, there is a conflict requiring a resolution. Some examples of possible resolutions are that intelligent life is rarer than we think, that our assumptions about the general development or behavior of intelligent species are flawed, or, more radically, that our current scientific understanding of the nature of the universe itself is quite incomplete."
+        },
+
+        {
+          type:"smallImg",
+          link:"https://i.imgur.com/S7jHVCb.png"
+        },
+        
+
+                
+        {
+          type:"textContent",
+          content:"The Fermi paradox can be asked in two ways. The first is, 'Why are no aliens or their artifacts found here on Earth, or in the Solar System?' If interstellar travel is possible, even the 'slow' kind nearly within the reach of Earth technology, then it would only take from 5 million to 50 million years to colonize the galaxy.[17] This is relatively brief on a geological scale, let alone a cosmological one. Since there are many stars older than the Sun, and since intelligent life might have evolved earlier elsewhere, the question then becomes why the galaxy has not been colonized already. Even if colonization is impractical or undesirable to all alien civilizations, large-scale exploration of the galaxy could be possible by probes. These might leave detectable artifacts in the Solar System, such as old probes or evidence of mining activity, but none of these have been observed."
         },
         
         {
           type:"youtube",
-          link:"https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0"
+          link:"https://www.youtube.com/embed/sNhhvQGsMEc"
         },
 
         {
@@ -201,16 +229,6 @@ export default {
                       { text: "yo", value: "second" },
                       { text: "ok", value: "third" }
            ]
-        },
-
-        {
-          type:"smallImg",
-          link:"https://picsum.photos/300/150/?image=41"
-        },
-
-        {
-          type:"bigImage",
-          link:"https://picsum.photos/300/150/?image=41"
         },
 
         {

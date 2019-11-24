@@ -70,7 +70,7 @@ export default {
      date:"20/11/19",
      username:"username",
      content:"แล้วสอนว่าอย่าไว้ใจมนุษย์ มันแสนสุดลึกล้ำเหลือกำหนด ถึงเถาวัลย์พันเกี่ยวที่เลี้ยวลด ก็ไม่คดเหมือนหนึ่งในน้ำใจคน",
-     link:"#"
+     link:"news/1"
      },
 
     {tagtype:"success",
@@ -180,6 +180,11 @@ export default {
     ]
 
     }
+  },
+  methods:{
+      sortby(prop){
+      this.CardData.sort((a,b) => a[prop] < b[prop] ? -1 : 1)
+      }
   }
   
 }
