@@ -6,9 +6,7 @@ Vue.use(Vuetify,{iconfont: 'mdi'})
 
 export default ctx => {
   const vuetify = new Vuetify({
-    theme: {
-      dark: false // From 2.0 You have to select the theme dark or light here
-    }
+
   })
 
   ctx.app.vuetify = vuetify

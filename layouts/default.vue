@@ -17,18 +17,19 @@
 
 
 <script>
-import nav from "./menu";
+
 import { Header as AppHeader, Footer as AppFooter } from "~/components/";
 
 export default {
   name: "full",
+
+
   components: {
     AppHeader,
-    AppFooter
-  },
-  data() {
+    AppFooter,
+  },data() {
     return {
-      nav: nav.items
+
     };
   },
   computed: {
