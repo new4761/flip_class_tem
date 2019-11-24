@@ -24,7 +24,7 @@
 
 </template>
 <script>
-import LessonCard from "./components/LessonCard";
+import LessonCard from "~/components/studentComponent/LessonCard";
 export default {
 
    components: {
