@@ -1,22 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Mitr&display=swap');
-
-
-html,body{
+html,
+body {
     font-family: 'Mitr', sans-serif !important;
 }
-.radiusButton-lg{
+
+.radiusButton-lg {
     border-radius: 20px !important;
 }
-.cardradius{
+
+.cardradius {
     border-radius: 10px !important;
 
 }
-.radiusObj{
-    border-radius: 20px  !important;
+
+.radiusObj {
+    border-radius: 20px !important;
 }
+
 .animated-witdh {
 
     -webkit-transition: width 0.5s;
     transition: width 0.5s;
-  }
-.rmLink{text-decoration: none !important;}
+}
+
+.rmLink {
+    text-decoration: none !important;
+}

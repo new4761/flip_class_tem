@@ -3,7 +3,7 @@
     <lessonCreaterModal @HideModal="statusModal" :modalShow="showModal" />
 
     <b-row no-gutters>
-      <b-col v-for="item in lessonList" :key="item.cardId"  lg="3" xl="2" sm="6" class="p-2">
+      <b-col v-for="item in lessonList" :key="item.cardId" xl="3" md="4" sm="12" class="p-2">
         <lessonCreated :cardData="item" />
       </b-col>
     </b-row>
@@ -23,7 +23,7 @@
   </b-container>
 </template>
 <script>
-//card ClassRoom
+//card LessonRoom
 import lessonCreated from "~/components/adminComponent/lesson/cardCreatedLesson";
 //modal obj
 import lessonCreaterModal from "~/components/adminComponent/buildingObj/lesson/newLesson";

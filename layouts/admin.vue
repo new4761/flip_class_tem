@@ -27,7 +27,7 @@
     </div>
     <v-content style="margin-left:80px; margin-top:20px; ">
       <b-container fluid class="cardradius">
-           <p>{{ this.$route.path}}</p>
+           <!-- <p>{{ this.$route.path}}</p> -->
         <b-card class="cardradius">
           <div v-for="(item,index) in pathSp " :key="item.name" class="d-inline rmLink">
             <h5  class="d-inline px-2 text-muted" v-if="index!==0">/</h5>
@@ -39,7 +39,7 @@
           </div>
         </b-card>
         <b-card no-body class="cardradius overflow-auto p-1" style="height:100vh; ">
-          <nuxt />
+          <nuxt  class="pt-2"/>
         </b-card>
       </b-container>
     </v-content>

@@ -1,8 +1,8 @@
 <template>
-  <b-container fluid>
+  <b-container fluid  class="px-5">
     <classCreaterModal @HideModal="statusModal" :modalShow="showModal" />
     <b-row no-gutters>
-      <b-col v-for="data in classRoomList" :key="data.cardId" lg="3" xl="2" sm="6" class="p-1">
+      <b-col v-for="data in classRoomList" :key="data.cardId" md="4"  xl="3" sm="12" class="p-1">
         <roomCreated :cardData="data" />
       </b-col>
     </b-row>
@@ -15,8 +15,7 @@
       style="background-color:#55fa5f"
       right
       color="dark"
-    >
-      <v-icon large style="color:white;">mdi-plus</v-icon>
+    > <v-icon large style="color:white;">mdi-plus</v-icon>
     </v-btn>
   </b-container>
 </template>
@@ -74,7 +73,7 @@ export default {
           exercise: 10
         }
       }
-    ]
+    ],
   }),
   methods: {
     statusModal(e) {
