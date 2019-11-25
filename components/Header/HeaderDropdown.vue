@@ -50,8 +50,10 @@
     </b-dropdown-item>
 
     <b-dropdown-divider></b-dropdown-divider>
-    <b-dropdown-item @click="logout">
+    <b-dropdown-item >
+      <n-link to= "/login">
       <i class="fa fa-sign-out"></i> ออกจากระบบ
+      </n-link>
     </b-dropdown-item>
   </b-nav-item-dropdown>
 </template>

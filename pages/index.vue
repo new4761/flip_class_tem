@@ -36,14 +36,30 @@
         <b-row>
           <v-tabs grow centered multiple>
             <v-tab>
-              <h3>บทเรียน</h3>
+              <h3>กิจกรรมล่าสุด</h3>
             </v-tab>
             <v-tab>
               <h3>แบบฝึกหัด</h3>
             </v-tab>
             <v-tab>
-              <h3>กิจกรรมล่าสุด</h3>
+              <h3>บทเรียน</h3>
             </v-tab>
+
+            <v-tab-item>
+              <b-row class="justify-content-around">
+                <b-col md="4" align="center" class="mx-2 d-md-down-none">
+                  <SVGpicWork />
+                </b-col>
+
+                <b-col md="6" sm="12" align="center" class="mx-0 pt-5">
+                  <h3 class="text-muted text-sm-center text-md-left ml-2">กิจกรรมล่าสุดของคุณ</h3>
+
+                  <DoingCardlesson :cardData="lessonData" />
+                </b-col>
+              </b-row>
+            </v-tab-item>
+
+
             <v-tab-item>
               <b-row class="justify-content-around">
                 <b-col md="4" align="center" class="mx-2 d-md-down-none">
@@ -86,19 +102,6 @@
               </b-row>
             </v-tab-item>
 
-            <v-tab-item>
-              <b-row class="justify-content-around">
-                <b-col md="4" align="center" class="mx-2 d-md-down-none">
-                  <SVGpicWork />
-                </b-col>
-
-                <b-col md="6" sm="12" align="center" class="mx-0 pt-5">
-                  <h3 class="text-muted text-sm-center text-md-left ml-2">กิจกรรมล่าสุดของคุณ</h3>
-
-                  <DoingCardlesson :cardData="lessonData" />
-                </b-col>
-              </b-row>
-            </v-tab-item>
           </v-tabs>
         </b-row>
 
@@ -109,17 +112,18 @@
       <SVGPart/>
           </div>-->
 
+          <b-row class="background justify-content-center text-center d-md-down-none">
+            <IntroCard />
+          </b-row>
+
+
           <b-col class="text-center justify-content-center" md="8" sm="12">
-            <h2>ใส่รายละเอียดการจัดทำเเละเครติด</h2>
+            <h2>รายละเอียดการจัดทำเเละเครติด</h2>
             <h6
               md="8"
               class
             >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6>
           </b-col>
-
-          <b-row class="background justify-content-center text-center d-md-down-none">
-            <IntroCard />
-          </b-row>
 
           <!-- <div>
       <SVGPart/>

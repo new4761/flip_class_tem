@@ -24,29 +24,23 @@
   </b-card>
 </template>
 <script>
+
+
+
+import { mapState } from "vuex";
+
 export default {
   name: "carousels",
+
+ computed: mapState({
+    Data: state => state.mainNews.Data
+  }),
+
+
   data: () => ({
     slide: 0,
     sliding: null,
-    Data: [
-      {
-        src: "https://via.placeholder.com/400x200",
-        title: "Hello world!",
-        des: "การเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้น  "
-      },
-      {
-        src: "https://via.placeholder.com/400x200",
-        title: "Hello world!2",
-        des: "การเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้น  "
-      },
-      {
-        src: "https://via.placeholder.com/400x200",
-        title: "Hello world!3",
-        des:
-          "การเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้นการเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้นการเเจ้งเตือนหัวข้อที่ีมีขนาดยาวขึ้นเเละมีหลายบรรทัดมากขึ้น  "
-      }
-    ]
+
   }),
   methods: {
     onSlideStart(slide) {
