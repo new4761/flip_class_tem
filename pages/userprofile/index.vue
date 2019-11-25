@@ -33,6 +33,7 @@
             :value="name"
             label="ชื่อ-สกุล"
             readonly
+            :disabled="disable"
             class="text-center"
           ></v-text-field>
         </v-col>      
@@ -44,7 +45,8 @@
           <v-text-field
             :value="mail"
             label="E-mail"
-            readonly
+            :readonly="editable"
+            :outlined="disable"
           ></v-text-field>
         </v-col>      
         
@@ -52,7 +54,8 @@
           <v-text-field
             :value="tel"
             label="เบอร์โทรติดต่อ"
-            readonly
+            :readonly="editable"
+            :outlined="disable"
           ></v-text-field>
         </v-col>
 
@@ -64,6 +67,7 @@
             :value="semester"
             label="ระดับการศึกษา"
             readonly
+            :disabled="disable"
           ></v-text-field>
         </v-col>      
         
@@ -72,12 +76,25 @@
             :value="year"
             label="ปีที่เข้าศึกษา"
             readonly
+            :disabled="disable"
           ></v-text-field>
         </v-col>
 
+        
         </b-row>
 
-          </v-card>
+        <b-row class="justify-content-end">
+          <v-btn  v-show="editable" v-on:click="editable = false; disable = true;" 
+          fab class="mx-5 my-3 bg-yellow small text-white"> <v-icon dark>mdi-pencil</v-icon> 
+          </v-btn>
+
+          <v-btn  v-show="!editable" v-on:click="editable = true; disable = false;" 
+          fab class="mx-5 my-3 bg-green small text-white"> <v-icon dark>mdi-content-save</v-icon> 
+          </v-btn>
+        </b-row>
+
+
+        </v-card>
 
         </b-col>
       </b-row>
@@ -99,6 +116,8 @@ export default {
     UserCard
   },
   data: () => ({
+    editable: true,
+    disable: false,
     username: "สมจันทร์ หมายชาย",
     name:"นาย สมจันทร์ หมายชาย",
     stdid: "std@42069",
