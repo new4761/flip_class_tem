@@ -1,0 +1,33 @@
+<template>
+  <b-row no-gutters>
+    <h5 class="py-1">
+      ระบุชื่อกล่องข้อความ
+      <small class="text-muted">(จำเป็น)</small>
+    </h5>
+    <b-form-input v-model="data.title" type="text" required placeholder="ระบุชื่อกล่องข้อความ"></b-form-input>
+    <h5 class="py-1">ระบุคำอธิบาย</h5>
+    <b-form-input v-model="data.desc" type="text" placeholder="ระบุคำอธิบาย"></b-form-input>
+  </b-row>
+</template>
+<script>
+export default {
+  name: "textArea",
+  data: () => ({
+    data: {
+      type: "textArea",
+      title: null,
+      desc: null
+    }
+  }),
+  methods: {
+    getchildValue() {
+      //console.log("getchildValue");
+      //console.log(this.data);
+      // console.log("from in" + input)
+      if (this.data.title != null && this.data.title != "") {
+        this.$emit("getchildValue", true, this.data);
+      }
+    }
+  }
+};
+</script>

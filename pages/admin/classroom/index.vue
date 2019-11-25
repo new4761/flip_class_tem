@@ -2,7 +2,7 @@
   <b-container fluid  class="px-5">
     <classCreaterModal @HideModal="statusModal" :modalShow="showModal" />
     
-     <b-navbar type="dark" variant="dark">
+     <b-navbar type="dark" variant="dark" class="radiusObj">
       <h3 class="px-3 text-white pt-2">
         <v-icon class="pr-3 text-white">mdi-book</v-icon>ห้องเรียนทั้งหมด
       </h3>
@@ -11,9 +11,7 @@
       <b-col v-for="data in classRoomList" :key="data.cardId" md="4"  xl="3" sm="12" class="p-1">
         <roomCreated :cardData="data" />
       </b-col>
-    </b-row>
-
-    
+    </b-row> 
     <v-btn
       @click="showModal=!showModal"
       fab

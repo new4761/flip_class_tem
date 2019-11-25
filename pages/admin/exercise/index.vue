@@ -2,7 +2,7 @@
   <b-container fluid>
     <newExerciseModal @HideModal="statusModal" :modalShow="showModal" />
 
-      <b-navbar type="dark" variant="dark">
+      <b-navbar type="dark" variant="dark" class="radiusObj">
       <h3 class="px-3 text-white pt-2">
         <v-icon class="pr-3 text-white">assignment</v-icon>แบบฝึกหัดทั้งหมด
       </h3>
