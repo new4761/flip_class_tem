@@ -2,7 +2,7 @@
   <b-container fluid>
     <lessonCreaterModal @HideModal="statusModal" :modalShow="showModal" />
 
-      <b-navbar type="dark" variant="dark">
+      <b-navbar type="dark" variant="dark" class="radiusObj">
       <h3 class="px-3 text-white pt-2">
         <v-icon class="pr-3 text-white">mdi-library-books</v-icon>บทเรียนทั้งหมด
       </h3>
