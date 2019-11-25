@@ -3,7 +3,7 @@
     <classCreaterModal @HideModal="statusModal" :modalShow="showModal" />
     
      <b-navbar type="dark" variant="dark">
-      <h3 class="px-3 text-white">
+      <h3 class="px-3 text-white pt-2">
         <v-icon class="pr-3 text-white">mdi-book</v-icon>ห้องเรียนทั้งหมด
       </h3>
     </b-navbar>
