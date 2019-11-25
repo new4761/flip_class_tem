@@ -53,7 +53,7 @@
                   
                   <b-col v-show="!buttonhide" cols="6">
                     <nuxt-link to= "/admin" v-show="hide">
-                    <v-btn depressed class="tlogin px-4 text-white">Login</v-btn>
+                    <v-btn type="submit" depressed class="tlogin px-4 text-white">Login</v-btn>
                      </nuxt-link>
                   </b-col>
 

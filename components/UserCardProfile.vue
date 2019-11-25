@@ -1,7 +1,7 @@
 <template>
   <v-card class="text-center" no-body>
     <b-row class="justify-content-center">
-      <b-col md="5">
+      <!-- <b-col>
         <b-row class="pt-3 justify-content-center">
           <b-img
             left
@@ -33,14 +33,15 @@
 
 
 
-      </b-col>
+      </b-col> -->
+      
     </b-row>
+    
 
     <h4 class="text-center mt-3">การดำเนินการของคุณ</h4>
     <b-row class="justify-content-center">
-      <b-col md="5">
+      <b-col>
         <b-row class="justify-content-center">
-
           <b-col v-for="(data,idx) in UserCardData" :key="idx">
             <p class="text-muted">{{data.title}}</p>
             <v-progress-circular

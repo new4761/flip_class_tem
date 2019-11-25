@@ -1,28 +1,113 @@
 <template>
-
-<b-container fluid class="app bg-myblue">
-
+  <b-container fluid class="app bg-myblue">
     <div class="m-3">
-        <b-row class="justify-content-center">
-        <b-col md="10" sm="12">  
-                <UserCard :UserCardData="UserCardData" />
-        </b-col>
+      <b-row class="justify-content-center py-3">
+        <b-col md="6" sm="12">
+
+          <h1 class="text-white"><strong>Profile</strong></h1>
+
+
+        <v-card class="bg-white">
+        <b-row class="pt-3 justify-content-center">
+          <b-img
+            left
+            :src="imgsrc"
+            width="100"
+            height="100"
+            rounded="circle"
+            alt="Circle image"
+          ></b-img>
         </b-row>
+
+        <b-row class="justify-content-center">
+          <h3 class="mt-2">{{username}}</h3>
+        </b-row>
+
+        <b-row class="justify-content-center">
+          <h6 class="text-muted md-3">{{stdid}}</h6>
+        </b-row>
+
+    <b-row class="justify-content-center">
+        <v-col md="4" sm="12">
+          <v-text-field
+            :value="name"
+            label="ชื่อ-สกุล"
+            readonly
+            class="text-center"
+          ></v-text-field>
+        </v-col>      
+        
+        </b-row>
+
+      <b-row class="justify-content-center">
+        <v-col md="4" sm="12">
+          <v-text-field
+            :value="mail"
+            label="E-mail"
+            readonly
+          ></v-text-field>
+        </v-col>      
+        
+         <v-col md="4" sm="12">
+          <v-text-field
+            :value="tel"
+            label="เบอร์โทรติดต่อ"
+            readonly
+          ></v-text-field>
+        </v-col>
+
+        </b-row>
+
+        <b-row class="justify-content-center">
+        <v-col md="4" sm="12">
+          <v-text-field
+            :value="semester"
+            label="ระดับการศึกษา"
+            readonly
+          ></v-text-field>
+        </v-col>      
+        
+         <v-col md="4" sm="12">
+          <v-text-field
+            :value="year"
+            label="ปีที่เข้าศึกษา"
+            readonly
+          ></v-text-field>
+        </v-col>
+
+        </b-row>
+
+          </v-card>
+
+        </b-col>
+      </b-row>
+
+      <b-row class="justify-content-center">
+        <b-col md="6" sm="12">
+          <UserCard :UserCardData="UserCardData" />
+        </b-col>
+      </b-row>
     </div>
-
-
-</b-container>
+  </b-container>
 </template>
 
 <script>
 import UserCard from "~/components/UserCardProfile";
 
 export default {
-
-    components: {
-        UserCard
-    },
-      data: () => ({
+  components: {
+    UserCard
+  },
+  data: () => ({
+    username: "สมจันทร์ หมายชาย",
+    name:"นาย สมจันทร์ หมายชาย",
+    stdid: "std@42069",
+    mail: "GachiGASM@Gmail.men",
+    tel: " +889874412",
+    year: "2569",
+    semester:"มัธยมศึกษา",
+    imgsrc:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiPBeloxh97nLE084M0KPmYpvh-IuH3uF8YhOKMmFnIvxjmUzV",
 
     UserCardData: [
       {
@@ -47,7 +132,6 @@ export default {
         link: "#"
       }
     ]
-
   })
-}
+};
 </script>
