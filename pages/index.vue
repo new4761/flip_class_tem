@@ -166,7 +166,8 @@ export default {
     SVGpicLesson
   },
   computed: mapState({
-    lessonData: state => state.testStore.lessonData
+    lessonData: state => state.testStore.lessonData,
+    UserCardData: state => state.student.UserCardData,
   }),
 
   middleware: "testpage",
@@ -177,52 +178,6 @@ export default {
   // },
   data: () => ({
     maxSmallcardWight: 300,
-
-    UserCardData: [
-      {
-        title: "บทเรียน",
-        icon: "fa fa-book",
-        value: "20",
-        maxvalue: "30",
-        link: "#"
-      },
-      {
-        title: "แบบฝึกหัด",
-        icon: "fa fa-certificate",
-        value: "10",
-        maxvalue: "60",
-        link: "#"
-      },
-      {
-        title: "งาน",
-        icon: "fa fa-folder-open",
-        value: "9",
-        maxvalue: "20",
-        link: "#"
-      }
-    ]
-
-    //  lessonData: {
-    //   lastUpdate: "14/7/2542 10:24",
-    //   imgSrc: "https://placekitten.com/380/200",
-    //   typeVariant: "primary",
-    //   typeName: "test",
-    //   cardTitle: "test",
-    //   cardTag: [
-    //     { tagVariant: "primary", tagName: "tagName" },
-    //     { tagVariant: "primary", tagName: "tagName" },
-    //     { tagVariant: "primary", tagName: "tagName" }
-    //   ],
-    //   cardSmallDes:
-    //     "Now you can finally test your work by changing VUE_APP_API_CLIENT in the targeted environment to either mock or server. But note that each time you change it you have to restart/rebuild your app.",
-    //   cardViewCount: 3000,
-    //   cardDoneCount: 3000,
-    //   cardCreaterData: {
-    //     src: "https://placekitten.com/380/200",
-    //     name: "GodNewInwZa"
-    //   },
-    //   progress: 30
-    // }
   })
 };
 </script>

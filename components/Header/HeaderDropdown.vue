@@ -4,12 +4,11 @@
        
         <v-avatar class="mx-auto" size="36">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQiPBeloxh97nLE084M0KPmYpvh-IuH3uF8YhOKMmFnIvxjmUzV"
-            alt="John"
+            :src="Profile.imgsrc"
           />
         </v-avatar>
 
-        <a class="DHbutton d-sm-down-none text-white" >สมจันทร์ หมายชาย</a>
+        <a class="DHbutton d-sm-down-none text-white" >{{Profile.username}}</a>
 
     </template>
 
@@ -59,8 +58,14 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "header-dropdown",
+
+    computed: mapState({
+    Profile:state => state.student.Profile
+  }),
+
   data: () => {
     return { itemsCount: 42 };
   },
