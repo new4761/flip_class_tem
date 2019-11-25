@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-row no-gutters>
+      <!-- <p v-for=" n in  this.$options.components" :key="n">{{n.name}}</p> -->
       <h5 class="pt-3">
         เลือกประเภท
         <small class="text-muted">(จำเป็น)</small>
@@ -15,14 +16,30 @@
     <!-- {{childValue}} -->
     <v-divider></v-divider>
     <h4>{{selectedComponentName}}</h4>
-    <linkbutton v-if="selectedType==='linkbutton'" @getchildValue="getchildValue" ref="child" />
+    <component :is="selectedType" @getchildValue="getchildValue" ref="child"></component>
   </div>
 </template>
 <script>
+
 import linkbutton from "~/components/generateObj/selecTypeInput/linkbutton";
+import textTitle from "~/components/generateObj/selecTypeInput/textTitle";
+import textContent from "~/components/generateObj/selecTypeInput/textContent";
+import downLoadFile from "~/components/generateObj/selecTypeInput/downLoadFile";
+import upLoadFile from "~/components/generateObj/selecTypeInput/upLoadFile";
+import iflameSlider from "~/components/generateObj/selecTypeInput/iflameSlider";
+import textArea from "~/components/generateObj/selecTypeInput/textArea";
+import youtube from "~/components/generateObj/selecTypeInput/youtube";
+import textInput from "~/components/generateObj/selecTypeInput/textInput";
+import radioInput from "~/components/generateObj/selecTypeInput/radioInput";
+import selectionInput from "~/components/generateObj/selecTypeInput/selectionInput";
+import bigImage from "~/components/generateObj/selecTypeInput/bigImage";
+import smallImg from "~/components/generateObj/selecTypeInput/smallImg";
 export default {
   components: {
-    linkbutton
+    linkbutton,radioInput,smallImg,bigImage,
+    textTitle,
+    textContent,
+    downLoadFile,upLoadFile,iflameSlider,textArea,youtube,textInput,selectionInput
   },
   computed: {},
   data: () => ({
@@ -30,7 +47,44 @@ export default {
     selectedComponentName: "",
     selectedType: null,
     //  need to be dynamic
-    selectList: [{ text: "ปุ่มสำหรับใส่ Link", value: "linkbutton" }],
+    selectList: [
+      { text: "ข้อความขนาดใหญ่", value: "textTitle" },
+      { value: "textContent", text: "ข้อความคำบรรยาย" },
+
+      { text: "ปุ่มสำหรับใส่ Link", value: "linkbutton" },
+      { value: "downLoadFile", text: "ปุ่ม Download File" },
+      { value: "youtube", text: "วิดีโอ youtube" },
+      {
+        value: "iflameSlider",
+        text: "Google slide"
+      },
+
+      {
+        value: "textArea",
+        text: "กล่องข้อความขนาดใหญ่"
+      },
+      {
+        value: "textInput",
+        text: "กล่องข้อความขนาดเล็ก"
+      },
+      {
+        value: "radioInput",
+        text: "ตัวเลือกเเบบ Radio"
+      },
+      {
+        value: "selectionInput",
+        text: "ตัวเลือกเเบบ Selection"
+      },
+      { value: "upLoadFile", text:"อัพโหลดไฟล์" },
+      {
+        value: "smallImg",
+        text: "รูปภาพขนาดเล็ก"
+      },
+      {
+        value: "bigImage",
+        text: "รูปภาพขนาดใฆย่"
+      }
+    ],
 
     childValidate: false,
     childValue: null
@@ -52,7 +106,7 @@ export default {
     },
     passData() {
       this.$refs.child.getchildValue();
-     // console.log("passData Call");
+      // console.log("passData Call");
       if (this.childValidate) this.$emit("addTempdata", true, this.childValue);
       else console.log("Ch error");
     }

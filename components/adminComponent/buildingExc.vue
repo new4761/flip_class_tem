@@ -1,4 +1,5 @@
 <template>
+<b-container  fluid class="mx-3">
   <b-tabs pills align="center" justified>
     <b-tab active>
       <template v-slot:title>
@@ -54,6 +55,7 @@
       <p class="p-3">{{temPageDataList}}</p>
     </b-tab>
   </b-tabs>
+  </b-container>
   <!-- <b-tabs align="center">
 
     <template v-slot:tabs-end>
