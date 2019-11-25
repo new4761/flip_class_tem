@@ -1,11 +1,19 @@
 <template>
-  <b-container fluid>
+  <b-container fluid  class="px-5">
     <classCreaterModal @HideModal="statusModal" :modalShow="showModal" />
-    <b-row no-gutters>
-      <b-col v-for="data in classRoomList" :key="data.cardId" lg="3" xl="2" sm="6" class="p-1">
+    
+     <b-navbar type="dark" variant="dark">
+      <h3 class="px-3 text-white pt-2">
+        <v-icon class="pr-3 text-white">mdi-book</v-icon>ห้องเรียนทั้งหมด
+      </h3>
+    </b-navbar>
+    <b-row class="mt-3" no-gutters>
+      <b-col v-for="data in classRoomList" :key="data.cardId" md="4"  xl="3" sm="12" class="p-1">
         <roomCreated :cardData="data" />
       </b-col>
     </b-row>
+
+    
     <v-btn
       @click="showModal=!showModal"
       fab
@@ -15,8 +23,7 @@
       style="background-color:#55fa5f"
       right
       color="dark"
-    >
-      <v-icon large style="color:white;">mdi-plus</v-icon>
+    > <v-icon large style="color:white;">mdi-plus</v-icon>
     </v-btn>
   </b-container>
 </template>
@@ -74,7 +81,7 @@ export default {
           exercise: 10
         }
       }
-    ]
+    ],
   }),
   methods: {
     statusModal(e) {

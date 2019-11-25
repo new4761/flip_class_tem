@@ -4,7 +4,7 @@
 
 
     <b-navbar class ="shadow header navbar-dark bg-myblue py-1" > 
-      <b-navbar-brand class="mr-auto" href="#">
+      <b-navbar-brand class="mr-auto" href="/">
         <h2>Flip classroom</h2>
       </b-navbar-brand>
 

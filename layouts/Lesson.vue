@@ -6,7 +6,7 @@
     <div>
       <div  class="d-flex">
 
-           <my-aside :dataType="'Exercise'" :ChapterName="'testdasdadasdsdsa'"  />
+           <my-aside :dataType="'Exercise'" :ChapterName="'ส่วนที่#'"  />
 
         <div class="flex-fill">
           <b-navbar justified type="dark" variant="dark">

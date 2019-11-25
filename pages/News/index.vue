@@ -3,7 +3,7 @@
 <b class ="p-5">
 
     <b-row class = "pl-5 ml-5">
-        <h1><strong>ประกาศแจ้งเตือน</strong></h1>
+        <h1><strong>ประกาศ</strong></h1>
     </b-row>
 
     <b-row class = "pt-4 px-5 justify-content-center"> 
