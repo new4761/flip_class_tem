@@ -35,7 +35,7 @@
               <v-expansion-panel-content
                 v-if="expand"
                 style="background-color:#f2f5f3"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</v-expansion-panel-content>
+              >รายละเอียดว่ามีกี่หัวข้อ มีข้อสอบกี่ข้อ มีกี่แบบทดสอบ </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
         </v-navigation-drawer>

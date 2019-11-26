@@ -26,7 +26,7 @@ export default {
       {
         id: 1,
         type: { variant: "warning", name: "ประเภท" },
-        title: "ชื่อหัวข้อข่าวasdasdasdkasl;dojqwoejp",
+        title: "อัพเดทบทเรียน",
         upTime: "14/7/2542 10:24",
         CreaterData: {
           src: "https://placekitten.com/380/200",
@@ -39,7 +39,7 @@ export default {
       {
         id: 2,
         type: { variant: "warning", name: "ประเภท" },
-        title: "ชื่อหัวข้อข่าว",
+        title: "การให้งานนักเรียน",
         upTime: "14/7/2542 10:24",
         CreaterData: {
           src: "https://placekitten.com/380/200",
@@ -52,7 +52,7 @@ export default {
       {
         id: 3,
         type: { variant: "warning", name: "ประเภท" },
-        title: "ชื่อหัวข้อข่าว",
+        title: "อัพเดทคะแนน",
         upTime: "14/7/2542 10:24",
         CreaterData: {
           src: "https://placekitten.com/380/200",
@@ -65,7 +65,7 @@ export default {
       {
         id: 4,
         type: { variant: "warning", name: "ประเภท" },
-        title: "ชื่อหัวข้อข่าว",
+        title: "อัพเดทความคืบหน้า",
         upTime: "14/7/2542 10:24",
         CreaterData: {
           src: "https://placekitten.com/380/200",
@@ -78,7 +78,7 @@ export default {
         {
         id: 4,
         type: { variant: "warning", name: "ประเภท" },
-        title: "ชื่อหัวข้อข่าว",
+        title: "เกี่ยวกับclassวันนี้",
         upTime: "14/7/2542 10:24",
         CreaterData: {
           src: "https://placekitten.com/380/200",
@@ -91,7 +91,7 @@ export default {
       ,  {
         id: 4,
         type: { variant: "warning", name: "ประเภท" },
-        title: "ชื่อหัวข้อข่าว",
+        title: "แจ้งการเปลี่ยนแปลงอาจารย์",
         upTime: "14/7/2542 10:24",
         CreaterData: {
           src: "https://placekitten.com/380/200",

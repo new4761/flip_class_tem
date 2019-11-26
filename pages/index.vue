@@ -22,7 +22,7 @@
         <SVGdivide />
       </b-row>
 
-      <b-row class="background justify-content-center">
+      <b-row class="background justify-content-center my-5">
         <b-col md="10" sm="12" align="center">
           <UserCard v-bind:UserCardData="UserCardData" />
         </b-col>
@@ -36,14 +36,30 @@
         <b-row>
           <v-tabs grow centered multiple>
             <v-tab>
-              <h3>บทเรียน</h3>
+              <h3>กิจกรรมล่าสุด</h3>
             </v-tab>
             <v-tab>
               <h3>แบบฝึกหัด</h3>
             </v-tab>
             <v-tab>
-              <h3>กิจกรรมล่าสุด</h3>
+              <h3>บทเรียน</h3>
             </v-tab>
+
+            <v-tab-item>
+              <b-row class="justify-content-around">
+                <b-col md="4" align="center" class="mx-2 d-md-down-none">
+                  <SVGpicWork />
+                </b-col>
+
+                <b-col md="6" sm="12" align="center" class="mx-0 pt-5">
+                  <h4 class="text-muted text-sm-center text-md-left ml-2">กิจกรรมล่าสุดของคุณ</h4>
+
+                  <DoingCardlesson :cardData="lessonData" />
+                </b-col>
+              </b-row>
+            </v-tab-item>
+
+
             <v-tab-item>
               <b-row class="justify-content-around">
                 <b-col md="4" align="center" class="mx-2 d-md-down-none">
@@ -51,7 +67,7 @@
                 </b-col>
 
                 <b-col md="6" sm="12" align="center" class="mx-0">
-                  <h3 class="text-muted text-sm-center text-md-left ml-2">บทเรียนของคุณ</h3>
+                  <h4 class="text-muted text-sm-center text-md-left ml-2">บทเรียนของคุณ</h4>
                   <v-slide-group
                     prev-icon="fa fa-arrow-left"
                     next-icon="fa fa-arrow-right"
@@ -72,7 +88,7 @@
                 </b-col>
 
                 <b-col md="6" sm="12" align="center" class="mx-0">
-                  <h3 class="text-muted text-sm-center text-md-left ml-2">แบบฝึกหัดของคุณ</h3>
+                  <h4 class="text-muted text-sm-center text-md-left ml-2">แบบฝึกหัดของคุณ</h4>
                   <v-slide-group
                     prev-icon="fa fa-arrow-left"
                     next-icon="fa fa-arrow-right"
@@ -86,19 +102,6 @@
               </b-row>
             </v-tab-item>
 
-            <v-tab-item>
-              <b-row class="justify-content-around">
-                <b-col md="4" align="center" class="mx-2 d-md-down-none">
-                  <SVGpicWork />
-                </b-col>
-
-                <b-col md="6" sm="12" align="center" class="mx-0 pt-5">
-                  <h3 class="text-muted text-sm-center text-md-left ml-2">กิจกรรมล่าสุดของคุณ</h3>
-
-                  <DoingCardlesson :cardData="lessonData" />
-                </b-col>
-              </b-row>
-            </v-tab-item>
           </v-tabs>
         </b-row>
 
@@ -109,17 +112,18 @@
       <SVGPart/>
           </div>-->
 
-          <b-col class="text-center justify-content-center" md="8" sm="12">
-            <h2>ใส่รายละเอียดการจัดทำเเละเครติด</h2>
-            <h6
-              md="8"
-              class
-            >Material is an adaptable system of guidelines, components, and tools that support the best practices of user interface design. Backed by open-source code, Material streamlines collaboration between designers and developers, and helps teams quickly build beautiful products.</h6>
-          </b-col>
-
           <b-row class="background justify-content-center text-center d-md-down-none">
             <IntroCard />
           </b-row>
+
+
+          <b-col class="text-center justify-content-center" md="8" sm="12">
+            <h2>รายละเอียดการจัดทำเเละเครติด</h2>
+            <h6
+              md="8"
+              class
+            >Nuxt is a progressive framework based on Vue.js to create modern web applications. It is based on Vue.js official libraries (vue, vue-router and vuex) and powerful development tools (webpack, Babel and PostCSS). Nuxt goal is to make web development powerful and performant with a great developer experience in mind.</h6>
+          </b-col>
 
           <!-- <div>
       <SVGPart/>
@@ -162,7 +166,8 @@ export default {
     SVGpicLesson
   },
   computed: mapState({
-    lessonData: state => state.testStore.lessonData
+    lessonData: state => state.testStore.lessonData,
+    UserCardData: state => state.student.UserCardData,
   }),
 
   middleware: "testpage",
@@ -173,52 +178,6 @@ export default {
   // },
   data: () => ({
     maxSmallcardWight: 300,
-
-    UserCardData: [
-      {
-        title: "บทเรียน",
-        icon: "fa fa-book",
-        value: "20",
-        maxvalue: "30",
-        link: "#"
-      },
-      {
-        title: "แบบฝึกหัด",
-        icon: "fa fa-certificate",
-        value: "10",
-        maxvalue: "60",
-        link: "#"
-      },
-      {
-        title: "งาน",
-        icon: "fa fa-folder-open",
-        value: "9",
-        maxvalue: "20",
-        link: "#"
-      }
-    ]
-
-    //  lessonData: {
-    //   lastUpdate: "14/7/2542 10:24",
-    //   imgSrc: "https://placekitten.com/380/200",
-    //   typeVariant: "primary",
-    //   typeName: "test",
-    //   cardTitle: "test",
-    //   cardTag: [
-    //     { tagVariant: "primary", tagName: "tagName" },
-    //     { tagVariant: "primary", tagName: "tagName" },
-    //     { tagVariant: "primary", tagName: "tagName" }
-    //   ],
-    //   cardSmallDes:
-    //     "Now you can finally test your work by changing VUE_APP_API_CLIENT in the targeted environment to either mock or server. But note that each time you change it you have to restart/rebuild your app.",
-    //   cardViewCount: 3000,
-    //   cardDoneCount: 3000,
-    //   cardCreaterData: {
-    //     src: "https://placekitten.com/380/200",
-    //     name: "GodNewInwZa"
-    //   },
-    //   progress: 30
-    // }
   })
 };
 </script>
