@@ -28,6 +28,12 @@
             <v-icon style="color:white" class="pr-2">mdi-pencil</v-icon>แก้ไของค์ประกอบ {{data.name}}
           </h4>
         </template>
+
+          <b-row no-gutters>
+          <h5 class>
+            แก้ไข้อมูล </h5>
+          <b-form-input type="text" required placeholder=""></b-form-input>
+        </b-row>
         
         <template v-slot:modal-footer="{ ok, cancel, hide }">
           <b-button
@@ -49,6 +55,7 @@
           <v-icon medium style="color:white;">mdi-plus-circle-outline</v-icon>
           <br />NEWOBJECT
         </b-button>
+
 
       </b-container>
       <b-modal v-model="createDataModal" header-bg-variant="info">

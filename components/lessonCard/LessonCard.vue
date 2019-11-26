@@ -36,7 +36,7 @@
               class="font-weight-light"
             >{{ cardData.typeName }}</b-badge>
           </b-col >
-          <b-col cols="9">{{cardData.cardTitle}}adasdasdasdasdasdasdqweqweqwdzdxasdasdasdasdsdadz</b-col>
+          <b-col cols="9">{{cardData.cardTitle}}</b-col>
         </b-row>
       </h6>
       <div>
