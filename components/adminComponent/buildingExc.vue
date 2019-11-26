@@ -1,4 +1,5 @@
 <template>
+<b-container  fluid class="mx-3">
   <b-tabs pills align="center" justified>
     <b-tab active>
       <template v-slot:title>
@@ -14,10 +15,48 @@
         EditPage
       </template>
       <b-container>
+
+      <div v-for="(data,idx) in temPageDataList" :key="idx" class="mb-2">
+        <b-button pill @click="editDataModal=!editDataModal" block variant="warning">
+          <v-icon medium>mdi-pencil</v-icon>
+          <br />EDIT "{{data.name}}"
+        </b-button>
+
+        <b-modal v-model="editDataModal" header-bg-variant="warning">
+        <template v-slot:modal-header="{ close }">
+          <h4 class="text-white">
+            <v-icon style="color:white" class="pr-2">mdi-pencil</v-icon>แก้ไของค์ประกอบ {{data.name}}
+          </h4>
+        </template>
+
+          <b-row no-gutters>
+          <h5 class>
+            แก้ไข้อมูล </h5>
+          <b-form-input type="text" required placeholder=""></b-form-input>
+        </b-row>
+        
+        <template v-slot:modal-footer="{ ok, cancel, hide }">
+          <b-button
+            type="submit"
+            style="width:180%;"
+            size="md"
+            block
+            @click.prevent="callClid()"
+            pill
+            variant="success"
+          >ยืนยันข้อมูล</b-button>
+          <br />
+          <b-button type="reset" size="md" block pill variant="danger" @click="cancelModal()">ยกเลิก</b-button>
+        </template>
+      </b-modal>
+      </div>
+
         <b-button pill @click="createDataModal=!createDataModal" block variant="success">
           <v-icon medium style="color:white;">mdi-plus-circle-outline</v-icon>
           <br />NEWOBJECT
         </b-button>
+
+
       </b-container>
       <b-modal v-model="createDataModal" header-bg-variant="info">
         <template v-slot:modal-header="{ close }">
@@ -48,12 +87,17 @@
           <b-button type="reset" size="md" block pill variant="danger" @click="cancelModal()">ยกเลิก</b-button>
         </template>
       </b-modal>
+
+
+
     </b-tab>
     <b-tab>
+
       <template v-slot:title>RawJson</template>
       <p class="p-3">{{temPageDataList}}</p>
     </b-tab>
   </b-tabs>
+  </b-container>
   <!-- <b-tabs align="center">
 
     <template v-slot:tabs-end>
@@ -74,9 +118,13 @@ export default {
   },
   data: () => ({
     updateSuccessModal: true,
+
     createDataModal: false,
-Objname:null,
+    editDataModal: false,
+
+    Objname:null,
     temPageDataList:[]
+
   }),
    computed: {
     getTempData() {
@@ -85,7 +133,10 @@ Objname:null,
   },
   methods: {
     cancelModal() {
+
      this.createDataModal = false;
+     this.editDataModal = false;
+
     },
     callClid() {
       //   console.log("callClid Call")

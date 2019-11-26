@@ -1,11 +1,50 @@
 <template>
   <b-container fluid>
-    <!-- {{this.$route.params.id}}
-    <br />
-    {{getClassData}}
-    <br />
-    {{getClassData.imgsrc}}
-    <br />-->
+
+
+
+ <b-modal v-model="addStudent" header-bg-variant="info">
+        <template v-slot:modal-header="{ close }">
+          <h4 class="text-white">
+            <v-icon style="color:white" class="pr-2">mdi-plus-circle-outline</v-icon>เพิ่มสมาชิก
+          </h4>
+        </template>
+
+        <b-row no-gutters>
+          <h5 class>
+            เพิ่มนักเรียน </h5>
+          <b-form-input type="text" required placeholder="รหัสนักเรียน"></b-form-input>
+        </b-row>
+
+        <b-row class="mt-2" no-gutters>
+
+      <b-form-file
+      placeholder="CSV file..."
+      drop-placeholder="Drop file here..."
+    ></b-form-file>
+        </b-row>
+
+
+
+
+
+        <template v-slot:modal-footer="{ ok, cancel, hide }">
+          <b-button
+            type="submit"
+            style="width:180%;"
+            size="md"
+            block
+            pill
+            variant="success"
+          >ยืนยันข้อมูล</b-button>
+          <br />
+          <b-button type="reset" size="md" block pill variant="danger" @click="cancelModal()">ยกเลิก</b-button>
+        </template>
+      </b-modal>
+
+
+
+
     <v-parallax dark :src="getClassData.imgsrc" style="height:300px; opacity:0.8; text-shadow: 3px 2px 6px #000000;">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
@@ -27,7 +66,7 @@
             <h6 class="text-center">จำนวนนักเรียนปัจจุบัน</h6>
               <v-icon style="font-size:3rem;">mdi-account-multiple</v-icon>
               <h3 class="text-center text-muted">{{getClassData.countList.student}}</h3>
-              <b-button block>เพิ่มนักเรียน</b-button>
+              <b-button @click="addStudent=!addStudent" block>เพิ่มนักเรียน</b-button>
             </b-card>
           </b-col>
           <b-col md="12" sm="4" >
@@ -72,6 +111,7 @@ export default {
   // },
   data: () => ({
     cardData: {},
+    addStudent: false,
     classRoomList: [
       {
         cardId: "1",
@@ -231,6 +271,14 @@ export default {
         }
       }
     ]
-  })
+  }),
+  methods:{
+    cancelModal() {
+
+     this.addStudent = false;
+
+    },
+
+  }
 };
 </script>

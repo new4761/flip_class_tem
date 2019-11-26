@@ -22,7 +22,7 @@
         <SVGdivide />
       </b-row>
 
-      <b-row class="background justify-content-center">
+      <b-row class="background justify-content-center my-5">
         <b-col md="10" sm="12" align="center">
           <UserCard v-bind:UserCardData="UserCardData" />
         </b-col>
@@ -52,7 +52,7 @@
                 </b-col>
 
                 <b-col md="6" sm="12" align="center" class="mx-0 pt-5">
-                  <h3 class="text-muted text-sm-center text-md-left ml-2">กิจกรรมล่าสุดของคุณ</h3>
+                  <h4 class="text-muted text-sm-center text-md-left ml-2">กิจกรรมล่าสุดของคุณ</h4>
 
                   <DoingCardlesson :cardData="lessonData" />
                 </b-col>
@@ -67,7 +67,7 @@
                 </b-col>
 
                 <b-col md="6" sm="12" align="center" class="mx-0">
-                  <h3 class="text-muted text-sm-center text-md-left ml-2">บทเรียนของคุณ</h3>
+                  <h4 class="text-muted text-sm-center text-md-left ml-2">บทเรียนของคุณ</h4>
                   <v-slide-group
                     prev-icon="fa fa-arrow-left"
                     next-icon="fa fa-arrow-right"
@@ -88,7 +88,7 @@
                 </b-col>
 
                 <b-col md="6" sm="12" align="center" class="mx-0">
-                  <h3 class="text-muted text-sm-center text-md-left ml-2">แบบฝึกหัดของคุณ</h3>
+                  <h4 class="text-muted text-sm-center text-md-left ml-2">แบบฝึกหัดของคุณ</h4>
                   <v-slide-group
                     prev-icon="fa fa-arrow-left"
                     next-icon="fa fa-arrow-right"

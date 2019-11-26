@@ -9,6 +9,7 @@
           <small class="h6">{{version}}</small>
         </p>
       <b-navbar-nav class="ml-auto">
+
         <b-button
           v-if="!editData"
           class="text-grey"
@@ -16,6 +17,7 @@
           pill
           variant="warning"
         >เเก้ไขเเบบฝึกหัด</b-button>
+
         <b-button
           v-if="editData"
           class="text-grey mx-1"
@@ -24,6 +26,7 @@
           pill
           variant="success"
         >บันทึกข้อมูล</b-button>
+
         <b-button
           v-if="editData"
           class="text-grey mx-1"
@@ -31,6 +34,7 @@
           pill
           variant="danger"
         >ยกเลิกการเเก้ไข</b-button>
+        
       </b-navbar-nav>
     </b-navbar>
     <br class="pt-2" />
@@ -57,6 +61,7 @@ export default {
     curPageData: null,
     temPageDataList: []
   }),
+
   methods: {
       submitTempData() {
       editData: false;

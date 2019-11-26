@@ -5,8 +5,8 @@ export const state = () => ({
     username: "สมจันทร์ หมายชาย",
     name:"นาย สมจันทร์ หมายชาย",
     stdid: "std@42069",
-    mail: "GachiGASM@Gmail.men",
-    tel: " +889874412",
+    mail: "Gachi@Gmail.men",
+    tel: " +666420911",
     year: "2569",
     semester:"มัธยมศึกษา",
     imgsrc:
